@@ -1,0 +1,2 @@
+rootProject.name = "Effe-21CA"
+include ':app'
