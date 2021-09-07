@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Effe21CA">
-        <activity android:name=".MainActivity">
+        <activity android:name=".twelve_page"></activity>
+        <activity android:name=".eleven_page" />
+        <activity android:name=".ten_page" />
+        <activity android:name=".nine_page" />
+        <activity android:name=".eight_page" />
+        <activity android:name=".MainActivity" />
+
+        <activity android:name=".seven_page">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
