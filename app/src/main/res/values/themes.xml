@@ -506,7 +506,7 @@
     <style name="campus_amba">
 
         <item name="android:textSize">
-            20sp
+            22sp
         </item>
 
         <item name="android:textColor">
@@ -542,7 +542,7 @@
     <style name="effervescen">
 
         <item name="android:textSize">
-            12sp
+            15sp
         </item>
 
         <item name="android:textColor">
@@ -560,7 +560,7 @@
     <style name="date">
 
         <item name="android:textSize">
-            16sp
+            20sp
         </item>
 
 
@@ -581,7 +581,7 @@
     <style name="title">
 
         <item name="android:textSize">
-            40sp
+            44sp
         </item>
 
 
@@ -600,7 +600,7 @@
     <style name="you_are_cur">
 
         <item name="android:textSize">
-            14sp
+            17sp
         </item>
 
         <item name="android:textColor">
@@ -617,7 +617,7 @@
     <style name="you_need_10">
 
         <item name="android:textSize">
-            14sp
+            17sp
         </item>
 
         <item name="android:textColor">
@@ -636,7 +636,7 @@
     <style name="points_hist">
 
         <item name="android:textSize">
-            18sp
+            20sp
         </item>
 
         <item name="android:textColor">
