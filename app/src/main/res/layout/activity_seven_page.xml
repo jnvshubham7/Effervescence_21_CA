@@ -37,7 +37,7 @@
         <TextView
             android:id="@+id/effervescen"
             android:layout_width="100dp"
-            android:layout_height="15dp"
+            android:layout_height="20dp"
             android:layout_alignParentLeft="true"
             android:layout_marginLeft="18dp"
             android:layout_alignParentTop="true"
@@ -47,8 +47,31 @@
             android:gravity="center_vertical"
             />
 
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="320sp"
+            android:layout_marginLeft="320sp"
+            android:layout_marginTop="30sp"
+            android:layout_marginEnd="50sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="10sp"
+            android:background="#5C6DC8"
+            app:srcCompat="@drawable/bell" />
 
-
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="360sp"
+            android:layout_marginLeft="320sp"
+            android:layout_marginTop="30sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="10sp"
+            android:background="#5C6DC8"
+            app:srcCompat="@drawable/more_vertical" />
 
 
     </RelativeLayout>
@@ -109,18 +132,17 @@
     <!-- You are currently at 5th Position with 800 Points -->
     <TextView
         android:id="@+id/you_are_cur"
-        android:layout_width="312dp"
+        android:layout_width="340dp"
         android:layout_height="48dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="20dp"
         android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="254dp"
+        android:gravity="top"
+        android:lineSpacingExtra="3sp"
         android:text="@string/you_are_cur"
         android:textAppearance="@style/you_are_cur"
-        android:lineSpacingExtra="3sp"
-        android:translationY="-1.5sp"
-        android:gravity="top"
-        />
+        android:translationY="-1.5sp" />
 
 
 
@@ -128,17 +150,16 @@
     <!-- You Need 100 points to rank up... -->
     <TextView
         android:id="@+id/you_need_10"
-        android:layout_width="316dp"
+        android:layout_width="340dp"
         android:layout_height="24dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="20dp"
         android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="318dp"
-        android:text="@string/you_need_10"
-        android:textAppearance="@style/you_need_10"
-        android:lineSpacingExtra="3sp"
         android:gravity="center_vertical"
-        />
+        android:lineSpacingExtra="3sp"
+        android:text="@string/you_need_10"
+        android:textAppearance="@style/you_need_10" />
 
 
     <!-- Points History -->
@@ -165,16 +186,14 @@
 
 
         android:id="@+id/rectangle_9"
-        android:layout_width="328dp"
+        android:layout_width="340dp"
         android:layout_height="280dp"
         android:layout_alignParentLeft="true"
-        android:layout_marginLeft="16dp"
         android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="376dp"
 
         android:elevation="4dp"
-
-
 
 
         />
@@ -443,180 +462,6 @@
         android:translationY="-1.5sp"
         android:gravity="top"
         /><!-- bell -->
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/bell"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="280dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="24dp"
-
-        android:background="@drawable/bell"
-        /><!-- more-vertical -->
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/more_vertic"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="320dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="24dp"
-
-        android:background="@drawable/more_vertical"
-        />
-
-
-    <!-- Group 36653 -->
-    <View
-        android:id="@+id/group_36653"
-        android:layout_width="140dp"
-        android:layout_height="132dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="216dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="88dp"
-        android:background="#00000000"
-        />
-    <!-- Sign Out -->
-    <TextView
-        android:id="@+id/sign_out"
-        android:layout_width="88dp"
-        android:layout_height="23dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="268dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="96dp"
-        android:text="@string/sign_out"
-        android:textAppearance="@style/sign_out"
-        android:gravity="center_vertical"
-        />
-
-    <!-- Group 36655 -->
-    <View
-        android:id="@+id/group_36655"
-        android:layout_width="107dp"
-        android:layout_height="23dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="229dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="128dp"
-        android:background="#00000000"
-
-
-
-        />
-    <!-- Contacts -->
-    <TextView
-        android:id="@+id/contacts"
-        android:layout_width="68dp"
-        android:layout_height="23dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="268dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="128dp"
-        android:text="@string/contacts"
-        android:textAppearance="@style/contacts"
-        android:gravity="center_vertical"
-        />
-
-
-    <!-- Group 36656 -->
-    <View
-        android:id="@+id/group_36656"
-        android:layout_width="106dp"
-        android:layout_height="23dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="230dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="160dp"
-        android:background="#00000000"
-        />
-
-    <!-- About Us -->
-    <TextView
-        android:id="@+id/about_us"
-        android:layout_width="68dp"
-        android:layout_height="23dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="268dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="160dp"
-        android:text="@string/about_us"
-        android:textAppearance="@style/about_us"
-        android:gravity="center_vertical"
-        />
-
-
-
-    <!-- Effe Logo -->
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/effe_logo"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="230dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="165dp"
-
-        android:background="@drawable/effe_logo"
-        />
-
-    <!-- Group 36657 -->
-    <View
-        android:id="@+id/group_36657"
-        android:layout_width="107dp"
-        android:layout_height="23dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="229dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="192dp"
-        android:background="#00000000"
-        />
-
-
-    <!-- About CA -->
-    <TextView
-        android:id="@+id/about_ca"
-        android:layout_width="68dp"
-        android:layout_height="23dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="268dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="192dp"
-        android:text="@string/about_ca"
-        android:textAppearance="@style/about_ca"
-        android:gravity="center_vertical"
-        />
-
-
-
-
-    <!-- help-circle -->
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/help_circle"
-        android:layout_width="16dp"
-        android:layout_height="16dp"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="229dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="196dp"
-
-        android:background="@drawable/help_circle"
-        />
-
-
-
-
-
-
-
-
-
 
 
 
