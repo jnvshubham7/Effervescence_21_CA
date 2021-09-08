@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Effe21CA" >
         <activity
-            android:name=".Bottom_Navigation_Activity">
+            android:name=".Bottom_Navigation_Activity"
+            android:exported="true">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
