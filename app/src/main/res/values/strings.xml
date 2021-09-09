@@ -587,15 +587,9 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-
-
-
-
-
-
-
-
-
+    <string name="award">award</string>
+    <string name="server">server</string>
+    <string name="user">user</string>
 
 
 </resources>
