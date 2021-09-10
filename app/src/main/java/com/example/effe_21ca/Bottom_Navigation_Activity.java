@@ -1,5 +1,6 @@
 package com.example.effe_21ca;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,15 +11,20 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import com.example.effe_21ca.databinding.ActivityBottomNavigationBinding;
+import com.google.android.material.navigation.NavigationView;
 
 public class Bottom_Navigation_Activity extends AppCompatActivity {
 
 private ActivityBottomNavigationBinding binding;
+
+private DrawerLayout drawerLayout;
+private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,17 +34,20 @@ private ActivityBottomNavigationBinding binding;
      setContentView(binding.getRoot());
 
         BottomNavigationView navView = findViewById(R.id.nav_view);
+        navView.setItemIconTintList(null);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.award, R.id.navigation_dashboard, R.id.navigation_notifications)
                 .build();
-//        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_bottom_navigation);
-//        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-//        NavigationUI.setupWithNavController(binding.navView, navController);
-
         Toolbar toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_bottom_navigation);
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        NavigationUI.setupWithNavController(binding.navView, navController);
+
+
+
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -51,6 +60,18 @@ private ActivityBottomNavigationBinding binding;
         int id= item.getItemId();
         if(id==R.id.signout){
             Toast.makeText(this, "You click on ", Toast.LENGTH_SHORT).show();
+        }
+        else if(id==R.id.Contacts){
+            Intent intent =new Intent(Bottom_Navigation_Activity.this,Contacts_Activity.class);
+            startActivity(intent);
+        }
+        else if(id==R.id.AboutUs){
+             Intent intent =new Intent(Bottom_Navigation_Activity.this,About_Us.class);
+             startActivity(intent);
+        }
+        else if(id==R.id.AboutCA){
+            Intent intent =new Intent(Bottom_Navigation_Activity.this,AboutCA_Activity.class);
+            startActivity(intent);
         }
 
         return true;
