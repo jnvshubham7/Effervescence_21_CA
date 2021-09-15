@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+     xmlns:app="https://schemas.com/apk/res-auto">
+    <item
+        app:showAsAction="always"
+        android:icon="@drawable/more_vertical"
+        android:title="">
+        <menu>
+            <item
+                android:id="@+id/signout"
+                android:title="@string/sign_out"
+                android:icon="@drawable/group"
+                app:showAsAction="never"
+                />
+
+            <item
+                android:id="@+id/Contacts"
+                android:title="@string/contacts"
+                android:icon="@drawable/vector"
+                app:showAsAction="never"/>
+
+            <item
+                android:id="@+id/AboutUs"
+                android:title="About Us"
+                android:icon="@drawable/effe_logo"
+                app:showAsAction="never"/>
+
+            <item
+                android:title="About CA"
+                android:id="@+id/AboutCA"
+                android:icon="@drawable/help_circle"
+                app:showAsAction="never"/>
+
+
+        </menu>
+    </item>
+
+
+
+</menu>
+

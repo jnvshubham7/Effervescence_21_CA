@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Effe21CA" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Effe21CA" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -13,4 +13,734 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--
+         Font family: Poppins
+         Line height: 30sp
+         (identical to box height)
+       -->
+    <!-- styles.xml -->
+    <style name="campus_amba">
+
+        <item name="android:textSize">
+            22sp
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+        <item name="android:shadowColor">
+            #40000000
+        </item>
+
+        <item name="android:shadowDx">
+            0
+        </item>
+
+        <item name="android:shadowDy">
+            4
+        </item>
+
+        <item name="android:shadowRadius">
+            4
+        </item>
+
+    </style>
+
+
+
+    <!--
+        Font family: Overlock
+        Line height: 15sp
+        (identical to box height)
+      -->
+    <!-- styles.xml -->
+    <style name="effervescen">
+
+        <item name="android:textSize">
+            15sp
+        </item>
+
+        <item name="android:textColor">
+            #FFFFFF
+        </item>
+
+    </style>
+
+    <!--
+          Font family: Poppins
+          Line height: 24sp
+          (identical to box height)
+        -->
+    <!-- styles.xml -->
+    <style name="date">
+
+        <item name="android:textSize">
+            20sp
+        </item>
+
+
+
+        <item name="android:textColor">
+            #000000
+        </item>
+
+    </style>
+
+
+    <!--
+          Font family: Poppins
+          Line height: 56sp
+          (identical to box height)
+        -->
+    <!-- styles.xml -->
+    <style name="title">
+
+        <item name="android:textSize">
+            44sp
+        </item>
+
+
+
+        <item name="android:textColor">
+            #000000
+        </item>
+
+    </style>
+    <!--
+     Font family: Poppins
+     Line height: 24sp
+     translationY 1.5sp compensates for the line height adjustment of text
+   -->
+    <!-- styles.xml -->
+    <style name="you_are_cur">
+
+        <item name="android:textSize">
+            17sp
+        </item>
+
+        <item name="android:textColor">
+            #000000
+        </item>
+
+    </style>
+    <!--
+         Font family: Poppins
+         Line height: 24sp
+         (identical to box height)
+       -->
+    <!-- styles.xml -->
+    <style name="you_need_10">
+
+        <item name="android:textSize">
+            17sp
+        </item>
+
+        <item name="android:textColor">
+            #000000
+        </item>
+
+    </style>
+
+    <!--
+     Font family: Poppins
+     Line height: 28sp
+     (identical to box height)
+   -->
+    <!-- styles.xml -->
+
+    <style name="points_hist">
+
+        <item name="android:textSize">
+            20sp
+        </item>
+
+        <item name="android:textColor">
+            #000000
+        </item>
+
+    </style>
+    <!-- styles.xml -->
+
+    <style name="pts">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+
+
+        <item name="android:textColor">
+            #CC000000
+        </item>
+
+    </style><!--
+      Font family: Poppins
+      Line height: 24sp
+      (identical to box height)
+      translationY 1.5sp compensates for the line height adjustment of text
+    -->
+    <!-- styles.xml -->
+    <style name="event_1">
+
+        <item name="android:textSize">
+            14sp
+        </item>
+
+
+
+        <item name="android:textColor">
+            #80000000
+        </item>
+
+    </style>
+
+    <!--
+      Font family: Poppins
+      Line height: 18sp
+    -->
+    <!-- styles.xml -->
+    <style name="sign_out">
+
+        <item name="android:textSize">
+            12sp
+        </item>
+
+        <item name="android:textColor">
+            #1F1F1F
+        </item>
+
+    </style><!--
+      Font family: Poppins
+      Line height: 18sp
+    -->
+    <!-- styles.xml -->
+    <style name="contacts">
+
+        <item name="android:textSize">
+            12sp
+        </item>
+
+        <item name="android:textColor">
+            #1F1F1F
+        </item>
+
+    </style>
+    <!--
+      Font family: Poppins
+      Line height: 18sp
+    -->
+    <!-- styles.xml -->
+    <style name="about_us">
+
+        <item name="android:textSize">
+            12sp
+        </item>
+
+        <item name="android:textColor">
+            #1F1F1F
+        </item>
+
+    </style>
+    <!--
+      Font family: Poppins
+      Line height: 18sp
+    -->
+    <!-- styles.xml -->
+    <style name="about_ca">
+
+        <item name="android:textSize">
+            12sp
+        </item>
+
+        <item name="android:textColor">
+            #1F1F1F
+        </item>
+
+    </style>
+
 </resources>

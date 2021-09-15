@@ -1,3 +1,93 @@
 <resources>
     <string name="app_name">Effe-21CA</string>
+
+
+    !-- strings.xml -->
+    <string name="campus_amba">
+
+            Campus Ambassador
+        </string>
+    <!-- strings.xml -->
+    <string name="effervescen">
+
+            EFFERVESCENCE
+        </string>
+
+
+    <!-- strings.xml -->
+    <string name="date">
+
+            Sunday, August 29
+        </string>
+
+
+    <!-- strings.xml -->
+    <string name="title">
+
+            Hi User!
+        </string>
+
+    <!-- strings.xml -->
+    <string name="you_are_cur">
+
+        You are currently at 5th Position with\n800 Points
+    </string>
+
+
+    <!-- strings.xml -->
+    <string name="you_need_10">
+
+        You Need 100 points to rank up...
+    </string>
+
+
+    <!-- strings.xml -->
+    <string name="points_hist">
+
+        Points History
+    </string>
+
+
+    <!-- strings.xml -->
+    <string name="event_1">
+
+        Event 1
+    </string>
+    <!-- strings.xml -->
+    <string name="pts">
+
+        50 pts
+    </string>  <!-- strings.xml -->
+
+    <!-- strings.xml -->
+    <string name="sign_out">
+
+        Sign Out
+    </string> <!-- strings.xml -->
+    <string name="contacts">
+
+        Contacts
+    </string>
+
+    <!-- strings.xml -->
+    <string name="about_us">
+
+        About Us
+    </string>
+
+
+    <!-- strings.xml -->
+    <string name="about_ca">
+
+        About CA
+    </string>
+    <string name="title_activity_bottom_navigation">Bottom_Navigation_Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="award">award</string>
+    <string name="server">server</string>
+    <string name="user">user</string>
+
+
 </resources>

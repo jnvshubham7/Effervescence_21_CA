@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+
+
+
+
+    <!-- Date -->
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="183dp"
+        android:layout_height="26dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="148dp"
+        android:gravity="top"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/date"
+        android:textAppearance="@style/date" />
+
+
+
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="301dp"
+        android:layout_height="67dp"
+        android:layout_alignEnd="@+id/date"
+        android:layout_alignRight="@+id/date"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentBottom="false"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="173dp"
+        android:layout_marginEnd="-114dp"
+        android:layout_marginRight="-114dp"
+        android:layout_marginBottom="491dp"
+        android:gravity="top"
+        android:lineSpacingExtra="0sp"
+        android:text="@string/title"
+        android:textAppearance="@style/title" />
+
+
+    <!-- image 296 -->
+    <View
+        android:id="@+id/image_296"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="232dp"
+        android:layout_marginTop="176dp"
+        android:background="@drawable/image" />
+    <!-- You are currently at 5th Position with 800 Points -->
+    <TextView
+        android:id="@+id/you_are_cur"
+        android:layout_width="312dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="254dp"
+        android:gravity="top"
+        android:lineSpacingExtra="3sp"
+        android:text="@string/you_are_cur"
+        android:textAppearance="@style/you_are_cur"
+        android:translationY="-1.5sp" />
+
+
+
+
+    <!-- You Need 100 points to rank up... -->
+    <TextView
+        android:id="@+id/you_need_10"
+        android:layout_width="316dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="318dp"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="3sp"
+        android:text="@string/you_need_10"
+        android:textAppearance="@style/you_need_10" />
+
+
+    <!-- Points History -->
+    <!-- Points History -->
+    <TextView
+        android:id="@+id/points_hist"
+        android:layout_width="123dp"
+        android:layout_height="28dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="32dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="388dp"
+        android:text="@string/points_hist"
+        android:textAppearance="@style/points_hist"
+        android:lineSpacingExtra="1sp"
+        android:gravity="center_vertical"
+        />
+
+
+
+
+    <!-- Rectangle 971 -->
+    <View
+
+
+        android:id="@+id/rectangle_9"
+        android:layout_width="328dp"
+        android:layout_height="280dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="376dp"
+
+
+        android:elevation="4dp" />
+
+
+    <!-- Event 1 -->
+    <TextView
+        android:id="@+id/event_1"
+        android:layout_width="45dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="439dp"
+        android:gravity="top"
+        android:lineSpacingExtra="3sp"
+        android:text="@string/event_1"
+        android:textAppearance="@style/event_1"
+        android:translationY="-1.5sp" />
+
+    <!-- Group 36643 -->
+    <View
+        android:id="@+id/group_36643"
+        android:layout_width="283dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="439dp" />
+
+    <!-- 50 pts -->
+    <TextView
+        android:id="@+id/pts"
+        android:layout_width="43dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="439dp"
+        android:gravity="top"
+        android:lineSpacingExtra="3sp"
+        android:text="@string/pts"
+        android:textAppearance="@style/pts"
+        android:textColor="#171515"
+        android:translationY="-1.5sp" />
+
+
+    <View
+        android:id="@+id/group_36644"
+        android:layout_width="283dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="471dp"
+        android:background="#00000000" />
+
+
+
+    <!-- Group 36645 -->
+    <View
+        android:id="@+id/group_36645"
+        android:layout_width="283dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="503dp"
+        android:background="#00000000" />
+
+
+
+    <!-- Group 36646 -->
+    <View
+        android:id="@+id/group_36646"
+        android:layout_width="283dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="535dp"
+        android:background="#00000000"
+        />
+
+    <!-- Group 36647 -->
+    <View
+        android:id="@+id/group_36647"
+        android:layout_width="283dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="567dp"
+        android:background="#00000000"
+        />
+
+    <!-- Group 36648 -->
+    <View
+        android:id="@+id/group_36648"
+        android:layout_width="283dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="599dp"
+        android:background="#00000000" />
+
+    <!-- Event 1 -->
+    <TextView
+        android:id="@+id/event_2"
+        android:layout_width="45dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="471dp"
+        android:gravity="top"
+        android:lineSpacingExtra="3sp"
+        android:text="@string/event_1"
+        android:textAppearance="@style/event_1"
+        android:translationY="-1.5sp" />
+    <!-- 50 pts -->
+    <TextView
+        android:id="@+id/pts2"
+        android:layout_width="43dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="471dp"
+        android:gravity="top"
+        android:lineSpacingExtra="3sp"
+        android:text="@string/pts"
+        android:textAppearance="@style/pts"
+        android:translationY="-1.5sp" />
+
+    <!-- Event 1 -->
+    <TextView
+        android:id="@+id/event_3"
+        android:layout_width="45dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="503dp"
+        android:gravity="top"
+        android:lineSpacingExtra="3sp"
+        android:text="@string/event_1"
+        android:textAppearance="@style/event_1"
+        android:translationY="-1.5sp" />
+
+    <!-- 50 pts -->
+    <TextView
+        android:id="@+id/pts3"
+        android:layout_width="43dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="503dp"
+        android:gravity="top"
+        android:lineSpacingExtra="3sp"
+        android:text="@string/pts"
+        android:textAppearance="@style/pts"
+        android:translationY="-1.5sp"
+        tools:ignore="DuplicateIds" />
+
+    <!-- Event 1 -->
+    <TextView
+        android:id="@+id/event_4"
+        android:layout_width="45dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="535dp"
+        android:gravity="top"
+        android:lineSpacingExtra="3sp"
+        android:text="@string/event_1"
+        android:textAppearance="@style/event_1"
+        android:translationY="-1.5sp" />
+    <!-- 50 pts -->
+    <TextView
+        android:id="@+id/pts4"
+        android:layout_width="43dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="535dp"
+        android:gravity="top"
+        android:lineSpacingExtra="3sp"
+        android:text="@string/pts"
+        android:textAppearance="@style/pts"
+        android:translationY="-1.5sp" />
+    <!-- Event 1 -->
+    <TextView
+        android:id="@+id/event_5"
+        android:layout_width="45dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="567dp"
+        android:gravity="top"
+        android:lineSpacingExtra="3sp"
+        android:text="@string/event_1"
+        android:textAppearance="@style/event_1"
+        android:translationY="-1.5sp" /><!-- Event 1 -->
+    <TextView
+        android:id="@+id/event_6"
+        android:layout_width="45dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="599dp"
+        android:gravity="top"
+        android:lineSpacingExtra="3sp"
+        android:text="@string/event_1"
+        android:textAppearance="@style/event_1"
+        android:translationY="-1.5sp" /><!-- 50 pts -->
+    <TextView
+        android:id="@+id/pts6"
+        android:layout_width="43dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="599dp"
+        android:gravity="top"
+        android:lineSpacingExtra="3sp"
+        android:text="@string/pts"
+        android:textAppearance="@style/pts"
+        android:translationY="-1.5sp" /><!-- 50 pts -->
+    <TextView
+        android:id="@+id/pts5"
+        android:layout_width="43dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="567dp"
+        android:gravity="top"
+        android:lineSpacingExtra="3sp"
+        android:text="@string/pts"
+        android:textAppearance="@style/pts"
+        android:translationY="-1.5sp">
+
+    </TextView>
+
+</RelativeLayout>
