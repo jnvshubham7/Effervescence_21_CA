@@ -10,12 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Effe21CA">
         <activity
+            android:name=".Bottom_Navigation_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".About_Us"
+            android:exported="true" />
+        <activity
+            android:name=".AboutCA_Activity"
+            android:exported="true" />
+        <activity
+            android:name=".Contacts_Activity"
+            android:exported="true" />
+        <activity
             android:name=".login"
             android:exported="true" />
         <activity
             android:name=".MainActivity2"
             android:exported="true" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
