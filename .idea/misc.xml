@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/drawable/button.xml" value="0.2703125" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/drawable/button1.xml" value="0.2703125" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/drawable/button_bg_rounded_corners.xml" value="0.2703125" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/drawable/sw_thumb.xml" value="0.24974358974358973" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/drawable/sw_track.xml" value="0.1" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/activity_main2.xml" value="0.2203125" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
