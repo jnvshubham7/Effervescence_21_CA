@@ -19,11 +19,11 @@
         app:srcCompat="@drawable/logo1" />
 
     <EditText
-        android:id="@+id/Username"
+        android:id="@+id/Email"
         android:layout_width="355dp"
         android:layout_height="43dp"
         android:ems="10"
-        android:hint="Username"
+        android:hint="Email "
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,8 +34,8 @@
 
     <EditText
         android:id="@+id/Password"
-        android:layout_width="350dp"
-        android:layout_height="35dp"
+        android:layout_width="352dp"
+        android:layout_height="45dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -46,17 +46,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.547" />
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="184dp"
-        android:layout_height="34dp"
-        android:text="Remember Me"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.63" />
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkBox"-->
+<!--        android:layout_width="184dp"-->
+<!--        android:layout_height="34dp"-->
+<!--        android:text="Remember Me"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.114"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.63" />-->
 
     <Button
         android:id="@+id/button2"
@@ -70,7 +70,8 @@
         app:layout_constraintHorizontal_bias="0.541"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.78" />
+        app:layout_constraintVertical_bias="0.7" />
+
 
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
