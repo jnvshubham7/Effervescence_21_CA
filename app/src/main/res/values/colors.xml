@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="botomnev">#3279a3</color>
+    <color name="colorPrimary">#1D52A8</color>
 </resources>
