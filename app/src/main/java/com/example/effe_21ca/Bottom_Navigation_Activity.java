@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -18,8 +19,10 @@ import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 import com.example.effe_21ca.databinding.ActivityBottomNavigationBinding;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Bottom_Navigation_Activity extends AppCompatActivity {
+    //Button signout;
 
 private ActivityBottomNavigationBinding binding;
 
@@ -59,7 +62,13 @@ private NavigationView navigationView;
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id= item.getItemId();
         if(id==R.id.signout){
-            Toast.makeText(this, "You click on ", Toast.LENGTH_SHORT).show();
+            signout();
+
+//            Intent intent = new Intent(Bottom_Navigation_Activity.this, login.class);
+//            startActivity(intent);
+
+
+           // Toast.makeText(this, "You click on ", Toast.LENGTH_SHORT).show();
         }
         else if(id==R.id.Contacts){
             Intent intent =new Intent(Bottom_Navigation_Activity.this,Contacts_Activity.class);
@@ -75,6 +84,16 @@ private NavigationView navigationView;
         }
 
         return true;
+    }
+
+
+
+    private void signout() {
+        FirebaseAuth.getInstance().signOut();
+        Intent in = new Intent(Bottom_Navigation_Activity.this, login.class);
+        in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(in);
+        finish();
     }
 
 }

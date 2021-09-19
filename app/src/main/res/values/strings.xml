@@ -2,8 +2,6 @@
     <string name="app_name">Effe-21CA</string>
 
 
-
-
     !-- strings.xml -->
     <string name="campus_amba">
 
@@ -90,7 +88,6 @@
     <string name="award">award</string>
     <string name="server">server</string>
     <string name="user">user</string>
-
 
 
 </resources>

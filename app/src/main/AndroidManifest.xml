@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Effe21CA">
         <activity
+            android:name=".SignUp"
+            android:exported="true" />
+        <activity
             android:name=".Bottom_Navigation_Activity"
             android:exported="true" />
         <activity
@@ -27,7 +30,8 @@
         <activity
             android:name=".MainActivity2"
             android:exported="true" />
-        <activity android:name=".login"
+        <activity
+            android:name=".login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
