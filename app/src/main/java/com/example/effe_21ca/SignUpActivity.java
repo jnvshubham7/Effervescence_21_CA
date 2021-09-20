@@ -29,7 +29,7 @@ public class SignUpActivity extends AppCompatActivity {
         binding =ActivitySignUpBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        getSupportActionBar().hide();
+
         Auth = FirebaseAuth.getInstance();
         database=FirebaseDatabase.getInstance();
          progressDialog=new ProgressDialog(SignUpActivity.this);
@@ -50,6 +50,8 @@ public class SignUpActivity extends AppCompatActivity {
 
                              String id=task.getResult().getUser().getUid();
                              database.getReference().child("Users").child(id).setValue(user);
+                             Intent intent =new Intent(SignUpActivity.this,Bottom_Navigation_Activity.class);
+                             startActivity(intent);
                              Toast.makeText(SignUpActivity.this, "SignUp Succesfully", Toast.LENGTH_SHORT).show();
                          }
                          else{

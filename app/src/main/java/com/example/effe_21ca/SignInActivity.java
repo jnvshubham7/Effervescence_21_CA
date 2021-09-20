@@ -38,8 +38,7 @@ public class SignInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding=ActivitySignInBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-        auth=FirebaseAuth.getInstance();
+         auth=FirebaseAuth.getInstance();
         progressDialog=new ProgressDialog(SignInActivity.this);
         progressDialog.setTitle("login");
         progressDialog.setMessage("login to your account");
@@ -71,21 +70,21 @@ public class SignInActivity extends AppCompatActivity {
                   });
             }
         });
-        tx=findViewById(R.id.tvLoginToSignUp);
-        tx.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent =new Intent(SignInActivity.this,SignUpActivity.class);
-                startActivity(intent);
-            }
-        });
-//        binding.tvLoginToSignUp.setOnClickListener(new View.OnClickListener() {
+//        tx=findViewById(R.id.tvLoginToSignUp);
+//        tx.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
-//                Intent intent=new Intent(SignInActivity.this,SignUpActivity.class);
+//                Intent intent =new Intent(SignInActivity.this,SignUpActivity.class);
 //                startActivity(intent);
 //            }
 //        });
+        binding.tvLoginToSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(SignInActivity.this,SignUpActivity.class);
+                startActivity(intent);
+            }
+        });
         binding.GoogleLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
