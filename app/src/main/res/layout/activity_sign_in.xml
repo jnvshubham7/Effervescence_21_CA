@@ -41,20 +41,6 @@
                     android:layout_height="2dp"
                     android:layout_gravity="center" />
 
-                <EditText
-                    android:id="@+id/PersonName"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="23dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/editbackground"
-                    android:ems="10"
-                    android:gravity="center"
-                    android:hint="User Name"
-                    android:inputType="textPersonName"
-                    android:padding="10dp" />
-
-
 
                 <EditText
                     android:id="@+id/EmailAddress"
@@ -81,25 +67,13 @@
                     android:padding="10dp" />
 
 
-                <EditText
-                    android:id="@+id/ConfirmPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:background="@drawable/editbackground"
-                    android:ems="10"
-                    android:gravity="center"
-                    android:hint="Confirm Password"
-                    android:inputType="textPassword"
-                    android:padding="10dp" />
-
                 <Button
-                    android:id="@+id/btnSignUp"
+                    android:id="@+id/btnSignIn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
                     android:background="@drawable/btn_gradint"
-                    android:text="Register"
+                    android:text="login"
                     android:textColor="#FAF6F6"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -141,7 +115,7 @@
 
 
                     <TextView
-                        android:id="@+id/textView6"
+                        android:id="@+id/GoogleLogin"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
@@ -156,11 +130,11 @@
                 </LinearLayout>
 
                 <TextView
-                    android:id="@+id/tvSignUpToLogin"
+                    android:id="@+id/tvLoginToSignUp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="Alredy have account ? login" />
+                    android:text="Want to creat new account" />
 
             </LinearLayout>
 

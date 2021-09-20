@@ -5,26 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.home.HomeFragment">
+   tools:context=".NotificationActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="70dp"
-        android:gravity="center"
-        android:text="LEADERBOARD"
-        android:textColor="#040303"
-        android:textSize="20sp" />
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:text="Yesterday"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/leaderBoardRecycleView"
+        android:id="@+id/orderRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        tools:listitem="@layout/list_item_leaderboard" />
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        tools:listitem="@layout/list_item_notification" />
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.effe_21ca.ui.notifications;
+package com.example.effe_21ca.notifications;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
