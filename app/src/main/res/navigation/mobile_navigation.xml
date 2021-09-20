@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.example.effe_21ca.ui.notifications.NotificationsFragment"
+        android:name="com.example.effe_21ca.notifications.NotificationsFragment"
 
         tools:layout="@layout/fragment_notifications" />
 </navigation>

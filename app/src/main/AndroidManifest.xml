@@ -10,8 +10,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Effe21CA">
         <activity
-            android:name=".Bottom_Navigation_Activity"
+            android:name=".SignInActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+    </activity>
+        <activity
+            android:name=".SignUpActivity"
             android:exported="true" />
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="true" />
+        <activity
+            android:name=".Bottom_Navigation_Activity"
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".About_Us"
             android:exported="true" />
@@ -27,14 +45,14 @@
         <activity
             android:name=".MainActivity2"
             android:exported="true" />
-        <activity android:name=".login"
+        <activity
+            android:name=".login"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

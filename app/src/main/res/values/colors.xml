@@ -8,5 +8,45 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="botomnev">#3279a3</color>
-    <color name="colorPrimary">#1D52A8</color>
+
+    <color name="colorPrimary">#2196f3</color>
+    <color name="colorPrimaryDark">#1976d2</color>
+    <color name="colorAccent">#F9A825</color>
+
+
+
+    <color name="primary">#1565C0</color>
+    <color name="primary_dark">#0288D1</color>
+    <color name="primary_darker">#0288D1</color>
+    <color name="accent">#B3E5FC</color>
+    <!--#FFD740-->
+
+
+
+    <color name="baseBackground1">#e3f2fd</color>
+    <color name="baseBackground2">#bbdefb</color>
+    <color name="baseBackground3">#2196F3</color>
+    <color name="baseTextHeader">#0d47a1</color>
+    <color name="baseTextPara">#1565c0</color>
+
+    <color name="gray0">#e1f5fe</color>
+    <color name="gray1">#B3E5FC</color>
+    <color name="gray2">#4FC3F7</color>
+
+    <color name="gray_shade_1">#cfd8dc</color>
+    <color name="gray_shade_2">#b0bec5</color>
+    <color name="gray_shade_3">#90a4ae</color>
+    <color name="gray_shade_4">#78909c</color>
+    <color name="gray_shade_5">#607D8B</color>
+    <color name="gray_shade_6">#546E7A</color>
+    <color name="gray_shade_7">#455a64</color>
+    <color name="gray_shade_8">#37474f</color>
+    <color name="gray_shade_9">#263238</color>
+
+
+    <color name="backgroundopacity">#AB363535</color>
+    <color name="startcolorgradient">#443C20</color>
+    <color name="endcolorgradient">#e8a564</color>
+    <color name="tintlogocolor">#AC7A4A</color>
+    <color name="goooglecolor">#FF5722</color>
 </resources>
