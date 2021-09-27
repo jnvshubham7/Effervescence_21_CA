@@ -21,7 +21,7 @@
         android:layout_marginLeft="8dp" />
 
     <TextView
-        android:id="@+id/helloText"
+        android:id="@+id/name1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -30,7 +30,7 @@
         android:fontFamily="sans-serif"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintBottom_toTopOf="@+id/sr.no"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintStart_toStartOf="@+id/guideline3"
         app:layout_constraintTop_toTopOf="parent"
@@ -48,7 +48,7 @@
         android:fontFamily="sans-serif"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/helloText"
+        app:layout_constraintEnd_toStartOf="@+id/name1"
         app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -67,12 +67,12 @@
         android:text="College of Fake Students"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/helloText"
-        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/name1"
+        app:layout_constraintTop_toTopOf="@+id/sr.no"
         android:layout_marginRight="8dp" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline2"
+        android:id="@+id/sr.no"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -101,12 +101,12 @@
         android:fontFamily="sans-serif"
         android:text=" pts"
         android:textColor="@color/baseTextPara"
-        app:layout_constraintBottom_toBottomOf="@+id/pointsTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/points"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginRight="8dp" />
 
     <TextView
-        android:id="@+id/pointsTextView"
+        android:id="@+id/points"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"

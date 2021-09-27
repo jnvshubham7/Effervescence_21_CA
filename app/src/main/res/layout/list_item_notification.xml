@@ -17,7 +17,7 @@
         app:srcCompat="@drawable/notificationb" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/notif_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
