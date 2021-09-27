@@ -3,6 +3,24 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/activity_about_ca.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/activity_about_us.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/activity_app_issues.xml" value="0.20153985507246377" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/activity_bottom_navigation.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/activity_contacts.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/activity_login.xml" value="0.18478260869565216" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/activity_main.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/activity_main2.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/activity_notification.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/activity_sign_in.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/activity_sign_up.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/activity_upload.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/fragment_dashboard.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/fragment_home.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/fragment_notifications.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/list_item1_leaderboard.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/list_item_leaderboard.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/list_item_notification.xml" value="0.1644021739130435" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/drawable-v24/ic_multicity.xml" value="0.12777777777777777" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/drawable-v24/ic_participation.xml" value="0.12777777777777777" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/drawable/ic_social.xml" value="0.12777777777777777" />
