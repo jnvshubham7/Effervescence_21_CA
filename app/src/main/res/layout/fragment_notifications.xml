@@ -29,7 +29,7 @@
 
     <!-- Title -->
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/hey"
         android:layout_width="301dp"
         android:layout_height="67dp"
         android:layout_alignEnd="@+id/date"
@@ -45,11 +45,32 @@
         android:layout_marginBottom="491dp"
         android:gravity="top"
         android:lineSpacingExtra="0sp"
-        android:text="@string/title"
+        android:text="Hey"
         android:textAppearance="@style/title" />
 
 
     <!-- image 296 -->
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="301dp"
+        android:layout_height="67dp"
+        android:layout_alignEnd="@+id/date"
+        android:layout_alignRight="@+id/date"
+        android:layout_alignParentLeft="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignParentRight="false"
+        android:layout_alignParentBottom="false"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="173dp"
+        android:layout_marginEnd="-206dp"
+        android:layout_marginRight="-206dp"
+        android:layout_marginBottom="491dp"
+        android:gravity="top"
+        android:lineSpacingExtra="0sp"
+        android:text="User"
+        android:textAppearance="@style/title" />
+
     <View
         android:id="@+id/image_296"
         android:layout_width="48dp"
