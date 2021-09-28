@@ -53,13 +53,14 @@
             android:exported="true" />
         <activity
             android:name=".login"
-            android:exported="true">
+            android:exported="true"></activity>
 
-        </activity>
+
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
-
 </manifest>
+
+
