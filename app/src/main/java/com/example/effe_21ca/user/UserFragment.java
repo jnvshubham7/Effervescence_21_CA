@@ -1,4 +1,4 @@
-package com.example.effe_21ca.notifications;
+package com.example.effe_21ca.user;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,18 +10,17 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.effe_21ca.databinding.FragmentNotificationsBinding;
-import com.google.firebase.database.FirebaseDatabase;
 
-public class NotificationsFragment extends Fragment {
+public class UserFragment extends Fragment {
     //FirebaseDatabase database;
 
-    private NotificationsViewModel notificationsViewModel;
+    private UserViewModel notificationsViewModel;
 private FragmentNotificationsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
             ViewGroup container, Bundle savedInstanceState) {
         notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
+                new ViewModelProvider(this).get(UserViewModel.class);
 
 //        database = FirebaseDatabase.getInstance();\
 //        String name = getIntent().getStringExtra("name");
