@@ -1,18 +1,20 @@
 package com.example.effe_21ca;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.TextView;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.example.effe_21ca.databinding.ActivitySignInBinding;
-import com.example.effe_21ca.databinding.ActivitySignUpBinding;
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+
+import com.example.effe_21ca.databinding.FragmentLoginBinding;
+import com.example.effe_21ca.databinding.FragmentSignUpBinding;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -26,20 +28,29 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
-public class SignInActivity extends AppCompatActivity {
 
-    ActivitySignInBinding binding;
+public class LoginFragment extends Fragment {
+
+
+    FragmentLoginBinding binding;
     ProgressDialog progressDialog;
     FirebaseAuth auth;
     GoogleSignInClient mGoogleSignInClient;
-    TextView tx;
+
+    public LoginFragment() {
+        // Required empty public constructor
+    }
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        binding=ActivitySignInBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-         auth=FirebaseAuth.getInstance();
-        progressDialog=new ProgressDialog(SignInActivity.this);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        // View view= inflater.inflate(R.layout.fragment_login, container, false);
+        binding= FragmentLoginBinding.inflate(inflater,container, false);
+
+        auth=FirebaseAuth.getInstance();
+        progressDialog=new ProgressDialog( getContext());
         progressDialog.setTitle("login");
         progressDialog.setMessage("login to your account");
 
@@ -49,42 +60,28 @@ public class SignInActivity extends AppCompatActivity {
                 .requestEmail()
                 .build();
 
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
+        mGoogleSignInClient = GoogleSignIn.getClient(getContext(), gso);
 
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                  progressDialog.show();
-                  auth.signInWithEmailAndPassword(binding.EmailAddress.getText().toString(),binding.TxPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                      @Override
-                      public void onComplete(@NonNull Task<AuthResult> task) {
-                          progressDialog.dismiss();
-                          if(task.isSuccessful()){
-                              Intent intent=new Intent(SignInActivity.this,Bottom_Navigation_Activity.class);
-                              startActivity(intent);
-                          }
-                          else{
-                              Toast.makeText(SignInActivity.this,task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                          }
-                      }
-                  });
+                progressDialog.show();
+                auth.signInWithEmailAndPassword(binding.EmailAddress.getText().toString(),binding.TxPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        progressDialog.dismiss();
+                        if(task.isSuccessful()){
+                            Intent intent=new Intent(getContext(),Bottom_Navigation_Activity.class);
+                            startActivity(intent);
+                        }
+                        else{
+                            Toast.makeText(getContext(),task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
             }
         });
-//        tx=findViewById(R.id.tvLoginToSignUp);
-//        tx.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent =new Intent(SignInActivity.this,SignUpActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-        binding.tvLoginToSignUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent=new Intent(SignInActivity.this,SignUpActivity.class);
-                startActivity(intent);
-            }
-        });
+
         binding.GoogleLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -92,10 +89,12 @@ public class SignInActivity extends AppCompatActivity {
             }
         });
         if(auth.getCurrentUser()!=null){
-            Intent intent=new Intent(SignInActivity.this,Bottom_Navigation_Activity.class);
+            Intent intent=new Intent(getContext(),Bottom_Navigation_Activity.class);
             startActivity(intent);
         }
+        return binding.getRoot();
     }
+
     int RC_SIGN_IN=65;
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
@@ -124,16 +123,16 @@ public class SignInActivity extends AppCompatActivity {
     private void firebaseAuthWithGoogle(String idToken) {
         AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
         auth.signInWithCredential(credential)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                .addOnCompleteListener((Activity) getContext(), new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "signInWithCredential:success");
                             FirebaseUser user = auth.getCurrentUser();
-                            Intent intent =new Intent(SignInActivity.this,Bottom_Navigation_Activity.class);
+                            Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
                             startActivity(intent);
-                           // updateUI(user);
+                            // updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("TAG", "signInWithCredential:failure", task.getException());
@@ -142,5 +141,6 @@ public class SignInActivity extends AppCompatActivity {
                     }
                 });
     }
+
 
 }

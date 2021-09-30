@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.jaeger.library.StatusBarUtil;
 
 public class Splash_Screen_Activity extends AppCompatActivity {
 
@@ -17,7 +16,7 @@ public class Splash_Screen_Activity extends AppCompatActivity {
         setContentView(R.layout.activity_splash_screen);
 
 
-        StatusBarUtil.setTransparent(this);
+        // StatusBarUtil.setTransparent(this);
         Handler handler = new Handler();
         Runnable runnable = () -> {
             Intent intent = new Intent(Splash_Screen_Activity.this, SignUpActivity.class);

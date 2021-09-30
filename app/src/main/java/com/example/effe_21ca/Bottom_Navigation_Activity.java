@@ -71,7 +71,7 @@ FirebaseAuth auth;
         int id= item.getItemId();
         if(id==R.id.signout){
             auth.signOut();
-            Intent intent=new Intent(Bottom_Navigation_Activity.this,SignInActivity.class);
+            Intent intent=new Intent(Bottom_Navigation_Activity.this,SignInUpActivity.class);
             startActivity(intent);
             Toast.makeText(this, "You click on ", Toast.LENGTH_SHORT).show();
         }
