@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/drawable/button.xml" value="0.2703125" />
         <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/activity_about_ca.xml" value="0.1644021739130435" />
         <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/activity_about_us.xml" value="0.1644021739130435" />
         <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/activity_app_issues.xml" value="0.20153985507246377" />
@@ -21,6 +22,8 @@
         <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/list_item1_leaderboard.xml" value="0.2033514492753623" />
         <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/list_item_leaderboard.xml" value="0.1644021739130435" />
         <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/layout/list_item_notification.xml" value="0.1644021739130435" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/menu/bottom_nav_menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Janhavi/OneDrive/Desktop/Effe-21CA/app/src/main/res/menu/menu.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/drawable-v24/ic_multicity.xml" value="0.12777777777777777" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/drawable-v24/ic_participation.xml" value="0.12777777777777777" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/drawable/ic_social.xml" value="0.12777777777777777" />
