@@ -42,7 +42,8 @@ private FragmentHomeBinding binding;
 
         database = FirebaseDatabase.getInstance();
         storage = FirebaseStorage.getInstance();
-        //database = FirebaseDatabase.getInstance();
+        String name = getActivity().getIntent().getStringExtra("name");
+
         users = new ArrayList<>();
         database.getReference().child("users").child(Objects.requireNonNull(FirebaseAuth.getInstance().getUid()))
                 .addValueEventListener(new ValueEventListener() {

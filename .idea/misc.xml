@@ -23,13 +23,16 @@
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/activity_splash_screen.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/activity_ten_page.xml" value="0.21875" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/activity_twelve_page.xml" value="0.21875" />
-        <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/activity_upload.xml" value="0.38697916666666665" />
-        <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/fragment_dashboard.xml" value="0.21875" />
+        <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/activity_upload.xml" value="0.33" />
+        <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/fragment_dashboard.xml" value="0.25" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/fragment_home.xml" value="0.33" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/fragment_login.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/fragment_notifications.xml" value="0.25" />
-        <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/list_item1_leaderboard.xml" value="0.38697916666666665" />
+        <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/fragment_sign_up.xml" value="0.21875" />
+        <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/list_item1_leaderboard.xml" value="0.25" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/list_item_leaderboard.xml" value="0.38645833333333335" />
+        <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/list_item_notification.xml" value="0.21875" />
+        <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/list_item_task.xml" value="0.33" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/menu/bottom_nav_menu.xml" value="0.24351851851851852" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/menu/menu.xml" value="0.24351851851851852" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.13333333333333333" />
