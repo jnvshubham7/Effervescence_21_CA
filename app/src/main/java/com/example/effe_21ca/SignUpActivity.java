@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class SignUpActivity extends AppCompatActivity {
@@ -40,16 +41,24 @@ public class SignUpActivity extends AppCompatActivity {
             public void onClick(View view) {
                 progressDialog.show();
 
+               // String uid = Auth.getUid();
+
+
                 Auth.createUserWithEmailAndPassword(binding.EmailAddress.getText().toString(),binding.TxPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressDialog.dismiss();
                          if(task.isSuccessful()){
+                             String uid = Auth.getUid();
+                           //  String uid=task.getResult().getUser().getUid();
+//                             FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
+//                             String uid =  currentFirebaseUser.getUid();
 
-                             Users user=new Users(binding.PersonName.getText().toString(),binding.EmailAddress.getText().toString(),binding.TxPassword.getText().toString());
+                             Users user=new Users(binding.PersonName.getText().toString(),binding.EmailAddress.getText().toString(),binding.TxPassword.getText().toString(), uid);
+                             assert uid != null;
 
-                             String id=task.getResult().getUser().getUid();
-                             database.getReference().child("Users").child(id).setValue(user);
+                            // String uid=task.getResult().getUser().getUid();
+                             database.getReference().child("Users").child(uid).setValue(user);
                              Intent intent =new Intent(SignUpActivity.this,Bottom_Navigation_Activity.class);
                              startActivity(intent);
                              Toast.makeText(SignUpActivity.this, "SignUp Succesfully", Toast.LENGTH_SHORT).show();

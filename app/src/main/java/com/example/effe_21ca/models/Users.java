@@ -18,10 +18,13 @@ public class Users {
         this.userName = userName;
         this.mail = mail;
         this.passwoord = passwoord;
+        this.userId = userId;
 
     }
 
-
+    public String getUid() {
+        return userId;
+    }
 
     public String getUserName() {
         return userName;
@@ -47,7 +50,7 @@ public class Users {
         this.passwoord = passwoord;
     }
 
-    public String getUserId() {
+    public String getUserId(String key) {
         return userId;
     }
 
