@@ -1,10 +1,10 @@
 package com.example.effe_21ca.models;
 
 public class Users {
-    String profilepic,userName,mail,passwoord,userId,points;
+    String userName,mail,passwoord,userId;
 
-    public Users(String profilepic, String userName, String mail, String passwoord, String userId, String points) {
-        this.profilepic = profilepic;
+    public Users( String userName, String mail, String passwoord, String userId) {
+
         this.userName = userName;
         this.mail = mail;
         this.passwoord = passwoord;
@@ -20,27 +20,12 @@ public class Users {
         this.userName = userName;
         this.mail = mail;
         this.passwoord = passwoord;
+        this.userId = userId;
 
     }
 
-    public String getUserId() {
+    public String getUid() {
         return userId;
-    }
-
-    public String getPoints() {
-        return points;
-    }
-
-    public void setPoints(String points) {
-        this.points = points;
-    }
-
-    public String getProfilepic() {
-        return profilepic;
-    }
-
-    public void setProfilepic(String profilepic) {
-        this.profilepic = profilepic;
     }
 
     public String getUserName() {
