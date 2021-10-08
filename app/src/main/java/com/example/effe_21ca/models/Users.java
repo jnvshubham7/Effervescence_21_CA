@@ -9,7 +9,9 @@ public class Users {
         this.mail = mail;
         this.passwoord = passwoord;
         this.userId = userId;
+        this.points = points;
     }
+
     public Users(){
 
     }
