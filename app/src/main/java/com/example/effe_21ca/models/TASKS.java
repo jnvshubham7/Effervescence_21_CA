@@ -2,10 +2,7 @@ package com.example.effe_21ca.models;
 
 public class TASKS {
 
-    String title,link,point,image;
-
-    public TASKS() {
-    }
+    String title,link,point;
 
     public TASKS(String title, String link, String point) {
         this.title = title;
@@ -17,9 +14,11 @@ public class TASKS {
     @Override
     public String toString() {
         return "TASKS{" +
-                "title='" + title + '\'' +
-                ", link='" + link + '\'' +
                 ", points='" + point + '\'' +
+
+                ", link='" + link + '\'' +
+                "title='" + title + '\'' +
+
 
                 '}';
     }
@@ -36,17 +35,9 @@ public class TASKS {
         return link;
     }
 
-    public void setLink(String link) {
-        this.link = link;
-    }
-
 
     public String getPoint() {
         return point;
-    }
-
-    public void setPoint(String point) {
-        this.point = point;
     }
 
 
