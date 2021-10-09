@@ -32,6 +32,8 @@ public class TaskAdaptor extends FirebaseRecyclerAdapter<TASKS,TaskAdaptor.TaskV
 
 
 
+
+
     public TaskAdaptor(@NonNull FirebaseRecyclerOptions<TASKS> options , Activity context) {
         super(options) ;
         this.context=context;

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -94,23 +95,27 @@ public class DashboardFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        Log.d("massage", "s");
+     //   Toast.makeText(getContext(), "image selected", Toast.LENGTH_SHORT).show();
 
-        if(data.getData()!=null){
-
-            Uri sFile=data.getData();
-
-            final StorageReference reference=storage.getReference().child("profile picture")
-                    .child(FirebaseAuth.getInstance().getUid());
-            reference.putFile(sFile).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+//        if(data.getData()!=null){
 
 
-                    Toast.makeText(getContext(), "Image is Uploaded", Toast.LENGTH_SHORT).show();
-                }
-            });
-
-        }
+//
+//            Uri sFile=data.getData();
+//
+//            final StorageReference reference=storage.getReference().child("profile picture")
+//                    .child(FirebaseAuth.getInstance().getUid());
+//            reference.putFile(sFile).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+//                @Override
+//                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+//
+//
+//                    Toast.makeText(getContext(), "Image is Uploaded", Toast.LENGTH_SHORT).show();
+//                }
+//            });
+//
+  //     }
     }
 
     @Override

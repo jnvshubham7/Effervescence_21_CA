@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.effe_21ca">
 
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="16" />
+
     <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <application
@@ -55,9 +59,6 @@
         <activity
             android:name=".MainActivity2"
             android:exported="true" />
-        <activity
-            android:name=".login"
-            android:exported="true"></activity>
 
 <!--        <service-->
 <!--            android:name=".MyFirebaseMessagingService"-->

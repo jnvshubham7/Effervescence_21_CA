@@ -45,8 +45,7 @@ public class LoginFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        // View view= inflater.inflate(R.layout.fragment_login, container, false);
+
         binding= FragmentLoginBinding.inflate(inflater,container, false);
 
         auth=FirebaseAuth.getInstance();
@@ -54,7 +53,7 @@ public class LoginFragment extends Fragment {
         progressDialog.setTitle("login");
         progressDialog.setMessage("login to your account");
 
-        // Configure Google Sign In
+
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken("358743908709-bm0lkn9hjv1ueogqk2ggpjlj5ribgua9.apps.googleusercontent.com")
                 .requestEmail()
