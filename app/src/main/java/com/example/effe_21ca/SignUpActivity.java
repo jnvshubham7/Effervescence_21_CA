@@ -54,7 +54,7 @@ public class SignUpActivity extends AppCompatActivity {
 //                             FirebaseUser currentFirebaseUser = FirebaseAuth.getInstance().getCurrentUser() ;
 //                             String uid =  currentFirebaseUser.getUid();
 
-                             Users user=new Users(binding.PersonName.getText().toString(),binding.EmailAddress.getText().toString(),binding.TxPassword.getText().toString(), uid);
+                             Users user=new Users(binding.PersonName.getText().toString(),binding.EmailAddress.getText().toString(),binding.TxPassword.getText().toString(),uid);
                              assert uid != null;
 
                             // String uid=task.getResult().getUser().getUid();
