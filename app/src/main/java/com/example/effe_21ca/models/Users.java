@@ -25,6 +25,7 @@ public class Users {
         this.mail = mail;
         this.passwoord = passwoord;
         this.userId = userId;
+ 
     }
 
     public Users(String userName, String mail, String passwoord, int score) {
@@ -32,6 +33,9 @@ public class Users {
         this.mail = mail;
         this.passwoord = passwoord;
         this.score = score;
+ 
+       // this.points = points;
+ 
     }
 
     public Users(){

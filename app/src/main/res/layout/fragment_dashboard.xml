@@ -8,11 +8,18 @@
     android:orientation="vertical"
     android:layout_marginTop="70dp"
     tools:context=".ui.dashboard.DashboardFragment" >
+ 
 
       <androidx.recyclerview.widget.RecyclerView
     android:id="@+id/dasaboardRecycleview"
     android:layout_width="match_parent"
     android:layout_height="match_parent" />
+ 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dasaboardRecycleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+ 
 
 
 </LinearLayout>

@@ -37,7 +37,7 @@ public class Users_Adapter extends RecyclerView.Adapter<Users_Adapter.UsersViewH
         Users user = users.get(position);
 
         holder.userName.setText(user.getUserName());
-        // holder.points.setText(user.getPoints());
+ 
 
 //        holder.itemView.setOnClickListener(v -> {
 //            Intent intent = new Intent(context, UserFragment.class);
