@@ -1,5 +1,6 @@
 package com.example.effe_21ca.Adaptors;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -18,16 +19,23 @@ import com.example.effe_21ca.models.TASKS;
 import com.example.effe_21ca.models.Users;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 
 public class TaskAdaptor extends FirebaseRecyclerAdapter<TASKS,TaskAdaptor.TaskViewholder>{
 
-    Context context;
+    private Activity context;
+   // private Activity activity;
 
 
-    public TaskAdaptor(@NonNull FirebaseRecyclerOptions<TASKS> options) {
-        super(options);
+
+
+    public TaskAdaptor(@NonNull FirebaseRecyclerOptions<TASKS> options , Activity context) {
+        super(options) ;
+        this.context=context;
+
     }
 
     @Override
@@ -51,7 +59,10 @@ public class TaskAdaptor extends FirebaseRecyclerAdapter<TASKS,TaskAdaptor.TaskV
                                 Intent intent=new Intent();
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 intent.setType("image/*");
-                // startActivityForResult(intent,33);
+
+               context.startActivityForResult(intent,33);
+               // holder.upload.getContext().startActivityForResult(intent,33);
+               // startListening();
             }
         });
 
@@ -59,28 +70,9 @@ public class TaskAdaptor extends FirebaseRecyclerAdapter<TASKS,TaskAdaptor.TaskV
 
 
 
+
     }
-//        @Override
-//    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//
-//        if(data.getData()!=null){
-//
-//            Uri sFile=data.getData();
-//
-//            final StorageReference reference=storage.getReference().child("profile picture")
-//                    .child(FirebaseAuth.getInstance().getUid());
-//            reference.putFile(sFile).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-//                @Override
-//                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-//
-//
-//                    Toast.makeText(getContext(), "Image is Uploaded", Toast.LENGTH_SHORT).show();
-//                }
-//            });
-//
-//        }
-//    }
+
 
 
     @NonNull

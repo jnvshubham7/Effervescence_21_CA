@@ -1,5 +1,6 @@
 package com.example.effe_21ca.ui.dashboard;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -34,9 +35,9 @@ public class DashboardFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
     private FragmentDashboardBinding binding;
-//    FirebaseStorage storage;
-//    FirebaseAuth auth;
-//    FirebaseDatabase database;
+    FirebaseStorage storage;
+    FirebaseAuth auth;
+    FirebaseDatabase database;
     private TaskAdaptor adapter;
 
 
@@ -48,9 +49,9 @@ public class DashboardFragment extends Fragment {
         binding = FragmentDashboardBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-//        storage=FirebaseStorage.getInstance();
-//        auth=FirebaseAuth.getInstance();
-//        database=FirebaseDatabase.getInstance();
+        storage=FirebaseStorage.getInstance();
+        auth=FirebaseAuth.getInstance();
+        database=FirebaseDatabase.getInstance();
 
         LinearLayoutManager layoutManager=new LinearLayoutManager(getContext());
         binding.dasaboardRecycleview.setLayoutManager(layoutManager);
@@ -61,7 +62,7 @@ public class DashboardFragment extends Fragment {
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("TASKS"), TASKS.class)
                         .build();
 
-        adapter=new TaskAdaptor(options);
+        adapter=new TaskAdaptor(options, getActivity());
         binding.dasaboardRecycleview.setAdapter(adapter);
 
 
@@ -90,27 +91,27 @@ public class DashboardFragment extends Fragment {
         return root;
     }
 
-//    @Override
-//    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//
-//        if(data.getData()!=null){
-//
-//            Uri sFile=data.getData();
-//
-//            final StorageReference reference=storage.getReference().child("profile picture")
-//                    .child(FirebaseAuth.getInstance().getUid());
-//            reference.putFile(sFile).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-//                @Override
-//                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-//
-//
-//                    Toast.makeText(getContext(), "Image is Uploaded", Toast.LENGTH_SHORT).show();
-//                }
-//            });
-//
-//        }
-//    }
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(data.getData()!=null){
+
+            Uri sFile=data.getData();
+
+            final StorageReference reference=storage.getReference().child("profile picture")
+                    .child(FirebaseAuth.getInstance().getUid());
+            reference.putFile(sFile).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+
+
+                    Toast.makeText(getContext(), "Image is Uploaded", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+        }
+    }
 
     @Override
     public void onStart() {
