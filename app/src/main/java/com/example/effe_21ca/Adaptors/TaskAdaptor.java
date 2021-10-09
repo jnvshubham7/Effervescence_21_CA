@@ -1,12 +1,15 @@
 package com.example.effe_21ca.Adaptors;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.Placeholder;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.effe_21ca.R;
@@ -19,7 +22,7 @@ import java.util.ArrayList;
 
 public class TaskAdaptor extends FirebaseRecyclerAdapter<TASKS,TaskAdaptor.TaskViewholder>{
 
-
+    Context context;
 
 
     public TaskAdaptor(@NonNull FirebaseRecyclerOptions<TASKS> options) {
@@ -31,7 +34,17 @@ public class TaskAdaptor extends FirebaseRecyclerAdapter<TASKS,TaskAdaptor.TaskV
 
         holder.title.setText(model.getTitle());
         holder.link.setText(model.getLink());
-        holder.points.setText(model.getPoint());
+
+        holder.link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                 Intent intent=new Intent(Intent.ACTION_SEND);
+
+
+            }
+        });
+
+
 
     }
 
@@ -47,12 +60,14 @@ public class TaskAdaptor extends FirebaseRecyclerAdapter<TASKS,TaskAdaptor.TaskV
 
     class TaskViewholder extends RecyclerView.ViewHolder {
 
-        TextView title,link,points;
+        TextView title,link;
         public TaskViewholder(@NonNull View itemView) {
             super(itemView);
             title=itemView.findViewById(R.id.event_title);
             link=itemView.findViewById(R.id.event_description);
-            points=itemView.findViewById(R.id.points);
+            // points=itemView.findViewById(R.id.points);
+
+
 
         }
     }

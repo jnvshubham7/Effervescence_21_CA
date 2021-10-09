@@ -1,19 +1,14 @@
 package com.example.effe_21ca.models;
 
 public class Users {
-    String profilepic,userName,mail,passwoord,userId,points;
+    String userName,mail,passwoord,userId;
+    int score;
+    boolean isCurrentUser;
 
-    public Users(String profilepic, String userName, String mail, String passwoord, String userId, String points) {
-        this.profilepic = profilepic;
+    public Users(String userName, int score, boolean isCurrentUser) {
         this.userName = userName;
-        this.mail = mail;
-        this.passwoord = passwoord;
-        this.userId = userId;
-        this.points = points;
-    }
-
-    public Users(){
-
+        this.score = score;
+        this.isCurrentUser = isCurrentUser;
     }
     public Users( String userName, String mail, String passwoord) {
 
@@ -21,26 +16,26 @@ public class Users {
         this.mail = mail;
         this.passwoord = passwoord;
 
+
     }
 
-    public String getUserId() {
+    public Users(String userName, String mail, String passwoord, int score) {
+        this.userName = userName;
+        this.mail = mail;
+        this.passwoord = passwoord;
+        this.score = score;
+    }
+
+    public Users(){
+
+    }
+
+    public String getUserId(String key) {
         return userId;
     }
 
-    public String getPoints() {
-        return points;
-    }
-
-    public void setPoints(String points) {
-        this.points = points;
-    }
-
-    public String getProfilepic() {
-        return profilepic;
-    }
-
-    public void setProfilepic(String profilepic) {
-        this.profilepic = profilepic;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getUserName() {
@@ -67,11 +62,23 @@ public class Users {
         this.passwoord = passwoord;
     }
 
-    public String getUserId(String key) {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public boolean isCurrentUser() {
+        return isCurrentUser;
+    }
+
+    public void setCurrentUser(boolean currentUser) {
+        isCurrentUser = currentUser;
     }
 }

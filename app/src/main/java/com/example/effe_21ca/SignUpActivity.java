@@ -61,6 +61,7 @@ public class SignUpActivity extends AppCompatActivity {
                 });
             }
         });
+
         binding.tvSignUpToLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

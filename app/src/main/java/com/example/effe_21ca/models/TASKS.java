@@ -1,8 +1,11 @@
 package com.example.effe_21ca.models;
 
+import android.net.Uri;
+
 public class TASKS {
 
     String title,link,point,image;
+
 
     public TASKS() {
     }
@@ -14,15 +17,7 @@ public class TASKS {
 
     }
 
-    @Override
-    public String toString() {
-        return "TASKS{" +
-                "title='" + title + '\'' +
-                ", link='" + link + '\'' +
-                ", points='" + point + '\'' +
 
-                '}';
-    }
 
     public String getTitle() {
         return title;
@@ -33,6 +28,7 @@ public class TASKS {
     }
 
     public String getLink() {
+
         return link;
     }
 
