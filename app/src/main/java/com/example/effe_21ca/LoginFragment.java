@@ -15,6 +15,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.effe_21ca.databinding.FragmentLoginBinding;
 import com.example.effe_21ca.databinding.FragmentSignUpBinding;
+import com.example.effe_21ca.models.Users;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -27,6 +28,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class LoginFragment extends Fragment {
@@ -36,6 +38,7 @@ public class LoginFragment extends Fragment {
     ProgressDialog progressDialog;
     FirebaseAuth auth;
     GoogleSignInClient mGoogleSignInClient;
+    FirebaseDatabase database;
 
     public LoginFragment() {
         // Required empty public constructor
@@ -126,6 +129,22 @@ public class LoginFragment extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+
+//                            GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getActivity());
+//                            if (acct != null) {
+//
+//
+//                                String GoogleName = acct.getDisplayName();
+////                                String personGivenName = acct.getGivenName();
+////                                String personFamilyName = acct.getFamilyName();
+//                                String personEmail = acct.getEmail();
+////                                String personId = acct.getId();
+//                                // Uri personPhoto = acct.getPhotoUrl();
+//                                Users user=new Users(GoogleName,personEmail);
+//                                String id=task.getResult().getUser().getUid();
+//                                database.getReference().child("Users").child(id).setValue(user);
+//                            }
+
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "signInWithCredential:success");
                             FirebaseUser user = auth.getCurrentUser();

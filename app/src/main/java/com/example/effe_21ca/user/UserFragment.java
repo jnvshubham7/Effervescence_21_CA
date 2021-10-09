@@ -10,9 +10,10 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.effe_21ca.databinding.FragmentNotificationsBinding;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class UserFragment extends Fragment {
-    //FirebaseDatabase database;
+    FirebaseDatabase database;
 
     private UserViewModel notificationsViewModel;
 private FragmentNotificationsBinding binding;
@@ -22,8 +23,8 @@ private FragmentNotificationsBinding binding;
         notificationsViewModel =
                 new ViewModelProvider(this).get(UserViewModel.class);
 
-//        database = FirebaseDatabase.getInstance();\
-//        String name = getIntent().getStringExtra("name");
+        database = FirebaseDatabase.getInstance();
+       // String name = getContext().getString("name");
 
     binding = FragmentNotificationsBinding.inflate(inflater, container, false);
     View root = binding.getRoot();

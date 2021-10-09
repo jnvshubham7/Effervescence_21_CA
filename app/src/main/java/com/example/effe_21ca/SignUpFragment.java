@@ -148,9 +148,27 @@ public class SignUpFragment extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+                            GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getActivity());
+                            if (acct != null) {
+
+
+                                String GoogleName = acct.getDisplayName();
+//                                String personGivenName = acct.getGivenName();
+//                                String personFamilyName = acct.getFamilyName();
+                                String personEmail = acct.getEmail();
+//                                String personId = acct.getId();
+                                // Uri personPhoto = acct.getPhotoUrl();
+                                Users user=new Users(GoogleName,personEmail);
+                                String id=task.getResult().getUser().getUid();
+                                database.getReference().child("Users").child(id).setValue(user);
+                            }
+
+
+
+
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "signInWithCredential:success");
-                            FirebaseUser user = Auth.getCurrentUser();
+                          //  FirebaseUser user = Auth.getCurrentUser();
                             Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
                             startActivity(intent);
                             // updateUI(user);
@@ -162,6 +180,8 @@ public class SignUpFragment extends Fragment {
                     }
                 });
     }
+
+
 
 
 

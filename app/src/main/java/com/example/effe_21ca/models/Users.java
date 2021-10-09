@@ -14,6 +14,12 @@ public class Users {
 //        this.isCurrentUser = isCurrentUser;
 //    }
 
+
+    public Users(String userName, String mail) {
+        this.userName = userName;
+        this.mail = mail;
+    }
+
     public Users(String userName, String mail, String passwoord) {
         this.userName = userName;
         this.mail = mail;
