@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -34,7 +35,7 @@ public class TaskAdaptor extends FirebaseRecyclerAdapter<TASKS,TaskAdaptor.TaskV
 
         holder.title.setText(model.getTitle());
         holder.link.setText(model.getLink());
-
+       // holder.points.setText(model.getPoint());
         holder.link.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,9 +45,43 @@ public class TaskAdaptor extends FirebaseRecyclerAdapter<TASKS,TaskAdaptor.TaskV
             }
         });
 
+        holder.upload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                                Intent intent=new Intent();
+                intent.setAction(Intent.ACTION_GET_CONTENT);
+                intent.setType("image/*");
+                // startActivityForResult(intent,33);
+            }
+        });
+
+
+
 
 
     }
+//        @Override
+//    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//
+//        if(data.getData()!=null){
+//
+//            Uri sFile=data.getData();
+//
+//            final StorageReference reference=storage.getReference().child("profile picture")
+//                    .child(FirebaseAuth.getInstance().getUid());
+//            reference.putFile(sFile).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+//                @Override
+//                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+//
+//
+//                    Toast.makeText(getContext(), "Image is Uploaded", Toast.LENGTH_SHORT).show();
+//                }
+//            });
+//
+//        }
+//    }
+
 
     @NonNull
     @Override
@@ -61,11 +96,13 @@ public class TaskAdaptor extends FirebaseRecyclerAdapter<TASKS,TaskAdaptor.TaskV
     class TaskViewholder extends RecyclerView.ViewHolder {
 
         TextView title,link;
+        Button upload;
         public TaskViewholder(@NonNull View itemView) {
             super(itemView);
             title=itemView.findViewById(R.id.event_title);
             link=itemView.findViewById(R.id.event_description);
-            // points=itemView.findViewById(R.id.points);
+            upload=itemView.findViewById(R.id.upload_button);
+            // points=itemView.findViewById(R.id.events_points);
 
 
 
