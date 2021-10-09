@@ -4,11 +4,15 @@ import android.net.Uri;
 
 public class TASKS {
 
+ 
     String title,link,point,image;
 
 
     public TASKS() {
     }
+ 
+    String title,link,point;
+ 
 
     public TASKS(String title, String link, String point) {
         this.title = title;
@@ -17,7 +21,9 @@ public class TASKS {
 
     }
 
+ 
 
+ 
 
     public String getTitle() {
         return title;
@@ -32,17 +38,9 @@ public class TASKS {
         return link;
     }
 
-    public void setLink(String link) {
-        this.link = link;
-    }
-
 
     public String getPoint() {
         return point;
-    }
-
-    public void setPoint(String point) {
-        this.point = point;
     }
 
 

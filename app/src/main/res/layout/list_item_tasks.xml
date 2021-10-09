@@ -20,6 +20,7 @@
         tools:ignore="MissingConstraints">
 
         <LinearLayout
+            android:id="@+id/dasaboardRecycleview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -50,8 +51,8 @@
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_marginEnd="1dp"
-                        android:src="@drawable/add_ic"
-                        android:layout_marginRight="1dp" />
+                        android:layout_marginRight="1dp"
+                        android:src="@drawable/add_ic" />
 
                     <TextView
                         android:id="@+id/events_points"
@@ -59,11 +60,11 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="2dp"
+                        android:layout_marginRight="2dp"
                         android:text="10"
                         android:textColor="@color/black"
                         android:textSize="20sp"
-                        android:textStyle="bold"
-                        android:layout_marginRight="2dp" />
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/point_text_TV"
@@ -71,10 +72,10 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom"
                         android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
                         android:gravity="top"
                         android:text="pts"
-                        android:textAppearance="?android:textAppearanceSmall"
-                        android:layout_marginRight="5dp" />
+                        android:textAppearance="?android:textAppearanceSmall" />
 
                 </LinearLayout>
 
@@ -94,15 +95,15 @@
                 android:layout_height="36dp"
                 android:layout_gravity="end"
                 android:backgroundTint="@color/colorPrimary"
-                android:minHeight="0dp"
-                android:minWidth="0dp"
                 android:drawableStart="@drawable/ic_file_upload"
+                android:drawableLeft="@drawable/ic_file_upload"
                 android:includeFontPadding="false"
+                android:minWidth="0dp"
+                android:minHeight="0dp"
                 android:text="Upload"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="13sp"
-                android:drawableLeft="@drawable/ic_file_upload" />
+                android:textSize="13sp" />
 
         </LinearLayout>
 
