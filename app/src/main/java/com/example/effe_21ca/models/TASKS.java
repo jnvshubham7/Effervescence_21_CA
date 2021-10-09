@@ -1,6 +1,5 @@
 package com.example.effe_21ca.models;
 
-import android.net.Uri;
 
 public class TASKS {
 
@@ -11,7 +10,7 @@ public class TASKS {
     public TASKS() {
     }
  
-    String title,link,point;
+
  
 
     public TASKS(String title, String link, String point) {
