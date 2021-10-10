@@ -46,11 +46,22 @@
         android:gravity="top"
         android:lineSpacingExtra="0sp"
         android:text="Hey"
-        android:textAppearance="@style/title" />
+        android:textAppearance="@style/title"
+        android:textSize="30sp" />
 
 
     <!-- image 296 -->
 
+    <!--    <View-->
+<!--        android:id="@+id/image_296"-->
+<!--        android:layout_width="48dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginLeft="232dp"-->
+<!--        android:layout_marginTop="176dp"-->
+<!--        android:background="@drawable/image" />-->
+    <!-- You are currently at 5th Position with 800 Points -->
     <TextView
         android:id="@+id/nameUser"
         android:layout_width="301dp"
@@ -63,25 +74,24 @@
         android:layout_alignParentBottom="false"
         android:layout_marginLeft="12dp"
         android:layout_marginTop="173dp"
-        android:layout_marginEnd="-206dp"
-        android:layout_marginRight="-206dp"
+        android:layout_marginEnd="-175dp"
+        android:layout_marginRight="-175dp"
         android:layout_marginBottom="491dp"
         android:gravity="top"
         android:lineSpacingExtra="0sp"
         android:text="User"
         android:textAppearance="@style/title"
-        android:textSize="34sp" />
+        android:textSize="30sp" />
+<!--        <View-->
+<!--            android:id="@+id/image_296"-->
+<!--            android:layout_width="48dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_marginLeft="232dp"-->
+<!--            android:layout_marginTop="176dp"-->
+<!--            android:background="@drawable/image" />-->
 
-    <View
-        android:id="@+id/image_296"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="232dp"
-        android:layout_marginTop="176dp"
-        android:background="@drawable/image" />
-    <!-- You are currently at 5th Position with 800 Points -->
     <TextView
         android:id="@+id/you_are_cur"
         android:layout_width="312dp"
