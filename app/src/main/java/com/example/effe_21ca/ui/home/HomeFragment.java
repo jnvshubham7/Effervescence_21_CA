@@ -1,7 +1,8 @@
 package com.example.effe_21ca.ui.home;
 
   import android.os.Bundle;
-import android.view.LayoutInflater;
+  import android.util.Log;
+  import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -20,6 +21,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 
 import java.util.ArrayList;
+  import java.util.Collections;
+  import java.util.Comparator;
   import java.util.HashMap;
 
 public class HomeFragment extends Fragment {
@@ -91,21 +94,51 @@ public class HomeFragment extends Fragment {
 //                            .child(FirebaseAuth.getInstance().getUid())
 //                            .orderByChild("userName");
                     //
-//                    Collections.sort(list, new Comparator<Users>(){
-//                        public int compare(Users obj1, Users obj2) {
-//                            // ## Ascending order
-//                            //return obj1.getScore().compareToIgnoreCase(obj2.getScore()); // To compare string values
-//                             return Integer.valueOf(obj1.getScore()).compareTo(Integer.valueOf(obj2.getScore())); // To compare integer values
+
+//                    System.out.println(user.getScore());
 //
-//                            // ## Descending order
-//                            // return obj2.firstName.compareToIgnoreCase(obj1.firstName); // To compare string values
-//                        }
-//                    });
+
+                  //  Log. d("myTag", "This is my message");
                    // list.add(users);
 
 
                 }
+
+                Collections.sort(list, new Comparator<Users>(){
+                    public int compare(Users obj1, Users obj2) {
+                       // Log.d("myTag", "This is my message");
+
+                        return Integer.compare(obj1.getScore(), obj2.getScore()); // To compare integer values
+
+
+
+
+                    }
+                });
+
                 adaptor.notifyDataSetChanged();
+
+
+                // ## Ascending order
+                //return obj1.getScore().compareToIgnoreCase(obj2.getScore()); // To compare string values
+              //  int temp = 0;
+//                            if (obj1.getScore() < obj2.getScore()) {
+//
+
+
+
+//                                // Swapping
+//                                temp = obj1.getScore();
+//                                obj1.getScore() = obj2.getScore();
+//                                obj2.getScore() = temp;
+                // }
+
+                //  System.out.println(obj1.getScore());
+
+
+
+                // ## Descending order
+                // return obj2.firstName.compareToIgnoreCase(obj1.firstName); // To compare string values
 
 
             }
