@@ -49,16 +49,19 @@
 
     <!-- image 296 -->
 
-    <!--    <View-->
-    <!--        android:id="@+id/image_296"-->
-    <!--        android:layout_width="48dp"-->
-    <!--        android:layout_height="48dp"-->
-    <!--        android:layout_alignParentLeft="true"-->
-    <!--        android:layout_alignParentTop="true"-->
-    <!--        android:layout_marginLeft="232dp"-->
-    <!--        android:layout_marginTop="176dp"-->
-    <!--        android:background="@drawable/image" />-->
     <!-- You are currently at 5th Position with 800 Points -->
+<!--    <View-->
+<!--        android:id="@+id/image_296"-->
+<!--        android:layout_width="48dp"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:layout_alignTop="@+id/nameUser"-->
+<!--        android:layout_alignBottom="@+id/nameUser"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:layout_marginLeft="380dp"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginBottom="11dp"-->
+<!--        android:background="@drawable/image" />-->
+
     <TextView
         android:id="@+id/nameUser"
         android:layout_width="301dp"

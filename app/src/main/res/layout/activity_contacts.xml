@@ -150,7 +150,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Any Other Issue"
+            android:text="General Issues"
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
