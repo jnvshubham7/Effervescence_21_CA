@@ -95,8 +95,8 @@ public class DashboardFragment extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Log.d("massage", "s");
-     //   Toast.makeText(getContext(), "image selected", Toast.LENGTH_SHORT).show();
+       // Log.d("massage", "s");
+       // Toast.makeText(getContext(), "image selected", Toast.LENGTH_SHORT).show();
 
 //        if(data.getData()!=null){
 
