@@ -51,13 +51,13 @@ public class Contacts_Activity extends AppCompatActivity {
         Callimg2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CallButton();
+                CallButton2();
             }
         });
         Callimg3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CallButton();
+                CallButton3();
             }
         });
         Callimg4.setOnClickListener(new View.OnClickListener() {
@@ -91,7 +91,33 @@ public class Contacts_Activity extends AppCompatActivity {
 
 
     private void CallButton() {
-        String number="1234567891";
+        String number="6299360050";
+        if(number.trim().length()>0){
+            if(ContextCompat.checkSelfPermission(Contacts_Activity.this, Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
+                ActivityCompat.requestPermissions(Contacts_Activity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
+            }
+            else{
+                String dial="tel:"+number;
+                startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+            }
+
+        }
+    }
+    private void CallButton2() {
+        String number="8875679288";
+        if(number.trim().length()>0){
+            if(ContextCompat.checkSelfPermission(Contacts_Activity.this, Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
+                ActivityCompat.requestPermissions(Contacts_Activity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
+            }
+            else{
+                String dial="tel:"+number;
+                startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+            }
+
+        }
+    }
+    private void CallButton3() {
+        String number="9167026346";
         if(number.trim().length()>0){
             if(ContextCompat.checkSelfPermission(Contacts_Activity.this, Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
                 ActivityCompat.requestPermissions(Contacts_Activity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);

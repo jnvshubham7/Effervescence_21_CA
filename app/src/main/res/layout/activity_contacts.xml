@@ -29,12 +29,25 @@
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold" />
+        <TextView
+            android:id="@+id/we_re_here_"
+            android:layout_width="314dp"
+            android:layout_height="88dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="23dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/we_re_here_"
+            android:textAppearance="@style/we_re_here_"
+            android:gravity="center_vertical"
+            />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="20dp"
+            android:autoLink="email"
             android:text="Email: app@effervescence.org"
             android:textSize="18sp" />
 
@@ -60,7 +73,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sashank Mishra"
+                android:text="Shubham Kumar Bhokta"
                 android:textSize="18sp" />
 
             <View
@@ -93,7 +106,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sashank Mishra"
+                android:text="Ashish Agrawal"
                 android:textSize="18sp" />
 
             <View
@@ -124,7 +137,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sashank Mishra"
+                android:text="Janhavi Bawaskar"
                 android:textSize="18sp" />
 
             <View
@@ -147,6 +160,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:layout_marginTop="32dp"
+            android:autoLink="email"
             android:text="Email: team@effervescence.org"
             android:textSize="18sp" />
 
