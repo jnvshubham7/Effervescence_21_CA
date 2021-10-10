@@ -92,7 +92,7 @@
                 android:orientation="horizontal">
 
 
-                <com.google.android.gms.common.SignInButton
+                <TextView
                     android:id="@+id/GoogleLogin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -104,7 +104,7 @@
                     android:drawableLeft="@drawable/ic__993685_brand_brands_google_logo_logos_icon"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:text="Sign in with Google"
+                    android:text="Sign In with Google"
                     android:textColor="@color/backgroundopacity" />
             </LinearLayout>
 

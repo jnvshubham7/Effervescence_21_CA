@@ -59,6 +59,22 @@ public class HomeFragment extends Fragment {
 //        database.getReference().child("Users")
 //                .child(FirebaseAuth.getInstance().getUid())
 //                .updateChildren(obj);
+        //
+//                            //Get user map
+//                            Map singleUser = (Map) entry.getValue();
+//                            //Get phone field and append to list
+//                             score.add((Long) singleUser.get("score"));
+//                        }
+//
+//                          Log.i("score",score.toString());
+//
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(DatabaseError databaseError) {
+//                        //handle databaseError
+//                    }
+//                });
 
 
         database.getReference().child("Users").addValueEventListener(new ValueEventListener() {
@@ -74,6 +90,19 @@ public class HomeFragment extends Fragment {
 //                    FirebaseDatabase.getInstance().getReference().child("Users")
 //                            .child(FirebaseAuth.getInstance().getUid())
 //                            .orderByChild("userName");
+                    //
+//                    Collections.sort(list, new Comparator<Users>(){
+//                        public int compare(Users obj1, Users obj2) {
+//                            // ## Ascending order
+//                            //return obj1.getScore().compareToIgnoreCase(obj2.getScore()); // To compare string values
+//                             return Integer.valueOf(obj1.getScore()).compareTo(Integer.valueOf(obj2.getScore())); // To compare integer values
+//
+//                            // ## Descending order
+//                            // return obj2.firstName.compareToIgnoreCase(obj1.firstName); // To compare string values
+//                        }
+//                    });
+                   // list.add(users);
+
 
                 }
                 adaptor.notifyDataSetChanged();

@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.effe_21ca.models.Users;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -25,10 +26,16 @@ import androidx.navigation.ui.NavigationUI;
 import com.example.effe_21ca.databinding.ActivityBottomNavigationBinding;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+
+import java.util.HashMap;
 
 public class Bottom_Navigation_Activity extends AppCompatActivity {
 
@@ -121,6 +128,25 @@ FirebaseAuth auth;
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
+                    DatabaseReference reference1=FirebaseDatabase.getInstance().getReference().child("Users")
+                            .child(FirebaseAuth.getInstance().getUid());
+
+                    reference1.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            Users user =  snapshot.getValue(Users.class);
+                            int ScoreN= user.getScore()+50;
+                            HashMap<String,Object> obj=new HashMap<>();
+                            obj.put("score",ScoreN);
+                            database.getReference().child("Users")
+                                    .child(FirebaseAuth.getInstance().getUid())
+                                    .updateChildren(obj);
+                            Toast.makeText(Bottom_Navigation_Activity.this, "points added", Toast.LENGTH_SHORT).show();
+                        }
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                        }
+                    });
 
                     Toast.makeText(Bottom_Navigation_Activity.this, "Image is Uploaded", Toast.LENGTH_SHORT).show();
                 }

@@ -37,7 +37,10 @@ public class Users_Adapter extends RecyclerView.Adapter<Users_Adapter.UsersViewH
         Users user = users.get(position);
 
         holder.userName.setText(user.getUserName());
- 
+        holder.userName.setText(user.getUserName());
+        holder.score.setText(String.valueOf(user.getScore()));
+        // TextView.setText(String.valueOf(int)).
+        holder.srNoTextView.setText(String.valueOf(position+1));
 
 //        holder.itemView.setOnClickListener(v -> {
 //            Intent intent = new Intent(context, UserFragment.class);
@@ -55,13 +58,13 @@ public class Users_Adapter extends RecyclerView.Adapter<Users_Adapter.UsersViewH
 
     public static class UsersViewHolder extends RecyclerView.ViewHolder {
 
-        TextView userName,srNoTextView,points;
+        TextView userName,srNoTextView,score;
 
         public UsersViewHolder(@NonNull View itemView) {
             super(itemView);
             userName = itemView.findViewById(R.id.name1);
             srNoTextView=itemView.findViewById(R.id.srNoTextView);
-            points=itemView.findViewById(R.id.points);
+            score=itemView.findViewById(R.id.Score);
 
             //  binding = RowConversationBinding.bind(itemView);
         }

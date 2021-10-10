@@ -15,6 +15,9 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserInfo;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.DateFormat;
+import java.util.Calendar;
+
 public class UserFragment extends Fragment {
     //FirebaseDatabase database;
 
@@ -29,8 +32,13 @@ public class UserFragment extends Fragment {
 //        database = FirebaseDatabase.getInstance();\
 //        String name = getIntent().getStringExtra("name");
 
+
         binding = FragmentNotificationsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+
+        Calendar calendar = Calendar.getInstance();
+        String currentDate = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.getTime());
+        binding.date.setText(currentDate);
 
 //    binding.nameUser.setText((CharSequence) FirebaseDatabase.getInstance().getReference().child("Users")
 //            .child(FirebaseAuth.getInstance().getUid()).
@@ -47,7 +55,7 @@ public class UserFragment extends Fragment {
         if (user != null) {
             // User is signed in
             String displayName = user.getDisplayName();
-          //  Uri profileUri = user.getPhotoUrl();
+            //  Uri profileUri = user.getPhotoUrl();
 
             // If the above were null, iterate the provider data
             // and set with the first non null data
@@ -56,10 +64,10 @@ public class UserFragment extends Fragment {
                     displayName = userInfo.getDisplayName();
                 }
 
-                }
+            }
 
 
-        binding.nameUser.setText(displayName);
+            binding.nameUser.setText(displayName);
 
 
         }
