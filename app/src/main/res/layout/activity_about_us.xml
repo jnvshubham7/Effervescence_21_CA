@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/baseBackground2"
+    android:background="@color/gray0"
     tools:context=".AboutCA_Activity">
 <LinearLayout
     android:layout_width="match_parent"
@@ -31,7 +31,7 @@
         android:layout_width="458dp"
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
-        android:background="@color/baseBackground2"
+        android:background="@color/gray0"
         android:fontFamily="@font/abeezee"
         android:text="About Effervescence"
 
@@ -51,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/abeezee"
-        android:background="@color/baseBackground2"
+        android:background="@color/gray0"
         android:textColor="@color/baseTextPara"
         android:text="IIIT Allahabad is one of the leading institutes all over India, where innumerable talented individuals gain experiences and attain unprecedented professional crests in their expedition.
 Effervescence, one of the most prodigious fests over colleges of North India, is the once-a-year cultural epitome of IIIT Allahabad.
