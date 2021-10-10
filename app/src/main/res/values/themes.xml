@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.Effe21CA" parent="Theme.AppCompat.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryVariant">@color/baseBackground3</item>
+        <item name="colorPrimary">@color/baseBackground3</item>
+        <item name="colorPrimaryVariant">@color/botomnev</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

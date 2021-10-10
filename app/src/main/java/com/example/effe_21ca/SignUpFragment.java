@@ -13,8 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import com.example.effe_21ca.databinding.ActivitySignInBinding;
-import com.example.effe_21ca.databinding.FragmentSignUpBinding;
+ import com.example.effe_21ca.databinding.FragmentSignUpBinding;
 import com.example.effe_21ca.models.Users;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;

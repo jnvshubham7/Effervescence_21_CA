@@ -27,6 +27,7 @@ import com.google.firebase.storage.FirebaseStorage;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Objects;
 
@@ -102,59 +103,7 @@ public class HomeFragment extends Fragment {
 
 
         database = FirebaseDatabase.getInstance();
-       // storage = FirebaseStorage.getInstance();
-//        String name = getActivity().getIntent().getStringExtra("username");
-//
-//        Users = new ArrayList<>();
-//        database.getReference().child("Users").child(Objects.requireNonNull(FirebaseAuth.getInstance().getUid()))
-//                .addValueEventListener(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                        user = snapshot.getValue(Users.class);
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError error) {
-//
-//                    }
-//                });
-//
-//        Users_Adapter = new Users_Adapter(getContext(), Users);
-//
-//
-//        binding.leaderBoardRecycleView.setAdapter(Users_Adapter);
-//
-//
-//        String userName = getActivity().getIntent().getStringExtra("userName");
-//        binding..setText(userName);
-//
-//        database.getReference().child("Users").addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                Users.clear();
-//                for(DataSnapshot snapshot1 : snapshot.getChildren()) {
-//                    Users user = snapshot1.getValue(Users.class);
-//                //   assert user != null;
-//                //   if(!user.getUid().equals(FirebaseAuth.getInstance().getUid()))
-//                        Users.add(user);
-//                }
-//
-//                Users_Adapter.notifyDataSetChanged();
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
-//
-//       // final TextView textView = binding.textHome;
-//        homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//                textView.setText(s);
-//            }
-//        });
+
 
         Users_Adapter adaptor=new Users_Adapter(getContext(), list);
         binding.leaderBoardRecycleView.setAdapter(adaptor);
@@ -174,6 +123,15 @@ public class HomeFragment extends Fragment {
 
                 }
                 adaptor.notifyDataSetChanged();
+                Collections.sort(list, new Comparator<Users>(){
+                        public int compare(Users obj1, Users obj2) {
+
+
+                         return Integer.valueOf(obj2.getScore()).compareTo(Integer.valueOf(obj1.getScore())); // To compare integer values
+
+                       }
+
+                   });
             }
 
             @Override

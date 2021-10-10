@@ -61,7 +61,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="2dp"
                         android:layout_marginRight="2dp"
-                        android:text="10"
+                        android:text="50"
                         android:textColor="@color/black"
                         android:textSize="20sp"
                         android:textStyle="bold" />
