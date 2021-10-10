@@ -92,20 +92,20 @@
                 android:orientation="horizontal">
 
 
-
-                <TextView
+                <com.google.android.gms.common.SignInButton
                     android:id="@+id/GoogleLogin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
-                    android:layout_weight="1"
-                    android:background="@color/colorAccent"
-                    android:drawableLeft="@drawable/googlea"
+                    android:layout_margin="80dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="5dp"
+
+                    android:layout_weight="10"
+                    android:drawableLeft="@drawable/ic__993685_brand_brands_google_logo_logos_icon"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:text="Google"
-                    android:textColor="#FAF6F6"
-                    android:layout_marginLeft="5dp" />
+                    android:text="Sign in with Google"
+                    android:textColor="@color/backgroundopacity" />
             </LinearLayout>
 
 

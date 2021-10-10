@@ -69,10 +69,16 @@ public class HomeFragment extends Fragment {
                 for(DataSnapshot dataSnapshot:snapshot.getChildren()){
                     Users users=dataSnapshot.getValue(Users.class);
                     users.getUserId(dataSnapshot.getKey());
+
                     list.add(users);
+//                    FirebaseDatabase.getInstance().getReference().child("Users")
+//                            .child(FirebaseAuth.getInstance().getUid())
+//                            .orderByChild("userName");
 
                 }
                 adaptor.notifyDataSetChanged();
+
+
             }
 
             @Override

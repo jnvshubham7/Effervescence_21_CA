@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/drawable-v24/ic_multicity.xml" value="0.12777777777777777" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/drawable-v24/ic_participation.xml" value="0.12777777777777777" />
+        <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/drawable/ic__993685_brand_brands_google_logo_logos_icon.xml" value="0.403125" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/drawable/ic_social.xml" value="0.12777777777777777" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/activity_about_ca.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/activity_about_us.xml" value="0.25" />
@@ -26,8 +27,9 @@
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/activity_upload.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/fragment_dashboard.xml" value="0.21875" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/fragment_login.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/fragment_notifications.xml" value="0.25" />
-        <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/fragment_sign_up.xml" value="0.21875" />
+        <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/fragment_sign_up.xml" value="0.5" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/list_item1_leaderboard.xml" value="0.38697916666666665" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/list_item_leaderboard.xml" value="0.38645833333333335" />
         <entry key="..\:/Users/Shubham/Documents/GitHub/Effe-21CA/app/src/main/res/layout/list_item_tasks.xml" value="0.2916666666666667" />
