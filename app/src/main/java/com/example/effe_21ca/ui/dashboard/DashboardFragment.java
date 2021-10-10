@@ -56,6 +56,7 @@ public class DashboardFragment extends Fragment {
 
         LinearLayoutManager layoutManager=new LinearLayoutManager(getContext());
         binding.dasaboardRecycleview.setLayoutManager(layoutManager);
+        binding.dasaboardRecycleview.setItemAnimator(null);
 
 
         FirebaseRecyclerOptions<TASKS> options =
@@ -90,32 +91,6 @@ public class DashboardFragment extends Fragment {
 
 
         return root;
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-       // Log.d("massage", "s");
-       // Toast.makeText(getContext(), "image selected", Toast.LENGTH_SHORT).show();
-
-//        if(data.getData()!=null){
-
-
-//
-//            Uri sFile=data.getData();
-//
-//            final StorageReference reference=storage.getReference().child("profile picture")
-//                    .child(FirebaseAuth.getInstance().getUid());
-//            reference.putFile(sFile).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-//                @Override
-//                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-//
-//
-//                    Toast.makeText(getContext(), "Image is Uploaded", Toast.LENGTH_SHORT).show();
-//                }
-//            });
-//
-  //     }
     }
 
     @Override
