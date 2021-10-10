@@ -48,8 +48,7 @@ public class Users {
 
     }
 
-    public String getUserId(String key) {
-        return userId;
+    public void getUserId(String key) {
     }
 
     public void setUserId(String userId) {

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/baseBackground2"
     tools:context=".AboutCA_Activity">
 <LinearLayout
     android:layout_width="match_parent"
@@ -14,6 +15,7 @@
     android:layout_marginEnd="12dp"
     android:layout_marginRight="12dp"
     android:orientation="vertical"
+
     tools:context=".About_Us">
 
 
@@ -26,12 +28,37 @@
 
     <TextView
         android:id="@+id/textView11"
+        android:layout_width="458dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/baseBackground2"
+        android:fontFamily="@font/abeezee"
+        android:text="About Effervescence"
+
+        android:textColor="@color/baseTextHeader"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+<!--    <ImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="144dp"-->
+<!--        android:src="@drawable/effelogoh"-->
+<!--        android:layout_gravity="center"/>-->
+
+    <TextView
+        android:id="@+id/textView12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/abeezee"
-        android:text="About Effervescence"
-        android:textColor="#000000"
-        android:textSize="24sp" />
+        android:background="@color/baseBackground2"
+        android:textColor="@color/baseTextPara"
+        android:text="IIIT Allahabad is one of the leading institutes all over India, where innumerable talented individuals gain experiences and attain unprecedented professional crests in their expedition.
+Effervescence, one of the most prodigious fests over colleges of North India, is the once-a-year cultural epitome of IIIT Allahabad.
+This carnival that illuminates the essence and ethos of IIITA, is known for its grand staged performances, diverse events with overwhelming participation and an assortment of nationally known artists.
+Over the years, the fest has risen to great standards - its popularity ramped up, reach extended far and wide to national circuits, and its name became a by-word for a grand celebration. The fest garners a total footfall of about 21k, with participants from over 150 colleges of the country. Our online events have been a real eye-opener, with participation from over 25 countries."
+        android:textSize="18sp" />
+
 </LinearLayout>
+
 </ScrollView>
