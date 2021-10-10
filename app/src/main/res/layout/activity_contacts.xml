@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/callimg" />
+                app:srcCompat="@drawable/ic_group_36628" />
 
             <View
                 android:layout_width="50dp"
@@ -84,7 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/callimg" />
+                app:srcCompat="@drawable/ic_group_36628" />
 
             <View
                 android:layout_width="50dp"
@@ -115,7 +115,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/callimg" />
+                app:srcCompat="@drawable/ic_group_36628" />
 
             <View
                 android:layout_width="50dp"
@@ -163,7 +163,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/callimg" />
+                app:srcCompat="@drawable/ic_group_36628" />
 
             <View
                 android:layout_width="50dp"
@@ -195,7 +195,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/callimg" />
+                app:srcCompat="@drawable/ic_group_36628" />
 
             <View
                 android:layout_width="50dp"
@@ -226,7 +226,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/callimg" />
+                app:srcCompat="@drawable/ic_group_36628" />
 
             <View
                 android:layout_width="50dp"
@@ -257,7 +257,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/callimg" />
+                app:srcCompat="@drawable/ic_group_36628" />
 
             <View
                 android:layout_width="50dp"

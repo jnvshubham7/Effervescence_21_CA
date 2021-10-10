@@ -33,7 +33,7 @@
         android:layout_marginBottom="0dp"
         android:gravity="center|center_horizontal"
         android:text="EFFERVESCENCE'21"
-        android:textColor="#E91E63"
+        android:textColor="#03A9F4"
         android:textSize="34sp"
         android:textStyle="bold" />
 </RelativeLayout>
