@@ -102,12 +102,12 @@
         android:fontFamily="sans-serif"
         android:text=" pts"
         android:textColor="@color/baseTextPara"
-        app:layout_constraintBottom_toBottomOf="@+id/points"
+        app:layout_constraintBottom_toBottomOf="@+id/Score"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginRight="8dp" />
 
     <TextView
-        android:id="@+id/points"
+        android:id="@+id/Score"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif"

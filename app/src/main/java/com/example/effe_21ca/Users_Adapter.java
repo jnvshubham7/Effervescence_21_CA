@@ -94,6 +94,7 @@ package com.example.effe_21ca;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -136,13 +137,24 @@ public class Users_Adapter extends RecyclerView.Adapter<Users_Adapter.UsersViewH
     @Override
     public void onBindViewHolder(@NonNull UsersViewHolder holder, int position) {
         Users user = users.get(position);
-
-
-
-
-
-
         holder.userName.setText(user.getUserName());
+        holder.score.setText(String.valueOf(user.getScore()));
+        // TextView.setText(String.valueOf(int)).
+        holder.srNoTextView.setText(String.valueOf(position+1));
+
+
+
+
+
+
+    }
+//                        Log.i("score",score.toString());
+//}
+//    @Override
+//    public void onCancelled(DatabaseError databaseError) {
+//        //handle databaseError
+//    }
+//});
 
 
 //        holder.itemView.setOnClickListener(v -> {
@@ -152,7 +164,7 @@ public class Users_Adapter extends RecyclerView.Adapter<Users_Adapter.UsersViewH
 //            intent.putExtra("uid", user.getUid());
 //            context.startActivity(intent);
 //        });
-    }
+ //   }
 
     @Override
     public int getItemCount() {
@@ -161,11 +173,13 @@ public class Users_Adapter extends RecyclerView.Adapter<Users_Adapter.UsersViewH
 
     public static class UsersViewHolder extends RecyclerView.ViewHolder {
 
-        TextView userName;
+        TextView userName,srNoTextView,score;;
 
         public UsersViewHolder(@NonNull View itemView) {
             super(itemView);
             userName = itemView.findViewById(R.id.name1);
+            srNoTextView=itemView.findViewById(R.id.srNoTextView);
+            score=itemView.findViewById(R.id.Score);
 
             //  binding = RowConversationBinding.bind(itemView);
         }
