@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.059"
-        app:srcCompat="@drawable/logo1" />
+        app:srcCompat="@drawable/ic_group_36563" />
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/switchBtn"
@@ -48,7 +48,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.355"
-        app:srcCompat="@drawable/effe1" />
+        app:srcCompat="@drawable/ic_group_36598" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

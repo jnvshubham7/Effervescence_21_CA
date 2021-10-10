@@ -49,7 +49,7 @@
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
         android:layout_marginBottom="20dp"
-        app:srcCompat="@drawable/bell" />
+        app:srcCompat="@drawable/ic_bell" />
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
