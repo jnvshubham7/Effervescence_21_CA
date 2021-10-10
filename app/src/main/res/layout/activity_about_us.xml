@@ -64,6 +64,78 @@ This carnival that illuminates the essence and ethos of IIITA, is known for its 
 Over the years, the fest has risen to great standards - its popularity ramped up, reach extended far and wide to national circuits, and its name became a by-word for a grand celebration. The fest garners a total footfall of about 21k, with participants from over 150 colleges of the country. Our online events have been a real eye-opener, with participation from over 25 countries."
         android:textSize="18sp" />
 
+    <TextView
+        android:id="@+id/colo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:text="Email Id"
+        android:textColor="@color/baseTextHeader"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:autoLink="email"
+        android:text="effervescence@iiita.ac.in"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:text="Website Link"
+        android:textColor="@color/baseTextHeader"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:autoLink="web"
+        android:text="https://effe.org.in/"
+        />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:text="FOLLOW US"
+        android:textColor="@color/baseTextHeader"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:autoLink="web"
+        android:text="https://www.facebook.com/effervescence.iiita/"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:autoLink="web"
+        android:text="https://www.instagram.com/goeffervescence/"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:autoLink="web"
+        android:text="https://twitter.com/goeffervescence"
+        />
+
+
+
 </LinearLayout>
 
 </ScrollView>
