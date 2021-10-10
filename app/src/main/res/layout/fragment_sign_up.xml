@@ -117,7 +117,7 @@
                     android:drawableLeft="@drawable/ic__993685_brand_brands_google_logo_logos_icon"
                     android:gravity="center"
                     android:padding="10dp"
-                    android:text="Sign up with Google"
+                    android:text="Sign Up with Google"
                     android:textColor="@color/backgroundopacity" />
             </LinearLayout>
 
