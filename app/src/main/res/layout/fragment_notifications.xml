@@ -7,394 +7,188 @@
     tools:context=".ui.Leaderboard.HomeFragment">
 
 
-    <!-- Date -->
-    <TextView
-        android:id="@+id/date"
-        android:layout_width="183dp"
-        android:layout_height="26dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="148dp"
-        android:gravity="top"
-        android:lineSpacingExtra="0sp"
-        android:text="@string/date"
-        android:textAppearance="@style/date"
-        android:textColor="#F44336" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp"
+        android:background="@color/gray0">
 
 
-    <!-- Title -->
-    <TextView
-        android:id="@+id/hey"
-        android:layout_width="301dp"
-        android:layout_height="67dp"
-        android:layout_alignEnd="@+id/date"
-        android:layout_alignRight="@+id/date"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentTop="false"
-        android:layout_alignParentRight="false"
-        android:layout_alignParentBottom="false"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="173dp"
-        android:layout_marginEnd="-114dp"
-        android:layout_marginRight="-114dp"
-        android:layout_marginBottom="491dp"
-        android:gravity="top"
-        android:lineSpacingExtra="0sp"
-        android:text="Hey,"
-        android:textAppearance="@style/title"
-        android:textColor="#09186C"
-        android:textSize="30sp" />
+        <!-- Date -->
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="183dp"
+            android:layout_height="26dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:gravity="top"
+            android:lineSpacingExtra="0sp"
+            android:text="@string/date"
+            android:textAppearance="@style/date"
+            android:textColor="#F44336" />
 
 
-    <!-- image 296 -->
-
-    <!-- You are currently at 5th Position with 800 Points -->
-<!--    <View-->
-<!--        android:id="@+id/image_296"-->
-<!--        android:layout_width="48dp"-->
-<!--        android:layout_height="48dp"-->
-<!--        android:layout_alignTop="@+id/nameUser"-->
-<!--        android:layout_alignBottom="@+id/nameUser"-->
-<!--        android:layout_alignParentLeft="true"-->
-<!--        android:layout_marginLeft="380dp"-->
-<!--        android:layout_marginTop="8dp"-->
-<!--        android:layout_marginBottom="11dp"-->
-<!--        android:background="@drawable/image" />-->
-
-    <TextView
-        android:id="@+id/nameUser"
-        android:layout_width="301dp"
-        android:layout_height="67dp"
-        android:layout_alignEnd="@+id/date"
-        android:layout_alignRight="@+id/date"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentTop="false"
-        android:layout_alignParentRight="false"
-        android:layout_alignParentBottom="false"
-        android:layout_marginLeft="12dp"
-        android:layout_marginTop="173dp"
-        android:layout_marginEnd="-175dp"
-        android:layout_marginRight="-175dp"
-        android:layout_marginBottom="491dp"
-        android:gravity="top"
-        android:lineSpacingExtra="0sp"
-        android:text="User"
-        android:textAppearance="@style/title"
-        android:textColor="#09186C"
-        android:textSize="30sp" />
-    <!--        <View-->
-    <!--            android:id="@+id/image_296"-->
-    <!--            android:layout_width="48dp"-->
-    <!--            android:layout_height="48dp"-->
-    <!--            android:layout_alignParentLeft="true"-->
-    <!--            android:layout_alignParentTop="true"-->
-    <!--            android:layout_marginLeft="232dp"-->
-    <!--            android:layout_marginTop="176dp"-->
-    <!--            android:background="@drawable/image" />-->
-
-    <TextView
-        android:id="@+id/score"
-        android:layout_width="312dp"
-        android:layout_height="48dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="254dp"
-        android:gravity="top"
-        android:lineSpacingExtra="3sp"
-        android:text="@string/you_are_cur"
-        android:textAppearance="@style/you_are_cur"
-        android:translationY="-1.5sp" />
+        <!-- Title -->
+        <TextView
+            android:id="@+id/hey"
+            android:layout_width="301dp"
+            android:layout_height="67dp"
+            android:layout_alignEnd="@+id/date"
+            android:layout_alignRight="@+id/date"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentBottom="false"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="-114dp"
+            android:layout_marginRight="-114dp"
+            android:layout_marginBottom="491dp"
+            android:gravity="top"
+            android:lineSpacingExtra="0sp"
+            android:text="Hey,"
+            android:textAppearance="@style/title"
+            android:textColor="#09186C"
+            android:textSize="30sp" />
 
 
-    <!-- You Need 100 points to rank up... -->
-    <TextView
-        android:id="@+id/you_need_10"
-        android:layout_width="316dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="318dp"
-        android:gravity="center_vertical"
-        android:lineSpacingExtra="3sp"
-        android:text="@string/you_need_10"
-        android:textAppearance="@style/you_need_10" />
+        <!-- image 296 -->
+
+        <!-- You are currently at 5th Position with 800 Points -->
+        <!--    <View-->
+        <!--        android:id="@+id/image_296"-->
+        <!--        android:layout_width="48dp"-->
+        <!--        android:layout_height="48dp"-->
+        <!--        android:layout_alignTop="@+id/nameUser"-->
+        <!--        android:layout_alignBottom="@+id/nameUser"-->
+        <!--        android:layout_alignParentLeft="true"-->
+        <!--        android:layout_marginLeft="380dp"-->
+        <!--        android:layout_marginTop="8dp"-->
+        <!--        android:layout_marginBottom="11dp"-->
+        <!--        android:background="@drawable/image" />-->
+
+        <TextView
+            android:id="@+id/nameUser"
+            android:layout_width="301dp"
+            android:layout_height="67dp"
+            android:layout_alignEnd="@+id/date"
+            android:layout_alignRight="@+id/date"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false"
+            android:layout_alignParentRight="false"
+            android:layout_alignParentBottom="false"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="-175dp"
+            android:layout_marginRight="-175dp"
+            android:layout_marginBottom="491dp"
+            android:gravity="top"
+            android:lineSpacingExtra="0sp"
+            android:text="User"
+            android:textAppearance="@style/title"
+            android:textColor="#09186C"
+            android:textSize="30sp" />
+
+<!--        <V-->
+<!--            android:id="@+id/image_296"-->
+<!--            android:layout_width="48dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_alignParentLeft="true"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_marginLeft="250dp"-->
+<!--            android:layout_marginTop="70dp"-->
+<!--            android:layout_alignLeft="@id/nameUser"-->
+<!--            android:background="@drawable/image" />-->
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="312dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="120dp"
+            android:gravity="top"
+            android:lineSpacingExtra="3sp"
+            android:text="score"
+            android:textAppearance="@style/you_are_cur"
+            android:translationY="-1.5sp" />
 
 
-    <!-- Points History -->
-    <!-- Points History -->
-    <TextView
-        android:id="@+id/points_hist"
-        android:layout_width="123dp"
-        android:layout_height="28dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="388dp"
-        android:gravity="center_vertical"
-        android:lineSpacingExtra="1sp"
-        android:text="@string/points_hist"
-        android:textAppearance="@style/points_hist" />
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:layout_alignEnd="@+id/textView3"
+            android:layout_alignRight="@+id/textView3"
+            android:layout_marginTop="91dp"
+            android:layout_marginEnd="-17dp"
+            android:layout_marginRight="-17dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1.18:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/badge" />
 
 
-    <!-- Rectangle 971 -->
-    <View
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/imageView11"
+            android:layout_alignStart="@+id/imageView11"
+            android:layout_alignLeft="@+id/imageView11"
+            android:layout_marginStart="87dp"
+            android:layout_marginLeft="87dp"
+            android:layout_marginTop="21dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="© Effervescence 2021"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/imageView11"
+            android:layout_alignLeft="@+id/imageView11"
+            android:layout_alignEnd="@+id/imageView11"
+            android:layout_alignRight="@+id/imageView11"
+            android:layout_alignBottom="@+id/imageView11"
+            android:layout_marginStart="128dp"
+            android:layout_marginLeft="128dp"
+            android:layout_marginEnd="86dp"
+            android:layout_marginRight="86dp"
+            android:layout_marginBottom="118dp"
+            android:text="50"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
 
 
-        android:id="@+id/rectangle_9"
-        android:layout_width="328dp"
-        android:layout_height="280dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="376dp"
+        <TextView
+            android:id="@+id/Text"
+            android:layout_width="98dp"
+            android:layout_height="48dp"
+            android:layout_alignStart="@+id/imageView11"
+            android:layout_alignLeft="@+id/imageView11"
+            android:layout_alignEnd="@+id/imageView11"
+            android:layout_alignRight="@+id/imageView11"
+            android:layout_alignBottom="@+id/imageView11"
+            android:layout_marginStart="102dp"
+            android:layout_marginLeft="102dp"
+            android:layout_marginEnd="81dp"
+            android:layout_marginRight="81dp"
+            android:layout_marginBottom="137dp"
+            android:text="Your Score"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
 
 
-        android:elevation="4dp" />
-
-
-    <!-- Event 1 -->
-    <TextView
-        android:id="@+id/event_1"
-        android:layout_width="45dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="439dp"
-        android:gravity="top"
-        android:lineSpacingExtra="3sp"
-        android:text="@string/event_1"
-        android:textAppearance="@style/event_1"
-        android:translationY="-1.5sp" />
-
-    <!-- Group 36643 -->
-    <View
-        android:id="@+id/group_36643"
-        android:layout_width="283dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="439dp" />
-
-    <!-- 50 pts -->
-    <TextView
-        android:id="@+id/pts"
-        android:layout_width="43dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="280dp"
-        android:layout_marginTop="439dp"
-        android:gravity="top"
-        android:lineSpacingExtra="3sp"
-        android:text="@string/pts"
-        android:textAppearance="@style/pts"
-        android:textColor="#171515"
-        android:translationY="-1.5sp" />
-
-
-    <View
-        android:id="@+id/group_36644"
-        android:layout_width="283dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="471dp"
-        android:background="#00000000" />
-
-
-    <!-- Group 36645 -->
-    <View
-        android:id="@+id/group_36645"
-        android:layout_width="283dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="503dp"
-        android:background="#00000000" />
-
-
-    <!-- Group 36646 -->
-    <View
-        android:id="@+id/group_36646"
-        android:layout_width="283dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="535dp"
-        android:background="#00000000" />
-
-    <!-- Group 36647 -->
-    <View
-        android:id="@+id/group_36647"
-        android:layout_width="283dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="567dp"
-        android:background="#00000000" />
-
-    <!-- Group 36648 -->
-    <View
-        android:id="@+id/group_36648"
-        android:layout_width="283dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="599dp"
-        android:background="#00000000" />
-
-    <!-- Event 1 -->
-    <TextView
-        android:id="@+id/event_2"
-        android:layout_width="45dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="471dp"
-        android:gravity="top"
-        android:lineSpacingExtra="3sp"
-        android:text="@string/event_1"
-        android:textAppearance="@style/event_1"
-        android:translationY="-1.5sp" />
-    <!-- 50 pts -->
-    <TextView
-        android:id="@+id/pts2"
-        android:layout_width="43dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="280dp"
-        android:layout_marginTop="471dp"
-        android:gravity="top"
-        android:lineSpacingExtra="3sp"
-        android:text="@string/pts"
-        android:textAppearance="@style/pts"
-        android:translationY="-1.5sp" />
-
-    <!-- Event 1 -->
-    <TextView
-        android:id="@+id/event_3"
-        android:layout_width="45dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="503dp"
-        android:gravity="top"
-        android:lineSpacingExtra="3sp"
-        android:text="@string/event_1"
-        android:textAppearance="@style/event_1"
-        android:translationY="-1.5sp" />
-
-    <!-- 50 pts -->
-    <TextView
-        android:id="@+id/pts3"
-        android:layout_width="43dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="280dp"
-        android:layout_marginTop="503dp"
-        android:gravity="top"
-        android:lineSpacingExtra="3sp"
-        android:text="@string/pts"
-        android:textAppearance="@style/pts"
-        android:translationY="-1.5sp"
-        tools:ignore="DuplicateIds" />
-
-    <!-- Event 1 -->
-    <TextView
-        android:id="@+id/event_4"
-        android:layout_width="45dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="535dp"
-        android:gravity="top"
-        android:lineSpacingExtra="3sp"
-        android:text="@string/event_1"
-        android:textAppearance="@style/event_1"
-        android:translationY="-1.5sp" />
-    <!-- 50 pts -->
-    <TextView
-        android:id="@+id/pts4"
-        android:layout_width="43dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="280dp"
-        android:layout_marginTop="535dp"
-        android:gravity="top"
-        android:lineSpacingExtra="3sp"
-        android:text="@string/pts"
-        android:textAppearance="@style/pts"
-        android:translationY="-1.5sp" />
-    <!-- Event 1 -->
-    <TextView
-        android:id="@+id/event_5"
-        android:layout_width="45dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="567dp"
-        android:gravity="top"
-        android:lineSpacingExtra="3sp"
-        android:text="@string/event_1"
-        android:textAppearance="@style/event_1"
-        android:translationY="-1.5sp" /><!-- Event 1 -->
-    <TextView
-        android:id="@+id/event_6"
-        android:layout_width="45dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="599dp"
-        android:gravity="top"
-        android:lineSpacingExtra="3sp"
-        android:text="@string/event_1"
-        android:textAppearance="@style/event_1"
-        android:translationY="-1.5sp" /><!-- 50 pts -->
-    <TextView
-        android:id="@+id/pts6"
-        android:layout_width="43dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="280dp"
-        android:layout_marginTop="599dp"
-        android:gravity="top"
-        android:lineSpacingExtra="3sp"
-        android:text="@string/pts"
-        android:textAppearance="@style/pts"
-        android:translationY="-1.5sp" /><!-- 50 pts -->
-    <TextView
-        android:id="@+id/pts5"
-        android:layout_width="43dp"
-        android:layout_height="24dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="280dp"
-        android:layout_marginTop="567dp"
-        android:gravity="top"
-        android:lineSpacingExtra="3sp"
-        android:text="@string/pts"
-        android:textAppearance="@style/pts"
-        android:translationY="-1.5sp">
-
-    </TextView>
+    </RelativeLayout>
 
 </RelativeLayout>

@@ -146,7 +146,10 @@ FirebaseAuth auth;
                             database.getReference().child("Users")
                                     .child(FirebaseAuth.getInstance().getUid())
                                     .updateChildren(obj);
+
                             Toast.makeText(Bottom_Navigation_Activity.this, "points added", Toast.LENGTH_SHORT).show();
+
+
                         }
                         @Override
                         public void onCancelled(@NonNull DatabaseError error) {
