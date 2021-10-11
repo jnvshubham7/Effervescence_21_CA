@@ -71,8 +71,8 @@
 
         <TextView
             android:id="@+id/nameUser"
-            android:layout_width="77dp"
-            android:layout_height="wrap_content"
+            android:layout_width="301dp"
+            android:layout_height="67dp"
             android:layout_alignEnd="@+id/date"
             android:layout_alignRight="@+id/date"
             android:layout_alignParentLeft="false"
@@ -81,8 +81,8 @@
             android:layout_alignParentBottom="false"
             android:layout_marginLeft="12dp"
             android:layout_marginTop="70dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginRight="50dp"
+            android:layout_marginEnd="-175dp"
+            android:layout_marginRight="-175dp"
             android:layout_marginBottom="491dp"
             android:gravity="top"
             android:lineSpacingExtra="0sp"
@@ -91,16 +91,16 @@
             android:textColor="#09186C"
             android:textSize="30sp" />
 
-                <View
-                    android:id="@+id/image_296"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginLeft="250dp"
-                    android:layout_marginTop="70dp"
-                    android:layout_alignLeft="@id/nameUser"
-                    android:background="@drawable/image" />
+        <!--        <V-->
+        <!--            android:id="@+id/image_296"-->
+        <!--            android:layout_width="48dp"-->
+        <!--            android:layout_height="48dp"-->
+        <!--            android:layout_alignParentLeft="true"-->
+        <!--            android:layout_alignParentTop="true"-->
+        <!--            android:layout_marginLeft="250dp"-->
+        <!--            android:layout_marginTop="70dp"-->
+        <!--            android:layout_alignLeft="@id/nameUser"-->
+        <!--            android:background="@drawable/image" />-->
 
         <TextView
             android:id="@+id/textView3"
@@ -123,13 +123,13 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/textView3"
 
+            android:layout_centerInParent="true"
+            android:layout_marginStart="50dp"
             android:layout_marginLeft="50dp"
             android:layout_marginTop="93dp"
-            android:layout_marginStart="50dp"
-           android:layout_marginEnd="50dp"
+            android:layout_marginEnd="50dp"
             android:layout_marginRight="50dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_centerInParent="true"
             app:layout_constraintDimensionRatio="1.18:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"

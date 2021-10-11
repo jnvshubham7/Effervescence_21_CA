@@ -63,6 +63,7 @@ public class DashboardFragment extends Fragment {
                 new FirebaseRecyclerOptions.Builder<TASKS>()
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("TASKS"), TASKS.class)
                         .build();
+        FirebaseDatabase.getInstance().getReference().child("TASKS").getKey();
 
         adapter=new TaskAdaptor(options, getActivity());
         binding.dasaboardRecycleview.setAdapter(adapter);

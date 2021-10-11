@@ -158,32 +158,6 @@ public class Users_Adapter extends RecyclerView.Adapter<Users_Adapter.UsersViewH
         holder.srNoTextView.setText(String.valueOf(position+1));
 
 
-//        holder.itemView.setOnClickListener(view -> {
-//            if (isFragment) {
-//                SharedPreferences.Editor editor = context.getSharedPreferences("PREFS", MODE_PRIVATE).edit();
-//                editor.putString("profileid", user.getUserId());
-//                editor.apply();
-//
-//                ((FragmentActivity) context).getSupportFragmentManager().beginTransaction().replace(R.id.container,
-//                        new UserFragment()).commit();
-//            } else {
-//                Intent intent = new Intent(context, Bottom_Navigation_Activity.class);
-//                intent.putExtra("publisherid", user.getUserId());
-//                context.startActivity(intent);
-//            }
-//        });
-
-
-
-//        final Information current = users.get(position);
-//        holder.name.setText(current.name);
-//        holder.job.setText(current.job);
-//
-//        FragmentB fragmentB=new FragmentB();
-//        Bundle bundle=new Bundle();
-//        bundle.putString("NAME",current.name);
-//        bundle.putString("JOB",current.job);
-//        fragmentB.setArguments(bundle);
 
 
 
@@ -191,32 +165,6 @@ public class Users_Adapter extends RecyclerView.Adapter<Users_Adapter.UsersViewH
 
     }
 
-//    @Override
-//    public void onBindViewHolder(final UsersViewHolder holder, final int position) {
-//
-//
-//
-//    }
-
-
-
-//                        Log.i("score",score.toString());
-//}
-//    @Override
-//    public void onCancelled(DatabaseError databaseError) {
-//        //handle databaseError
-//    }
-//});
-
-
-//        holder.itemView.setOnClickListener(v -> {
-//            Intent intent = new Intent(context, UserFragment.class);
-//            intent.putExtra("name", user.getUserName());
-//
-//            intent.putExtra("uid", user.getUid());
-//            context.startActivity(intent);
-//        });
- //   }
 
     @Override
     public int getItemCount() {
@@ -233,7 +181,7 @@ public class Users_Adapter extends RecyclerView.Adapter<Users_Adapter.UsersViewH
             srNoTextView=itemView.findViewById(R.id.srNoTextView);
             score=itemView.findViewById(R.id.Score);
 
-            //  binding = RowConversationBinding.bind(itemView);
+
         }
     }
 

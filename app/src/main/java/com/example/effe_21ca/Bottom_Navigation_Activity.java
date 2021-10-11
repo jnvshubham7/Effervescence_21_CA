@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.effe_21ca.models.TASKS;
 import com.example.effe_21ca.models.Users;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -49,6 +50,7 @@ private NavigationView navigationView;
 FirebaseAuth auth;
     FirebaseStorage storage;
     FirebaseDatabase database;
+    Boolean uploaded=false;
     //View name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,8 +130,11 @@ FirebaseAuth auth;
             Uri sFile=data.getData();
 
             final StorageReference reference=storage.getReference().child("profile picture")
-                    .child(FirebaseAuth.getInstance().getUid());
+                    .child(FirebaseAuth.getInstance().getUid()).child("image");
+
             reference.putFile(sFile).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+
+
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
 
@@ -140,14 +145,18 @@ FirebaseAuth auth;
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             Users user =  snapshot.getValue(Users.class);
-                            int ScoreN= user.getScore()+50;
-                            HashMap<String,Object> obj=new HashMap<>();
-                            obj.put("score",ScoreN);
-                            database.getReference().child("Users")
-                                    .child(FirebaseAuth.getInstance().getUid())
-                                    .updateChildren(obj);
+                            if(!uploaded) {
+                                int ScoreN = user.getScore() + 50;
+                                uploaded=false;
 
-                            Toast.makeText(Bottom_Navigation_Activity.this, "points added", Toast.LENGTH_SHORT).show();
+                                HashMap<String, Object> obj = new HashMap<>();
+                                obj.put("score", ScoreN);
+                                database.getReference().child("Users")
+                                        .child(FirebaseAuth.getInstance().getUid())
+                                        .updateChildren(obj);
+
+                                Toast.makeText(Bottom_Navigation_Activity.this, "points added", Toast.LENGTH_SHORT).show();
+                            }
 
 
                         }

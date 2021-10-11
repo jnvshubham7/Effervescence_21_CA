@@ -4,9 +4,15 @@ package com.example.effe_21ca.models;
 public class TASKS {
 
 
-    String title,link;
+    String title,link,TaskId;
     int points;
 
+    public TASKS(String title, String link, String TaskId, int points) {
+        this.title = title;
+        this.link = link;
+        this.TaskId = TaskId;
+        this.points = points;
+    }
 
     public TASKS() {
     }
