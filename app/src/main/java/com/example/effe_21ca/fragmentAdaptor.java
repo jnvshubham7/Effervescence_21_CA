@@ -20,11 +20,11 @@ public class fragmentAdaptor extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return new LoginFragment();
-            case 1:
                 return new SignUpFragment();
-            default:
+            case 1:
                 return new LoginFragment();
+            default:
+                return new SignUpFragment();
         }
     }
 
@@ -38,10 +38,10 @@ public class fragmentAdaptor extends FragmentPagerAdapter {
         String title=null;
 
         if (position==0){
-            title="LOGIN";
+            title="SIGN UP";
         }
         else if (position==1){
-            title="SIGN UP";
+            title="SIGN IN";
         }
 
 
