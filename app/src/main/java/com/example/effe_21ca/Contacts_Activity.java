@@ -63,19 +63,19 @@ public class Contacts_Activity extends AppCompatActivity {
         Callimg4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CallButton();
+                CallButton4();
             }
         });
         Callimg5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CallButton();
+                CallButton5();
             }
         });
         Callimg6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                CallButton();
+                CallButton6();
             }
         });
         Callimg7.setOnClickListener(new View.OnClickListener() {
@@ -117,6 +117,45 @@ public class Contacts_Activity extends AppCompatActivity {
         }
     }
     private void CallButton3() {
+        String number="9167026346";
+        if(number.trim().length()>0){
+            if(ContextCompat.checkSelfPermission(Contacts_Activity.this, Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
+                ActivityCompat.requestPermissions(Contacts_Activity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
+            }
+            else{
+                String dial="tel:"+number;
+                startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+            }
+
+        }
+    }
+    private void CallButton4() {
+        String number="9455117105";
+        if(number.trim().length()>0){
+            if(ContextCompat.checkSelfPermission(Contacts_Activity.this, Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
+                ActivityCompat.requestPermissions(Contacts_Activity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
+            }
+            else{
+                String dial="tel:"+number;
+                startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+            }
+
+        }
+    }
+    private void CallButton5() {
+        String number="9167026346";
+        if(number.trim().length()>0){
+            if(ContextCompat.checkSelfPermission(Contacts_Activity.this, Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
+                ActivityCompat.requestPermissions(Contacts_Activity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
+            }
+            else{
+                String dial="tel:"+number;
+                startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
+            }
+
+        }
+    }
+    private void CallButton6() {
         String number="9167026346";
         if(number.trim().length()>0){
             if(ContextCompat.checkSelfPermission(Contacts_Activity.this, Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){

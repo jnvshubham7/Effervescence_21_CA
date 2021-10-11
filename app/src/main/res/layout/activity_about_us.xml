@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="@color/gray0"
     tools:context=".AboutCA_Activity">
 <LinearLayout
@@ -15,6 +16,7 @@
     android:layout_marginEnd="12dp"
     android:layout_marginRight="12dp"
     android:orientation="vertical"
+    android:paddingBottom="60dp"
 
     tools:context=".About_Us">
 
