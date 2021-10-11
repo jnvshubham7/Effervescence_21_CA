@@ -1,5 +1,7 @@
 package com.example.effe_21ca;
 
+import static java.security.AccessController.getContext;
+
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -8,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.effe_21ca.models.Users;
@@ -46,6 +49,7 @@ private NavigationView navigationView;
 FirebaseAuth auth;
     FirebaseStorage storage;
     FirebaseDatabase database;
+    //View name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +74,7 @@ FirebaseAuth auth;
         storage=FirebaseStorage.getInstance();
         database=FirebaseDatabase.getInstance();
          imgnoti=findViewById(R.id.imgNotification);
+        // name=findViewById(R.id.nameUser);
          imgnoti.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
@@ -151,6 +156,30 @@ FirebaseAuth auth;
                     Toast.makeText(Bottom_Navigation_Activity.this, "Image is Uploaded", Toast.LENGTH_SHORT).show();
                 }
             });
+
+
+//            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child("userName");
+//            reference.addValueEventListener(new ValueEventListener() {
+//                @Override
+//                public void onDataChange(DataSnapshot dataSnapshot) {
+//                    if (getContext() == null){
+//                        return;
+//                    }
+//                    Users user = dataSnapshot.getValue(Users.class);
+//
+//                    assert user != null;
+//
+//                    // userName.setText(user.getUsername());
+//                    name.setText(user.getUserName());
+//                    // bio.setText(user.getBio());
+//
+//                }
+//
+//                @Override
+//                public void onCancelled(DatabaseError databaseError) {
+//
+//                }
+//            });
 
              }
     }

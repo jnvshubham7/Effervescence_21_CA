@@ -1,5 +1,7 @@
 package com.example.effe_21ca.ui.Leaderboard;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.renderscript.ScriptGroup;
 import android.view.LayoutInflater;
@@ -40,6 +42,7 @@ public class HomeFragment extends Fragment {
     Users user;
     Users_Adapter Users_Adapter;
   // FragmentHomeBinding binding;
+
 
 
 
@@ -143,7 +146,23 @@ public class HomeFragment extends Fragment {
         return root;
     }
 
-@Override
+    // this = your fragment
+   // SharedPreferences preferences = this.getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
+//    SharedPreferences pref = this.getActivity().getSharedPreferences("MyPref", 0); // 0 - for private mode
+//
+//
+//    SharedPreferences.Editor editor = pref.edit();
+
+//editor.putBoolean("key_name", true); // Storing boolean - true/false
+//editor.putString("1", "userName"); // Storing string
+////editor.putInt("key_name", "int value"); // Storing integer
+////editor.putFloat("key_name", "float value"); // Storing float
+////editor.putLong("key_name", "long value"); // Storing long
+//
+//editor.commit(); // commit changes
+
+
+    @Override
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;

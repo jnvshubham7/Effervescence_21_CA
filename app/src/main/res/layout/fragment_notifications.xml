@@ -94,7 +94,7 @@
     <!--            android:background="@drawable/image" />-->
 
     <TextView
-        android:id="@+id/you_are_cur"
+        android:id="@+id/score"
         android:layout_width="312dp"
         android:layout_height="48dp"
         android:layout_alignParentLeft="true"

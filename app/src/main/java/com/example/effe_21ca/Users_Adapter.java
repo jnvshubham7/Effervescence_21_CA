@@ -91,9 +91,12 @@
 package com.example.effe_21ca;
 
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -101,6 +104,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 
@@ -120,6 +124,13 @@ public class Users_Adapter extends RecyclerView.Adapter<Users_Adapter.UsersViewH
 
     Context context;
     ArrayList<Users> users;
+    private boolean isFragment;
+
+    public Users_Adapter(Context context, ArrayList<Users> users, boolean isFragment) {
+        this.context = context;
+        this.users = users;
+        this.isFragment = isFragment;
+    }
 
     public Users_Adapter(Context context, ArrayList<Users> users) {
         this.context = context;
@@ -134,8 +145,12 @@ public class Users_Adapter extends RecyclerView.Adapter<Users_Adapter.UsersViewH
         return new UsersViewHolder(view);
     }
 
+
+
     @Override
     public void onBindViewHolder(@NonNull UsersViewHolder holder, int position) {
+
+
         Users user = users.get(position);
         holder.userName.setText(user.getUserName());
         holder.score.setText(String.valueOf(user.getScore()));
@@ -143,13 +158,48 @@ public class Users_Adapter extends RecyclerView.Adapter<Users_Adapter.UsersViewH
         holder.srNoTextView.setText(String.valueOf(position+1));
 
 
+//        holder.itemView.setOnClickListener(view -> {
+//            if (isFragment) {
+//                SharedPreferences.Editor editor = context.getSharedPreferences("PREFS", MODE_PRIVATE).edit();
+//                editor.putString("profileid", user.getUserId());
+//                editor.apply();
+//
+//                ((FragmentActivity) context).getSupportFragmentManager().beginTransaction().replace(R.id.container,
+//                        new UserFragment()).commit();
+//            } else {
+//                Intent intent = new Intent(context, Bottom_Navigation_Activity.class);
+//                intent.putExtra("publisherid", user.getUserId());
+//                context.startActivity(intent);
+//            }
+//        });
 
+
+
+//        final Information current = users.get(position);
+//        holder.name.setText(current.name);
+//        holder.job.setText(current.job);
+//
+//        FragmentB fragmentB=new FragmentB();
+//        Bundle bundle=new Bundle();
+//        bundle.putString("NAME",current.name);
+//        bundle.putString("JOB",current.job);
+//        fragmentB.setArguments(bundle);
 
 
 
 
 
     }
+
+//    @Override
+//    public void onBindViewHolder(final UsersViewHolder holder, final int position) {
+//
+//
+//
+//    }
+
+
+
 //                        Log.i("score",score.toString());
 //}
 //    @Override

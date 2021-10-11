@@ -26,6 +26,10 @@ public class Users {
         this.passwoord = passwoord;
     }
 
+//    public String getUsername() {
+//        return userName;
+//    }
+
     public Users(String userName, String mail, String passwoord, String userId) {
         this.userName = userName;
         this.mail = mail;
