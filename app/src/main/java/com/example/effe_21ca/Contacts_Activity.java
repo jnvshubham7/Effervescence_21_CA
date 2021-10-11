@@ -41,7 +41,7 @@ public class Contacts_Activity extends AppCompatActivity {
         Callimg4=findViewById(R.id.call4);
         Callimg5=findViewById(R.id.call5);
         Callimg6=findViewById(R.id.call6);
-        Callimg7=findViewById(R.id.call7);
+        //Callimg7=findViewById(R.id.call7);
         Callimg1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -78,12 +78,12 @@ public class Contacts_Activity extends AppCompatActivity {
                 CallButton6();
             }
         });
-        Callimg7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                CallButton();
-            }
-        });
+//        Callimg7.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                CallButton();
+//            }
+//        });
 
 
     }
@@ -143,7 +143,7 @@ public class Contacts_Activity extends AppCompatActivity {
         }
     }
     private void CallButton5() {
-        String number="9167026346";
+        String number="6260310290";
         if(number.trim().length()>0){
             if(ContextCompat.checkSelfPermission(Contacts_Activity.this, Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
                 ActivityCompat.requestPermissions(Contacts_Activity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
@@ -156,7 +156,7 @@ public class Contacts_Activity extends AppCompatActivity {
         }
     }
     private void CallButton6() {
-        String number="9167026346";
+        String number="9113708310";
         if(number.trim().length()>0){
             if(ContextCompat.checkSelfPermission(Contacts_Activity.this, Manifest.permission.CALL_PHONE)!= PackageManager.PERMISSION_GRANTED){
                 ActivityCompat.requestPermissions(Contacts_Activity.this,new String[]{Manifest.permission.CALL_PHONE},REQUEST_CALL);
