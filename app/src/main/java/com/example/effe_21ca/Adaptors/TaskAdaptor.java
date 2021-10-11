@@ -27,7 +27,7 @@ import java.util.ArrayList;
 public class TaskAdaptor extends FirebaseRecyclerAdapter<TASKS,TaskAdaptor.TaskViewholder>{
 
     private Activity context;
-   // private Activity activity;
+    // private Activity activity;
 
 
 
@@ -45,26 +45,18 @@ public class TaskAdaptor extends FirebaseRecyclerAdapter<TASKS,TaskAdaptor.TaskV
 
         holder.title.setText(model.getTitle());
         holder.link.setText(model.getLink());
-       // holder.points.setText(model.getPoint());
-        holder.link.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                 Intent intent=new Intent(Intent.ACTION_SEND);
 
-
-            }
-        });
+        holder.points.setText(String.valueOf(model.getPoints()));
 
         holder.upload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                                Intent intent=new Intent();
+                Intent intent=new Intent();
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 intent.setType("image/*");
 
-               context.startActivityForResult(intent,33);
-               // holder.upload.getContext().startActivityForResult(intent,33);
-               // startListening();
+                context.startActivityForResult(intent,33);
+
             }
         });
 
@@ -81,7 +73,7 @@ public class TaskAdaptor extends FirebaseRecyclerAdapter<TASKS,TaskAdaptor.TaskV
     @Override
     public TaskViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_tasks, parent, false);
-       return new TaskViewholder(view);
+        return new TaskViewholder(view);
 
     }
 
@@ -89,14 +81,15 @@ public class TaskAdaptor extends FirebaseRecyclerAdapter<TASKS,TaskAdaptor.TaskV
 
     class TaskViewholder extends RecyclerView.ViewHolder {
 
-        TextView title,link;
+        TextView title,link,points;
         Button upload;
         public TaskViewholder(@NonNull View itemView) {
             super(itemView);
             title=itemView.findViewById(R.id.event_title);
             link=itemView.findViewById(R.id.event_description);
             upload=itemView.findViewById(R.id.upload_button);
-            // points=itemView.findViewById(R.id.events_points);
+            points=itemView.findViewById(R.id.events_points);
+
 
 
 

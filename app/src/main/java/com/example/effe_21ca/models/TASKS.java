@@ -3,26 +3,20 @@ package com.example.effe_21ca.models;
 
 public class TASKS {
 
- 
-    String title,link,point,image;
+
+    String title,link;
+    int points;
 
 
     public TASKS() {
     }
- 
 
- 
 
-    public TASKS(String title, String link, String point) {
+    public TASKS(String title, String link, int points) {
         this.title = title;
         this.link = link;
-        this.point = point;
-
+        this.points = points;
     }
-
- 
-
- 
 
     public String getTitle() {
         return title;
@@ -38,9 +32,15 @@ public class TASKS {
     }
 
 
-    public String getPoint() {
-        return point;
+    public void setLink(String link) {
+        this.link = link;
     }
 
+    public int getPoints() {
+        return points;
+    }
 
+    public void setPoints(int points) {
+        this.points = points;
+    }
 }
