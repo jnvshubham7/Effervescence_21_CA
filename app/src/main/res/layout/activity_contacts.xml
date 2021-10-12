@@ -63,23 +63,24 @@
                 android:id="@+id/call1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_marginLeft="30dp"
                 app:srcCompat="@drawable/ic_group_36628" />
 
-            <View
-                android:layout_width="50dp"
-                android:layout_height="wrap_content" />
+<!--            <View-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="wrap_content" />-->
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Shubham Kumar Bhokta"
                 android:textSize="18sp" />
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1" />-->
 
 
         </LinearLayout>
@@ -96,23 +97,24 @@
                 android:id="@+id/call2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_marginLeft="30dp"
                 app:srcCompat="@drawable/ic_group_36628" />
 
-            <View
-                android:layout_width="50dp"
-                android:layout_height="wrap_content" />
+<!--            <View-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="wrap_content" />-->
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Aashish Agrawal"
+                android:gravity="center"
                 android:textSize="18sp" />
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1" />-->
         </LinearLayout>
 
         <LinearLayout
@@ -127,23 +129,24 @@
                 android:id="@+id/call3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_marginLeft="30dp"
                 app:srcCompat="@drawable/ic_group_36628" />
 
-            <View
-                android:layout_width="50dp"
-                android:layout_height="wrap_content" />
+<!--            <View-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="wrap_content" />-->
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Janhavi Bawaskar"
+                android:gravity="center"
                 android:textSize="18sp" />
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1" />-->
 
         </LinearLayout>
 
@@ -176,23 +179,25 @@
                 android:id="@+id/call4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_marginLeft="30dp"
+
                 app:srcCompat="@drawable/ic_group_36628" />
 
-            <View
-                android:layout_width="50dp"
-                android:layout_height="wrap_content" />
+<!--            <View-->
+<!--                android:layout_width="80dp"-->
+<!--                android:layout_height="wrap_content" />-->
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+               android:gravity="center"
                 android:text="Sinni"
                 android:textSize="18sp" />
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+            <!--            <View-->
+<!--                android:layout_width="90dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1" />-->
 
         </LinearLayout>
 
@@ -208,23 +213,24 @@
                 android:id="@+id/call5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_marginLeft="30dp"
                 app:srcCompat="@drawable/ic_group_36628" />
 
-            <View
-                android:layout_width="50dp"
-                android:layout_height="wrap_content" />
+<!--            <View-->
+<!--                android:layout_width="70dp"-->
+<!--                android:layout_height="wrap_content" />-->
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Sanidhya Gupta"
+                android:gravity="center"
                 android:textSize="18sp" />
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+<!--            <View-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1" />-->
         </LinearLayout>
 
         <LinearLayout
@@ -239,23 +245,24 @@
                 android:id="@+id/call6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_marginLeft="30dp"
                 app:srcCompat="@drawable/ic_group_36628" />
 
-            <View
-                android:layout_width="50dp"
-                android:layout_height="wrap_content" />
+<!--            <View-->
+<!--                android:layout_width="80dp"-->
+<!--                android:layout_height="wrap_content" />-->
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Ayush"
+                android:gravity="center"
                 android:textSize="18sp" />
 
-            <View
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1" />
+<!--            <View-->
+<!--                android:layout_width="50dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1" />-->
         </LinearLayout>
 
 <!--        <LinearLayout-->
