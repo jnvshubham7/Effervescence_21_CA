@@ -12,6 +12,7 @@ public class SignInUpActivity extends AppCompatActivity {
     TabLayout tabLayoutx;
     ViewPager viewPagerx;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

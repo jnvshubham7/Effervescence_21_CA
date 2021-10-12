@@ -127,10 +127,16 @@ FirebaseAuth auth;
 
 
 
+
+//            DatabaseReference reference2=FirebaseDatabase.getInstance().getReference().child("TASKS")
+//                    .child(FirebaseDatabase.getInstance().getReference().getKey());
             Uri sFile=data.getData();
 
             final StorageReference reference=storage.getReference().child("profile picture")
                     .child(FirebaseAuth.getInstance().getUid()).child("image");
+
+           // System.out.println("hello");
+           // Log. d("myTag", "This is my message");
 
             reference.putFile(sFile).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
 
