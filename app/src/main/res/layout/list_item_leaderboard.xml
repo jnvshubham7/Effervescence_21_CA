@@ -6,6 +6,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
 
     android:background="@color/gray0">
 
@@ -15,6 +17,7 @@
         android:layout_height="1dp"
         android:layout_marginStart="8dp"
         android:background="@color/gray2"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
         app:layout_constraintHorizontal_bias="0.0"
