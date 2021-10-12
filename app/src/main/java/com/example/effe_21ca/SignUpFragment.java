@@ -55,7 +55,7 @@ public class SignUpFragment extends Fragment {
                              Bundle savedInstanceState) {
 
 
-        binding= FragmentSignUpBinding.inflate(inflater,container, false);
+       binding= FragmentSignUpBinding.inflate(inflater,container, false);
 
 
 
