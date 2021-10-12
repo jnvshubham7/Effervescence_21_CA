@@ -89,9 +89,10 @@ We are here to resolve your problems , feel free to contact :)
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="award">award</string>
-    <string name="server">server</string>
-    <string name="user">user</string>
+    <string name="award">Award</string>
+    <string name="server">Task</string>
+
+    <string name="user">User</string>
 
 
 </resources>
