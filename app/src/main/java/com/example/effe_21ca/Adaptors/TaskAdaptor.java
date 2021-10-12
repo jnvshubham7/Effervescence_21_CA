@@ -34,6 +34,7 @@ public class TaskAdaptor extends FirebaseRecyclerAdapter<TASKS,TaskAdaptor.TaskV
 
 
 
+
     public TaskAdaptor(@NonNull FirebaseRecyclerOptions<TASKS> options , Activity context) {
         super(options) ;
         this.context=context;
@@ -45,6 +46,7 @@ public class TaskAdaptor extends FirebaseRecyclerAdapter<TASKS,TaskAdaptor.TaskV
 
         holder.title.setText(model.getTitle());
         holder.link.setText(model.getLink());
+
 
         holder.points.setText(String.valueOf(model.getPoints()));
 

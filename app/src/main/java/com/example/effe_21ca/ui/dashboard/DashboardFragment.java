@@ -1,6 +1,7 @@
 package com.example.effe_21ca.ui.dashboard;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -40,6 +41,7 @@ public class DashboardFragment extends Fragment {
     FirebaseAuth auth;
     FirebaseDatabase database;
     private TaskAdaptor adapter;
+   // ProgressDialog dialog;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -49,6 +51,11 @@ public class DashboardFragment extends Fragment {
 
         binding = FragmentDashboardBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
+//        dialog = new ProgressDialog(getActivity());
+//        dialog.setMessage("Uploading Task");
+//
+//        dialog.setCancelable(false);
+
 
         storage=FirebaseStorage.getInstance();
         auth=FirebaseAuth.getInstance();
@@ -61,9 +68,13 @@ public class DashboardFragment extends Fragment {
 
         FirebaseRecyclerOptions<TASKS> options =
                 new FirebaseRecyclerOptions.Builder<TASKS>()
+
                         .setQuery(FirebaseDatabase.getInstance().getReference().child("TASKS"), TASKS.class)
+
                         .build();
+       // dialog.dismiss();
         FirebaseDatabase.getInstance().getReference().child("TASKS").getKey();
+
 
         adapter=new TaskAdaptor(options, getActivity());
         binding.dasaboardRecycleview.setAdapter(adapter);
@@ -71,23 +82,6 @@ public class DashboardFragment extends Fragment {
 
 
 
-//        final TextView textView = binding.textDashboard;
-//        dashboardViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//                textView.setText(s);
-//            }
-//        });
-
-//        binding.uploadButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent=new Intent();
-//                intent.setAction(Intent.ACTION_GET_CONTENT);
-//                intent.setType("image/*");
-//                startActivityForResult(intent,33);
-//            }
-//        });
 
 
 

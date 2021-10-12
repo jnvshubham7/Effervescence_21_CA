@@ -1,5 +1,6 @@
 package com.example.effe_21ca.ui.Leaderboard;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -41,57 +42,8 @@ public class HomeFragment extends Fragment {
    ArrayList<Users>list =new ArrayList<>();
     Users user;
     Users_Adapter Users_Adapter;
-  // FragmentHomeBinding binding;
+    ProgressDialog dialog;
 
-
-
-
-
-//    private Notification_Adapter notificationAdapter;
-//    private List<Notification> notificationList;
-
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-//                             Bundle savedInstanceState) {
-//        View view = inflater.inflate(R.layout.list_item_leaderboard, container, false);
-//
-//        RecyclerView recyclerView = view.findViewById(R.id.leaderBoardRecycleView);
-//        recyclerView.setHasFixedSize(true);
-//        LinearLayoutManager mLayoutManager = new LinearLayoutManager(getContext());
-//        recyclerView.setLayoutManager(mLayoutManager);
-//        Users = new ArrayList<>();
-//        Users_Adapter = new Users_Adapter(getContext(), Users);
-//        recyclerView.setAdapter(Users_Adapter);
-//
-//        readLeaderboard();
-//
-//        return view;
-//    }
-//
-//    private void readLeaderboard() {
-//        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-//        assert firebaseUser != null;
-//        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
-//
-//        reference.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                Users.clear();
-//                for (DataSnapshot snapshot : dataSnapshot.getChildren()){
-//                    Users users = snapshot.getValue(Users.class);
-//                    Users.add(users);
-//                }
-//
-//                Collections.reverse(Users);
-//               // Users.notifyDataSetChanged();
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//
-//            }
-//        });
-//    }
 
     //private LeaderboardViewModel homeViewModel;
  FragmentHomeBinding binding;
@@ -103,6 +55,11 @@ public class HomeFragment extends Fragment {
 
     binding = FragmentHomeBinding.inflate(inflater, container, false);
     View root = binding.getRoot();
+        dialog = new ProgressDialog(getActivity());
+        dialog.setMessage("Loading LeaderBoard");
+
+       // dialog.setCancelable(false);
+
 
 
         database = FirebaseDatabase.getInstance();
@@ -113,7 +70,7 @@ public class HomeFragment extends Fragment {
 
         LinearLayoutManager layoutManager=new LinearLayoutManager(getContext());
         binding.leaderBoardRecycleView.setLayoutManager(layoutManager);
-
+        dialog.show();
         database.getReference().child("Users").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -123,6 +80,7 @@ public class HomeFragment extends Fragment {
                     Users users=dataSnapshot.getValue(Users.class);
                     users.getUserId(dataSnapshot.getKey());
                     list.add(users);
+                    dialog.dismiss();
 
                 }
                 adaptor.notifyDataSetChanged();
@@ -137,6 +95,7 @@ public class HomeFragment extends Fragment {
                    });
             }
 
+
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
@@ -146,20 +105,7 @@ public class HomeFragment extends Fragment {
         return root;
     }
 
-    // this = your fragment
-   // SharedPreferences preferences = this.getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
-//    SharedPreferences pref = this.getActivity().getSharedPreferences("MyPref", 0); // 0 - for private mode
-//
-//
-//    SharedPreferences.Editor editor = pref.edit();
 
-//editor.putBoolean("key_name", true); // Storing boolean - true/false
-//editor.putString("1", "userName"); // Storing string
-////editor.putInt("key_name", "int value"); // Storing integer
-////editor.putFloat("key_name", "float value"); // Storing float
-////editor.putLong("key_name", "long value"); // Storing long
-//
-//editor.commit(); // commit changes
 
 
     @Override

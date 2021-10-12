@@ -2,6 +2,7 @@ package com.example.effe_21ca;
 
 import static java.security.AccessController.getContext;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -51,6 +52,8 @@ FirebaseAuth auth;
     FirebaseStorage storage;
     FirebaseDatabase database;
     Boolean uploaded=false;
+    ProgressDialog dialog;
+
     //View name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +61,10 @@ FirebaseAuth auth;
 
      binding = ActivityBottomNavigationBinding.inflate(getLayoutInflater());
      setContentView(binding.getRoot());
+        dialog = new ProgressDialog(this);
+        dialog.setMessage("Uploading Image...");
+
+      //  dialog.setCancelable(false);
         ImageView imgnoti;
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setItemIconTintList(null);
@@ -99,7 +106,7 @@ FirebaseAuth auth;
             auth.signOut();
             Intent intent=new Intent(Bottom_Navigation_Activity.this,SignInUpActivity.class);
             startActivity(intent);
-            Toast.makeText(this, "You click on ", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "SignOut Successfully ", Toast.LENGTH_SHORT).show();
         }
         else if(id==R.id.Contacts){
             Intent intent =new Intent(Bottom_Navigation_Activity.this,Contacts_Activity.class);
@@ -125,8 +132,7 @@ FirebaseAuth auth;
 
         if(data.getData()!=null){
 
-
-
+            dialog.show();
 
 //            DatabaseReference reference2=FirebaseDatabase.getInstance().getReference().child("TASKS")
 //                    .child(FirebaseDatabase.getInstance().getReference().getKey());
@@ -161,6 +167,8 @@ FirebaseAuth auth;
                                         .child(FirebaseAuth.getInstance().getUid())
                                         .updateChildren(obj);
 
+                                dialog.dismiss();
+
                                 Toast.makeText(Bottom_Navigation_Activity.this, "points added", Toast.LENGTH_SHORT).show();
                             }
 
@@ -176,28 +184,6 @@ FirebaseAuth auth;
             });
 
 
-//            DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child("userName");
-//            reference.addValueEventListener(new ValueEventListener() {
-//                @Override
-//                public void onDataChange(DataSnapshot dataSnapshot) {
-//                    if (getContext() == null){
-//                        return;
-//                    }
-//                    Users user = dataSnapshot.getValue(Users.class);
-//
-//                    assert user != null;
-//
-//                    // userName.setText(user.getUsername());
-//                    name.setText(user.getUserName());
-//                    // bio.setText(user.getBio());
-//
-//                }
-//
-//                @Override
-//                public void onCancelled(DatabaseError databaseError) {
-//
-//                }
-//            });
 
              }
     }

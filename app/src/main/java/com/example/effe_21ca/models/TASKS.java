@@ -14,6 +14,14 @@ public class TASKS {
         this.points = points;
     }
 
+    public String getTaskId() {
+        return TaskId;
+    }
+
+    public void setTaskId(String taskId) {
+        TaskId = taskId;
+    }
+
     public TASKS() {
     }
 
