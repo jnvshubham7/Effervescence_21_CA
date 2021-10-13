@@ -4,6 +4,7 @@ import static java.security.AccessController.getContext;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,6 +25,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -39,7 +41,11 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Bottom_Navigation_Activity extends AppCompatActivity {
@@ -53,6 +59,8 @@ FirebaseAuth auth;
     FirebaseDatabase database;
     Boolean uploaded=false;
     ProgressDialog dialog;
+
+    ArrayList<String> arrayList;
 
     //View name;
     @Override
@@ -124,25 +132,62 @@ FirebaseAuth auth;
         return true;
     }
 
+    public void loadData() {
+        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = sharedPreferences.getString("tasks", null);
+
+        Type type = new TypeToken<ArrayList<String>>() {}.getType();
+        arrayList = gson.fromJson(json, type);
+        if (arrayList == null) {
+            arrayList = new ArrayList<>();
+        }
+    }
+
+    public void saveData(String id){
+
+        loadData();
+
+        arrayList.add(id);
+
+        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        Gson gson = new Gson();
+        String json = gson.toJson(arrayList);
+        editor.putString("tasks", json);
+        editor.apply();
+    }
+
+    private void sendMessage(int pos) {
+        Log.d("sender", "Broadcasting message");
+        Intent intent = new Intent("custom-event-name");
+        intent.putExtra("message", "delete");
+        intent.putExtra("position",pos);
+        LocalBroadcastManager.getInstance(this).sendBroadcast(intent);
+    }
+
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         Log.d("massage", "s2");
-         Toast.makeText(Bottom_Navigation_Activity.this, "image selected", Toast.LENGTH_SHORT).show();
+         Toast.makeText(Bottom_Navigation_Activity.this, "Image Selected!", Toast.LENGTH_SHORT).show();
 
-        if(data.getData()!=null){
+        if(data.getData()!=null && requestCode==33){
+
+            String id = getIntent().getStringExtra("id");
+            int pos = getIntent().getIntExtra("position",0);
+            int points = getIntent().getIntExtra("score",50);
+
+            Log.d("received", String.valueOf(pos));
+
+            saveData(id);
 
             dialog.show();
-
-//            DatabaseReference reference2=FirebaseDatabase.getInstance().getReference().child("TASKS")
-//                    .child(FirebaseDatabase.getInstance().getReference().getKey());
             Uri sFile=data.getData();
 
             final StorageReference reference=storage.getReference().child("profile picture")
                     .child(FirebaseAuth.getInstance().getUid()).child("image");
-
-           // System.out.println("hello");
-           // Log. d("myTag", "This is my message");
 
             reference.putFile(sFile).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
 
@@ -158,7 +203,7 @@ FirebaseAuth auth;
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
                             Users user =  snapshot.getValue(Users.class);
                             if(!uploaded) {
-                                int ScoreN = user.getScore() + 50;
+                                int ScoreN = user.getScore() + points;
                                 uploaded=false;
 
                                 HashMap<String, Object> obj = new HashMap<>();
@@ -167,9 +212,11 @@ FirebaseAuth auth;
                                         .child(FirebaseAuth.getInstance().getUid())
                                         .updateChildren(obj);
 
+                                sendMessage(pos);
+
                                 dialog.dismiss();
 
-                                Toast.makeText(Bottom_Navigation_Activity.this, "points added", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Bottom_Navigation_Activity.this, "Points Added!", Toast.LENGTH_SHORT).show();
                             }
 
 
