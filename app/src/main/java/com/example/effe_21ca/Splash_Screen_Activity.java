@@ -22,7 +22,7 @@ public class Splash_Screen_Activity extends AppCompatActivity {
          StatusBarUtil.setTransparent(this);
         Handler handler = new Handler();
         Runnable runnable = () -> {
-            Intent intent = new Intent(Splash_Screen_Activity.this, MainActivity.class);
+            Intent intent = new Intent(Splash_Screen_Activity.this, MainActivity1.class);
             startActivity(intent);
         };
         handler.postDelayed(runnable, 500);

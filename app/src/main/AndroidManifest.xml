@@ -15,6 +15,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Effe21CA">
 
+<!--        <meta-data-->
+<!--            android:name="com.google.firebase.messaging.default_notification_icon"-->
+<!--            android:resource="@drawable/ic_stat_ic_notification" />-->
+<!--        <meta-data-->
+<!--            android:name="com.google.firebase.messaging.default_notification_color"-->
+<!--            android:resource="@color/colorAccent" />-->
+<!--        <meta-data-->
+<!--            android:name="com.google.firebase.messaging.default_notification_channel_id"-->
+<!--            android:value="@string/default_notification_channel_id" />-->
+
+
+
         <activity
             android:name=".Splash_Screen_Activity"
             android:exported="true">
@@ -43,8 +55,13 @@
             android:name=".Contacts_Activity"
             android:exported="true" />
         <activity
+            android:name=".MainActivity1"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true" />
+
+
         <activity
             android:name=".MainActivity2"
             android:exported="true" />
@@ -52,6 +69,13 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+        <service
+            android:name=".MyFirebaseMessagingService"
+          android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
