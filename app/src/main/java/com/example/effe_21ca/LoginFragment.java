@@ -71,10 +71,21 @@ public class LoginFragment extends Fragment {
                 auth.signInWithEmailAndPassword(binding.EmailAddress.getText().toString(),binding.TxPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
+
                         progressDialog.dismiss();
                         if(task.isSuccessful()){
-                            Intent intent=new Intent(getContext(),Bottom_Navigation_Activity.class);
-                            startActivity(intent);
+                            if(binding.EmailAddress.getText().toString().equals("effervescence@iiita.ac.in"))
+                            {
+                                Intent intent=new Intent(getContext(),Admin_Page.class);
+                                startActivity(intent);
+                            }
+
+                            else {
+
+                                Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
+                                startActivity(intent);
+                            }
+
                         }
                         else{
                             Toast.makeText(getContext(),task.getException().getMessage(), Toast.LENGTH_SHORT).show();
@@ -91,8 +102,11 @@ public class LoginFragment extends Fragment {
             }
         });
         if(auth.getCurrentUser()!=null){
-            Intent intent=new Intent(getContext(),Bottom_Navigation_Activity.class);
-            startActivity(intent);
+
+
+                Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
+                startActivity(intent);
+
         }
         return binding.getRoot();
     }
@@ -148,8 +162,15 @@ public class LoginFragment extends Fragment {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "signInWithCredential:success");
                             FirebaseUser user = auth.getCurrentUser();
-                            Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
-                            startActivity(intent);
+                            if(user.getEmail().equals("effervescence@iiita.ac.in"))
+                            {
+                                Intent intent=new Intent(getContext(),Admin_Page.class);
+                                startActivity(intent);
+                            }
+                            else {
+                                Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
+                                startActivity(intent);
+                            }
                             // updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
