@@ -74,7 +74,7 @@ public class LoginFragment extends Fragment {
 
                         progressDialog.dismiss();
                         if(task.isSuccessful()){
-                            if(binding.EmailAddress.getText().toString().equals("effervescence@iiita.ac.in"))
+                            if(binding.EmailAddress.getText().toString().equals("x@gmail.com"))
                             {
                                 Intent intent=new Intent(getContext(),Admin_Page.class);
                                 startActivity(intent);

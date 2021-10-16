@@ -31,13 +31,13 @@ binding.AdminButton.setOnClickListener(new View.OnClickListener() {
         String TaskId=binding.TaskId.getText().toString();
         String TaskTitle=binding.Title.getText().toString();
         String TaskLink=binding.TaskLink.getText().toString();
-
+        int Taskpoint=Integer.parseInt(binding.Points.getText().toString());
         binding.TaskId.setText("");
         binding.TaskLink.setText("");
         binding.Title.setText("");
-      //  binding.TaskId.setText("");
+        binding.Points.setText("");
 
-        TASKS Task = new TASKS(TaskTitle,TaskLink,TaskId,5);
+        TASKS Task = new TASKS(TaskTitle,TaskLink,TaskId,Taskpoint);
 
         database.getReference().child("TASKS").child(TaskId).setValue(Task).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
