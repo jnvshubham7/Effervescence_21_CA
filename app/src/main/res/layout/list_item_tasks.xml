@@ -88,6 +88,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="3dp"
                 android:autoLink="web"
+                android:textColor="#E91E63"
+                android:shadowColor="#E91E63"
+                android:textColorHighlight="#E91E63"
+                android:textColorHint="#E91E63"
+                android:textColorLink="#E91E63"
 
                 android:text="Event description tells to about the event and describes about it as its event description"
                 android:textAppearance="?android:textAppearanceSmall" />

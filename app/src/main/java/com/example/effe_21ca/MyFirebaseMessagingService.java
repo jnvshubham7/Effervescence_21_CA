@@ -14,9 +14,16 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
 import android.util.Log;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
+
+import java.util.Objects;
 
 
 /**
@@ -30,7 +37,7 @@ import com.google.firebase.messaging.RemoteMessage;
  *   <action android:name="com.google.firebase.MESSAGING_EVENT" />
  * </intent-filter>
  */
-public class MyFirebaseMessagingService extends FirebaseMessagingService {
+public class MyFirebaseMessagingService<showNotifications> extends FirebaseMessagingService {
 
    // private static final String TAG = "MyFirebaseMsgService";
 
@@ -45,6 +52,13 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         super.onMessageReceived(remoteMessage);
         showNotification(remoteMessage.getNotification().getTitle(), remoteMessage.getNotification().getBody());
 
+//        FirebaseDatabase database = FirebaseDatabase.getInstance();
+//        DatabaseReference notificationDatabase = database.getReference("user_notifications");
+//        String key = notificationDatabase.push().getKey();
+//        String userSessionId = "peter123";
+//        if(userSessionId.equals("NULL")){
+//            return;
+//        }
 
     }
 
@@ -58,6 +72,28 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         NotificationManagerCompat manager =NotificationManagerCompat.from(this);
         manager.notify(999,builder.build());
+
+        //public void saveTokenToDatabase(String title, String message) {
+//            FirebaseDatabase database = FirebaseDatabase.getInstance();
+//            DatabaseReference notificationDatabase = database.getReference("user_notifications");
+//            String key = notificationDatabase.push().getKey();
+//            String userSessionId = "peter123";
+//            if(userSessionId.equals("NULL")){
+//                return;
+//            }
+//            //Create Object saveNotifications
+//            showNotifications newmessages = new showNotifications(message, title, "firebase", userSessionId, key);
+//            notificationDatabase.child(userSessionId).child(key).setValue(newmessages).addOnCompleteListener(new OnCompleteListener<Void>() {
+//                @Override
+//                public void onComplete(@NonNull Task<Void> task) {
+//                    if(task.isSuccessful()){
+//                        Toast.makeText(this, "Token Saved", Toast.LENGTH_LONG).show();
+//                    }else{
+//                        Toast.makeText(this, Objects.requireNonNull(task.getException()).getMessage(), Toast.LENGTH_LONG).show();
+//                    }
+//                }
+//            });
+//        }
     }
 }
 

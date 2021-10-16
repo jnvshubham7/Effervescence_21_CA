@@ -54,6 +54,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="-15dp"
         android:fontFamily="sans-serif"
+        android:textColor="#E91E63"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/name1"

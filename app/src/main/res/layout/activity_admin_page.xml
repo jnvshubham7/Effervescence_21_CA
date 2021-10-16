@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray0"
+    tools:context=".Admin_Page">
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:text="TASKS"
+        android:textSize="30dp"
+        android:textColor="#E91E63"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/TaskLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:textColor="#393333"
+        android:textColorHint="#3A3939"
+        android:padding="10dp"
+        android:hint=" Task Link"
+        android:inputType="textPersonName"
+
+        app:layout_constraintEnd_toEndOf="@+id/textView15"
+        app:layout_constraintStart_toStartOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <EditText
+        android:id="@+id/Points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:hint="Task Points"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:textColor="#393333"
+        android:textColorHint="#3A3939"
+        android:inputType="number"
+
+        app:layout_constraintEnd_toEndOf="@+id/TaskLink"
+        app:layout_constraintStart_toStartOf="@+id/TaskLink"
+        app:layout_constraintTop_toBottomOf="@+id/TaskLink" />
+
+    <EditText
+        android:id="@+id/TaskId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:textColor="#393333"
+        android:textColorHint="#3A3939"
+        android:background="@color/white"
+        android:ems="10"
+        android:padding="10dp"
+        android:hint="Task ID"
+        android:inputType="textPersonName"
+
+        app:layout_constraintEnd_toEndOf="@+id/Points"
+        app:layout_constraintStart_toStartOf="@+id/Points"
+        app:layout_constraintTop_toBottomOf="@+id/Points" />
+
+    <EditText
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:padding="10dp"
+        android:textColor="#393333"
+        android:textColorHint="#3A3939"
+        android:background="@color/white"
+        android:hint="Task Title"
+        android:inputType="textPersonName"
+
+        app:layout_constraintEnd_toEndOf="@+id/TaskId"
+        app:layout_constraintStart_toStartOf="@+id/TaskId"
+        app:layout_constraintTop_toBottomOf="@+id/TaskId" />
+
+    <Button
+        android:id="@+id/Admin_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:circularflow_radiusInDP="50dp"
+        android:background="@color/baseBackground3"
+        android:text="Task Add"
+        app:layout_constraintEnd_toEndOf="@+id/Title"
+        app:layout_constraintStart_toStartOf="@+id/Title"
+        app:layout_constraintTop_toBottomOf="@+id/Title" />
+
+    <ImageButton
+        android:id="@+id/Admin_back_button"
+        android:layout_width="44dp"
+
+        android:layout_height="37dp"
+        android:background="@color/teal_200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_vector" />
+</androidx.constraintlayout.widget.ConstraintLayout>

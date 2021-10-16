@@ -2,6 +2,7 @@ package com.example.effe_21ca;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -14,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.effe_21ca.databinding.ActivityMainBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 
@@ -24,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main1);
+        setContentView(R.layout.activity_notification);
 //        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
 //        setContentView(binding.getRoot());
 
@@ -53,6 +56,13 @@ public class MainActivity extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
+//                        FirebaseDatabase database = FirebaseDatabase.getInstance();
+//                        DatabaseReference notificationDatabase = database.getReference("user_notifications");
+//                        String key = notificationDatabase.push().getKey();
+//                        String userSessionId = "peter123";
+//                        if(userSessionId.equals("NULL")){
+//                            return;
+//                        }
                         String msg = "Successful";
                         if (!task.isSuccessful()) {
                             msg = "Failed";

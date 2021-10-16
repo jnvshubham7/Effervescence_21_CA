@@ -81,9 +81,15 @@ Over the years, the fest has risen to great standards - its popularity ramped up
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
+
         android:autoLink="email"
+
         android:text="effervescence@iiita.ac.in"
-        />
+        android:textColor="#E91E63"
+        android:shadowColor="#E91E63"
+        android:textColorHighlight="#E91E63"
+        android:textColorHint="#E91E63"
+        android:textColorLink="#E91E63" />
 
     <TextView
         android:layout_width="match_parent"
@@ -100,6 +106,11 @@ Over the years, the fest has risen to great standards - its popularity ramped up
         android:layout_height="match_parent"
         android:layout_marginTop="10dp"
         android:autoLink="web"
+        android:shadowColor="#E91E63"
+        android:textColorHighlight="#E91E63"
+        android:textColorHint="#E91E63"
+        android:textColorLink="#E91E63"
+        android:textColor="#E91E63"
         android:text="https://effe.org.in/"
         />
 
@@ -118,19 +129,34 @@ Over the years, the fest has risen to great standards - its popularity ramped up
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="20dp"
+        android:textColor="#E91E63"
+        android:shadowColor="#E91E63"
+        android:textColorHighlight="#E91E63"
+        android:textColorHint="#E91E63"
+        android:textColorLink="#E91E63"
         android:autoLink="web"
         android:text="https://www.facebook.com/effervescence.iiita/"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:textColor="#E91E63"
         android:layout_marginTop="20dp"
+        android:shadowColor="#E91E63"
+        android:textColorHighlight="#E91E63"
+        android:textColorHint="#E91E63"
+        android:textColorLink="#E91E63"
         android:autoLink="web"
         android:text="https://www.instagram.com/goeffervescence/"
         />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:textColor="#E91E63"
+        android:shadowColor="#E91E63"
+        android:textColorHighlight="#E91E63"
+        android:textColorHint="#E91E63"
+        android:textColorLink="#E91E63"
         android:layout_marginTop="20dp"
         android:autoLink="web"
         android:text="https://twitter.com/goeffervescence"
