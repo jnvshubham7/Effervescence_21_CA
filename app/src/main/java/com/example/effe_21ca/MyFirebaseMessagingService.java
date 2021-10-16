@@ -65,7 +65,7 @@ public class MyFirebaseMessagingService<showNotifications> extends FirebaseMessa
     public void showNotification(String title, String message) {
         NotificationCompat.Builder builder= new NotificationCompat.Builder(this,"MyNotifications")
                 .setContentText(title)
-                .setSmallIcon(R.drawable.ic_bell)
+                .setSmallIcon(R.drawable.effe_logo)
                 .setContentText(message)
                 .setAutoCancel(true);
 
