@@ -68,7 +68,7 @@ public class TaskNotiAdaptor extends RecyclerView.Adapter<TaskNotiAdaptor.YasksN
     public static class YasksNotiViewHolder extends RecyclerView.ViewHolder {
 
         TextView title,link,points;
-        EditText date;
+        TextView date;
 
         public YasksNotiViewHolder(@NonNull View itemView) {
             super(itemView);
