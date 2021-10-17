@@ -4,7 +4,28 @@ package com.example.effe_21ca.models;
 public class TASKS {
 
 
-    String title,link,taskId;
+    String title,link,taskId,date;
+
+    public TASKS(String title, String link, String taskId, String date, int points) {
+        this.title = title;
+        this.link = link;
+        this.taskId = taskId;
+        this.date = date;
+        this.points = points;
+    }
+
+    public void setTaskId(String taskId) {
+        this.taskId = taskId;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
     int points;
 
     public TASKS(String title, String link, String taskId, int points) {
