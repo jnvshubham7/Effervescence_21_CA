@@ -76,8 +76,11 @@ binding.AdminButton.setOnClickListener(new View.OnClickListener() {
                 map.put("timestamp", ServerValue.TIMESTAMP);
                 ref.child("TASKS").child(TaskId).updateChildren(map);
                 Toast.makeText(Admin_Page.this, "Task Added", Toast.LENGTH_SHORT).show();
-                postData();
-
+                try {
+                    postData();
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
 
 
             }
@@ -153,20 +156,30 @@ binding.AdminBackButton.setOnClickListener(new View.OnClickListener() {
 
 
     // Post Request For JSONObject
-    public void postData() {
+    public void postData() throws JSONException {
 
 
 
 
         JSONObject object = new JSONObject();
-        try {
-            //input your API parameters
-            object.put("Title",binding.Title.getText().toString());
-            object.put("TitleLink",binding.TaskLink.getText().toString());
-           // object.put("Points",binding.Points.getText().toString());
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+
+        JSONObject notification = new JSONObject();
+        JSONObject message = new JSONObject();
+        notification.put("title", "message");
+        notification.put("body", "bodym");
+        message.put("notification", notification);
+        message.put("topic", "general");
+        object.put("message", message);
+
+//        try {
+//            //input your API parameters
+//            object.put("Title", "String");
+//            object.put("TitleLink","ssss");
+//           // object.put("Points",binding.Points.getText().toString());
+//          String string = "{\"message\" :{  \"notification\" : { \"title\" : \"Effe\", \"body\" : \"Checking push notification\" }, \"topic\" : \"general\" } }";
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
         // Enter the correct url for your api service site
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, "https://limitless-shore-56363.herokuapp.com/push", object,
                 new Response.Listener<JSONObject>() {
