@@ -29,11 +29,12 @@ public class Admin_Page extends AppCompatActivity {
 binding.AdminButton.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
-        String TaskId=binding.TaskId.getText().toString();
+        DatabaseReference tasksRef = FirebaseDatabase.getInstance().getReference().child("TASKS").push();
+
+        String TaskId=tasksRef.getKey();
         String TaskTitle=binding.Title.getText().toString();
         String TaskLink=binding.TaskLink.getText().toString();
         int Taskpoint=Integer.parseInt(binding.Points.getText().toString());
-        binding.TaskId.setText("");
         binding.TaskLink.setText("");
         binding.Title.setText("");
         binding.Points.setText("");

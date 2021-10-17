@@ -54,38 +54,22 @@
         app:layout_constraintTop_toBottomOf="@+id/TaskLink" />
 
     <EditText
-        android:id="@+id/TaskId"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:textColor="#393333"
-        android:textColorHint="#3A3939"
-        android:background="@color/white"
-        android:ems="10"
-        android:padding="10dp"
-        android:hint="Task ID"
-        android:inputType="textPersonName"
-
-        app:layout_constraintEnd_toEndOf="@+id/Points"
-        app:layout_constraintStart_toStartOf="@+id/Points"
-        app:layout_constraintTop_toBottomOf="@+id/Points" />
-
-    <EditText
         android:id="@+id/Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="21dp"
-        android:ems="10"
-        android:padding="10dp"
-        android:textColor="#393333"
-        android:textColorHint="#3A3939"
         android:background="@color/white"
+        android:ems="10"
         android:hint="Task Title"
         android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColor="#393333"
 
-        app:layout_constraintEnd_toEndOf="@+id/TaskId"
-        app:layout_constraintStart_toStartOf="@+id/TaskId"
-        app:layout_constraintTop_toBottomOf="@+id/TaskId" />
+        android:textColorHint="#3A3939"
+        app:layout_constraintEnd_toEndOf="@+id/Points"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Points"
+        app:layout_constraintTop_toBottomOf="@+id/Points" />
 
     <Button
         android:id="@+id/Admin_Button"
