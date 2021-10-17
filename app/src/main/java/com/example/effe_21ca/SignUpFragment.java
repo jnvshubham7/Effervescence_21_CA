@@ -13,7 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
- import com.example.effe_21ca.databinding.FragmentSignUpBinding;
+import com.example.effe_21ca.databinding.FragmentSignUpBinding;
 import com.example.effe_21ca.models.Users;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -34,14 +34,11 @@ public class SignUpFragment extends Fragment {
 
 
     FragmentSignUpBinding binding;
-     FirebaseAuth Auth;
+    FirebaseAuth Auth;
     FirebaseDatabase database;
     ProgressDialog progressDialog;
 
     GoogleSignInClient mGoogleSignInClient;
-
-
-
 
 
     public SignUpFragment() {
@@ -49,19 +46,17 @@ public class SignUpFragment extends Fragment {
     }
 
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
 
-       binding= FragmentSignUpBinding.inflate(inflater,container, false);
-
+        binding = FragmentSignUpBinding.inflate(inflater, container, false);
 
 
         Auth = FirebaseAuth.getInstance();
-        database=FirebaseDatabase.getInstance();
-        progressDialog=new ProgressDialog(getContext());
+        database = FirebaseDatabase.getInstance();
+        progressDialog = new ProgressDialog(getContext());
         progressDialog.setTitle("Creating Account");
         progressDialog.setMessage("We are creating your account");
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -72,29 +67,26 @@ public class SignUpFragment extends Fragment {
         mGoogleSignInClient = GoogleSignIn.getClient(getContext(), gso);
 
 
-
-
         binding.btnSignUP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 progressDialog.show();
 
-                Auth.createUserWithEmailAndPassword(binding.EmailAddress.getText().toString(),binding.TxPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                Auth.createUserWithEmailAndPassword(binding.EmailAddress.getText().toString(), binding.TxPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         progressDialog.dismiss();
-                        if(task.isSuccessful()){
+                        if (task.isSuccessful()) {
 
-                            Users user=new Users(binding.PersonName.getText().toString(),binding.EmailAddress.getText().toString(),binding.TxPassword.getText().toString());
+                            Users user = new Users(binding.PersonName.getText().toString(), binding.EmailAddress.getText().toString(), binding.TxPassword.getText().toString());
 
-                            String id=task.getResult().getUser().getUid();
+                            String id = task.getResult().getUser().getUid();
                             database.getReference().child("Users").child(id).setValue(user);
-                            Intent intent =new Intent(getContext(),Bottom_Navigation_Activity.class);
+                            Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
                             startActivity(intent);
                             Toast.makeText(getContext(), "SignUp Succesfully", Toast.LENGTH_SHORT).show();
-                        }
-                        else{
-                            Toast.makeText(getContext(),task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -107,8 +99,8 @@ public class SignUpFragment extends Fragment {
                 signIn();
             }
         });
-        if(Auth.getCurrentUser()!=null){
-            Intent intent=new Intent(getContext(),Bottom_Navigation_Activity.class);
+        if (Auth.getCurrentUser() != null) {
+            Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
             startActivity(intent);
         }
 
@@ -116,8 +108,8 @@ public class SignUpFragment extends Fragment {
     }
 
 
+    int RC_SIGN_IN = 65;
 
-    int RC_SIGN_IN=65;
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
@@ -141,6 +133,7 @@ public class SignUpFragment extends Fragment {
             }
         }
     }
+
     private void firebaseAuthWithGoogle(String idToken) {
         AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
         Auth.signInWithCredential(credential)
@@ -158,17 +151,15 @@ public class SignUpFragment extends Fragment {
                                 String personEmail = acct.getEmail();
 //                                String personId = acct.getId();
                                 // Uri personPhoto = acct.getPhotoUrl();
-                                Users user=new Users(GoogleName,personEmail);
-                                String id=task.getResult().getUser().getUid();
+                                Users user = new Users(GoogleName, personEmail);
+                                String id = task.getResult().getUser().getUid();
                                 database.getReference().child("Users").child(id).setValue(user);
                             }
 
 
-
-
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "signInWithCredential:success");
-                          //  FirebaseUser user = Auth.getCurrentUser();
+                            //  FirebaseUser user = Auth.getCurrentUser();
                             Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
                             startActivity(intent);
                             // updateUI(user);
@@ -180,9 +171,6 @@ public class SignUpFragment extends Fragment {
                     }
                 });
     }
-
-
-
 
 
 }

@@ -49,10 +49,10 @@ public class LoginFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        binding= FragmentLoginBinding.inflate(inflater,container, false);
+        binding = FragmentLoginBinding.inflate(inflater, container, false);
 
-        auth=FirebaseAuth.getInstance();
-        progressDialog=new ProgressDialog( getContext());
+        auth = FirebaseAuth.getInstance();
+        progressDialog = new ProgressDialog(getContext());
         progressDialog.setTitle("login");
         progressDialog.setMessage("login to your account");
 
@@ -68,27 +68,23 @@ public class LoginFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 progressDialog.show();
-                auth.signInWithEmailAndPassword(binding.EmailAddress.getText().toString(),binding.TxPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                auth.signInWithEmailAndPassword(binding.EmailAddress.getText().toString(), binding.TxPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         progressDialog.dismiss();
-                        if(task.isSuccessful()){
-                            if(binding.EmailAddress.getText().toString().equals("effervescence@iiita.ac.in"))
-                            {
-                                Intent intent=new Intent(getContext(),Admin_Page.class);
+                        if (task.isSuccessful()) {
+                            if (binding.EmailAddress.getText().toString().equals("effervescence@iiita.ac.in")) {
+                                Intent intent = new Intent(getContext(), Admin_Page.class);
                                 startActivity(intent);
-                            }
-
-                            else {
+                            } else {
 
                                 Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
                                 startActivity(intent);
                             }
 
-                        }
-                        else{
-                            Toast.makeText(getContext(),task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -101,17 +97,18 @@ public class LoginFragment extends Fragment {
                 signIn();
             }
         });
-        if(auth.getCurrentUser()!=null){
+        if (auth.getCurrentUser() != null) {
 
 
-                Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
-                startActivity(intent);
+            Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
+            startActivity(intent);
 
         }
         return binding.getRoot();
     }
 
-    int RC_SIGN_IN=65;
+    int RC_SIGN_IN = 65;
+
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
@@ -162,12 +159,10 @@ public class LoginFragment extends Fragment {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "signInWithCredential:success");
                             FirebaseUser user = auth.getCurrentUser();
-                            if(user.getEmail().equals("effervescence@iiita.ac.in"))
-                            {
-                                Intent intent=new Intent(getContext(),Admin_Page.class);
+                            if (user.getEmail().equals("effervescence@iiita.ac.in")) {
+                                Intent intent = new Intent(getContext(), Admin_Page.class);
                                 startActivity(intent);
-                            }
-                            else {
+                            } else {
                                 Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
                                 startActivity(intent);
                             }

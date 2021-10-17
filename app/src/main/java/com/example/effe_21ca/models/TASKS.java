@@ -1,32 +1,14 @@
 package com.example.effe_21ca.models;
 
 
+import java.util.Map;
+
 public class TASKS {
 
 
-    String title,link,taskId,date;
-
-    public TASKS(String title, String link, String taskId, String date, int points) {
-        this.title = title;
-        this.link = link;
-        this.taskId = taskId;
-        this.date = date;
-        this.points = points;
-    }
-
-    public void setTaskId(String taskId) {
-        this.taskId = taskId;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
+    String title,link,taskId;
     int points;
+    Long timestamp;
 
     public TASKS(String title, String link, String taskId, int points) {
         this.title = title;
@@ -35,8 +17,20 @@ public class TASKS {
         this.points = points;
     }
 
-    public String getTaskId() {
-        return taskId;
+    public TASKS(String title, String link, String taskId, int points, Long timestamp) {
+        this.title = title;
+        this.link = link;
+        this.taskId = taskId;
+        this.points = points;
+        this.timestamp = timestamp;
+    }
+
+    public Long getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(Long timestamp) {
+        this.timestamp = timestamp;
     }
 
     public void settaskId(String taskId) {
@@ -46,6 +40,9 @@ public class TASKS {
     public TASKS() {
     }
 
+    public String getTaskId() {
+        return taskId;
+    }
 
     public TASKS(String title, String link, int points) {
         this.title = title;
