@@ -20,9 +20,6 @@ public class TASKS {
 
     public TASKS(String title, String link, String taskId, int points, Long timestamp) {
 
-    int points;
-
-    public TASKS(String title, String link, String taskId, int points) {
          this.title = title;
         this.link = link;
         this.taskId = taskId;
