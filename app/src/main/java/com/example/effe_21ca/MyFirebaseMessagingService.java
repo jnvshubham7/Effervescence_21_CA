@@ -123,6 +123,8 @@ public class MyFirebaseMessagingService<showNotifications> extends FirebaseMessa
                 .setAutoCancel(true);
 
 
+
+
         NotificationManagerCompat manager =NotificationManagerCompat.from(this);
         manager.notify(999,builder.build());
 
