@@ -114,6 +114,7 @@ FirebaseAuth auth;
             auth.signOut();
             Intent intent=new Intent(Bottom_Navigation_Activity.this,SignInUpActivity.class);
             startActivity(intent);
+
             Toast.makeText(this, "SignOut Successfully ", Toast.LENGTH_SHORT).show();
         }
         else if(id==R.id.Contacts){

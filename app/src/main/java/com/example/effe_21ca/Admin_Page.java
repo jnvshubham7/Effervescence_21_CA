@@ -1,5 +1,6 @@
 package com.example.effe_21ca;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -20,10 +21,13 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.effe_21ca.databinding.ActivityAdminPageBinding;
 import com.example.effe_21ca.models.TASKS;
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ServerValue;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -33,6 +37,7 @@ import org.json.JSONObject;
 
 
 public class Admin_Page extends AppCompatActivity {
+    private static final String TAG = "s";
     ActivityAdminPageBinding binding;
     FirebaseDatabase database;
 
@@ -92,6 +97,34 @@ binding.AdminButton.setOnClickListener(new View.OnClickListener() {
 
     }
 });
+        FirebaseMessaging.getInstance().subscribeToTopic("general")
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+//                        FirebaseDatabase database = FirebaseDatabase.getInstance();
+//                        DatabaseReference notificationDatabase = database.getReference("user_notifications");
+//                        String key = notificationDatabase.push().getKey();
+//                        String userSessionId = "peter123";
+//                        if(userSessionId.equals("NULL")){
+//                            return;
+//                        }
+
+//                        {
+//                            "message" :{
+//                            "notification" : {
+//                                "title" : "Effe",
+//                                        "body" : "Checking push notification"
+//                            },
+//                            "topic" : "general"
+//                        }
+                        String msg = "Successful";
+                        if (!task.isSuccessful()) {
+                            msg = "Failed";
+                        }
+                        Log.d(TAG, msg);
+                        Toast.makeText(Admin_Page.this, msg, Toast.LENGTH_SHORT).show();
+                    }
+                });
 
 
 binding.AdminBackButton.setOnClickListener(new View.OnClickListener() {
@@ -161,15 +194,19 @@ binding.AdminBackButton.setOnClickListener(new View.OnClickListener() {
 
 
 
-        JSONObject object = new JSONObject();
+       // JSONObject object = new JSONObject();
 
-        JSONObject notification = new JSONObject();
-        JSONObject message = new JSONObject();
-        notification.put("title", "message");
-        notification.put("body", "bodym");
-        message.put("notification", notification);
-        message.put("topic", "general");
-        object.put("message", message);
+        JSONObject notification1 = new JSONObject();
+     //   JSONObject message = new JSONObject();
+        notification1.put("title", "message");
+        notification1.put("body", "bodym");
+        Log.d("notification", String.valueOf(notification1));
+//        message.put("notification", notification1);
+//        message.put("topic", "general");
+//        object.put("message", message);
+
+
+
 
 //        try {
 //            //input your API parameters
@@ -181,7 +218,7 @@ binding.AdminBackButton.setOnClickListener(new View.OnClickListener() {
 //            e.printStackTrace();
 //        }
         // Enter the correct url for your api service site
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, "https://limitless-shore-56363.herokuapp.com/push", object,
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, "https://limitless-shore-56363.herokuapp.com/push", notification1,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
