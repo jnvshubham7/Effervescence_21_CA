@@ -4,8 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.effe_21ca.Adaptors.TaskAdaptor;
@@ -71,6 +73,14 @@ public class NotificationActivity extends AppCompatActivity {
             }
         });
 
+        binding.backNotification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NotificationActivity.this, Bottom_Navigation_Activity.class);
+                startActivity(intent);
+            }
+        });
+
 //        databaseReference = database.getReference().child("TASKS");
 //
 //        databaseReference.addValueEventListener(new ValueEventListener() {
@@ -103,6 +113,7 @@ public class NotificationActivity extends AppCompatActivity {
 //        FirebaseMessaging.getInstance().unsubscribeFromTopic("TopicName");
  
     }
+
 
     @Override
     public void onStart() {

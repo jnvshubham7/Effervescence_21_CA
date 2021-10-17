@@ -63,6 +63,15 @@ public class MainActivity extends AppCompatActivity {
 //                        if(userSessionId.equals("NULL")){
 //                            return;
 //                        }
+
+//                        {
+//                            "message" :{
+//                            "notification" : {
+//                                "title" : "Effe",
+//                                        "body" : "Checking push notification"
+//                            },
+//                            "topic" : "general"
+//                        }
                         String msg = "Successful";
                         if (!task.isSuccessful()) {
                             msg = "Failed";

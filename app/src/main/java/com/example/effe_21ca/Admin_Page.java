@@ -76,6 +76,7 @@ binding.AdminButton.setOnClickListener(new View.OnClickListener() {
                 map.put("timestamp", ServerValue.TIMESTAMP);
                 ref.child("TASKS").child(TaskId).updateChildren(map);
                 Toast.makeText(Admin_Page.this, "Task Added", Toast.LENGTH_SHORT).show();
+                postData();
 
 
 
@@ -152,56 +153,56 @@ binding.AdminBackButton.setOnClickListener(new View.OnClickListener() {
 
 
     // Post Request For JSONObject
-//    public void postData() {
-//
-//
-//
-//
-//        JSONObject object = new JSONObject();
-//        try {
-//            //input your API parameters
-//            object.put("Title",binding.Title.getText().toString());
-//            object.put("TitleLink",binding.TaskLink.getText().toString());
-//           // object.put("Points",binding.Points.getText().toString());
-//        } catch (JSONException e) {
-//            e.printStackTrace();
-//        }
-//        // Enter the correct url for your api service site
-//        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, "https://limitless-shore-56363.herokuapp.com/push", object,
-//                new Response.Listener<JSONObject>() {
-//                    @Override
-//                    public void onResponse(JSONObject response) {
-////                        Toast.makeText(Login_screen.this,"String Response : "+ response.toString(),Toast.LENGTH_LONG).show();
-//                        try {
-//                            Log.d("JSON", String.valueOf(response));
-//
-//                            String Error = response.getString("httpStatus");
-//                            if (Error.equals("")||Error.equals(null)){
-//
-//                            }else if(Error.equals("OK")){
-//                                JSONObject body = response.getJSONObject("body");
-//
-//                            }else {
-//
-//                            }
-//
-//                        } catch (JSONException e) {
-//                            e.printStackTrace();
-//
-//                        }
-////                        resultTextView.setText("String Response : "+ response.toString());
-//                    }
-//                }, new Response.ErrorListener() {
-//            @Override
-//            public void onErrorResponse(VolleyError error) {
-//
-//                VolleyLog.d("Error", "Error: " + error.getMessage());
-//                Toast.makeText(Admin_Page.this, "" + error.getMessage(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-//        requestQueue.add(jsonObjectRequest);
-//    }
+    public void postData() {
+
+
+
+
+        JSONObject object = new JSONObject();
+        try {
+            //input your API parameters
+            object.put("Title",binding.Title.getText().toString());
+            object.put("TitleLink",binding.TaskLink.getText().toString());
+           // object.put("Points",binding.Points.getText().toString());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        // Enter the correct url for your api service site
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, "https://limitless-shore-56363.herokuapp.com/push", object,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+//                        Toast.makeText(Login_screen.this,"String Response : "+ response.toString(),Toast.LENGTH_LONG).show();
+                        try {
+                            Log.d("JSON", String.valueOf(response));
+
+                            String Error = response.getString("httpStatus");
+                            if (Error.equals("")||Error.equals(null)){
+
+                            }else if(Error.equals("OK")){
+                                JSONObject body = response.getJSONObject("body");
+
+                            }else {
+
+                            }
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+
+                        }
+//                        resultTextView.setText("String Response : "+ response.toString());
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+                VolleyLog.d("Error", "Error: " + error.getMessage());
+                Toast.makeText(Admin_Page.this, "" + error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
+        requestQueue.add(jsonObjectRequest);
+    }
 
 
 }
