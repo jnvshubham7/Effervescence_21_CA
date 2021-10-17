@@ -1,6 +1,8 @@
 package com.example.effe_21ca;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.renderscript.ScriptGroup;
 import android.view.View;
@@ -60,6 +62,15 @@ binding.AdminButton.setOnClickListener(new View.OnClickListener() {
 
 
 
+    }
+});
+
+
+binding.AdminBackButton.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        Intent intent = new Intent(Admin_Page.this, SignInUpActivity.class);
+        startActivity(intent);
     }
 });
 
