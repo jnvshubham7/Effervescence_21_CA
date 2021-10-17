@@ -17,8 +17,13 @@ public class TASKS {
         this.points = points;
     }
 
+
     public TASKS(String title, String link, String taskId, int points, Long timestamp) {
-        this.title = title;
+
+    int points;
+
+    public TASKS(String title, String link, String taskId, int points) {
+         this.title = title;
         this.link = link;
         this.taskId = taskId;
         this.points = points;
@@ -33,9 +38,9 @@ public class TASKS {
         this.timestamp = timestamp;
     }
 
-    public void settaskId(String taskId) {
-        taskId = taskId;
-    }
+//    public void settaskId(String taskId) {
+//        taskId = taskId;
+//    }
 
     public TASKS() {
     }
