@@ -14,18 +14,6 @@ public class TASKS {
         this.points = points;
     }
 
-    public void setTaskId(String taskId) {
-        this.taskId = taskId;
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
     int points;
 
     public TASKS(String title, String link, String taskId, int points) {
@@ -39,9 +27,9 @@ public class TASKS {
         return taskId;
     }
 
-    public void settaskId(String taskId) {
-        taskId = taskId;
-    }
+//    public void settaskId(String taskId) {
+//        taskId = taskId;
+//    }
 
     public TASKS() {
     }
