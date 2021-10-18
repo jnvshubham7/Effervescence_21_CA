@@ -127,25 +127,25 @@
     android:orientation="horizontal"
     >
 
-            <TextView
-                android:id="@+id/task"
-                android:layout_width="150dp"
-                android:layout_height="25dp"
-                android:layout_gravity="start"
-                android:ems="10"
-                android:gravity="start"
+<!--            <TextView-->
+<!--                android:id="@+id/task"-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="25dp"-->
+<!--                android:layout_gravity="start"-->
+<!--                android:ems="10"-->
+<!--                android:gravity="start"-->
 
-                android:includeFontPadding="false"
-                android:inputType="date"
-                android:minWidth="0dp"
-                android:minHeight="0dp"
+<!--                android:includeFontPadding="false"-->
+<!--                android:inputType="date"-->
+<!--                android:minWidth="0dp"-->
+<!--                android:minHeight="0dp"-->
 
-                android:text="Task Added"
+<!--                android:text="Task Added"-->
 
 
-                android:textAllCaps="false"
-                android:textColor="#98566C"
-                android:textSize="20sp" />
+<!--                android:textAllCaps="false"-->
+<!--                android:textColor="#98566C"-->
+<!--                android:textSize="20sp" />-->
 
             <TextView
                 android:id="@+id/date"

@@ -136,7 +136,7 @@ binding.AdminButton.setOnClickListener(new View.OnClickListener() {
                             msg = "Failed";
                         }
                         Log.d(TAG, msg);
-                        Toast.makeText(Admin_Page.this, msg, Toast.LENGTH_SHORT).show();
+                   //     Toast.makeText(Admin_Page.this, msg, Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -145,7 +145,7 @@ binding.AdminBackButton.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
 
-//      //  auth.signOut();
+      //  auth.signOut();
 //        mGoogleSignInClient.signOut()
 //                .addOnCompleteListener( new OnCompleteListener<Void>() {
 //                    @Override
