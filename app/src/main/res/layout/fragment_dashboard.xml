@@ -11,9 +11,24 @@
     tools:context=".ui.dashboard.DashboardFragment" >
 
 
+    <TextView
+        android:id="@+id/t"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:gravity="center"
+
+        android:text="TASKS"
+
+        android:textColor="#E91E63"
+        android:background="@color/white"
+        android:textSize="20sp" />
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/dasaboardRecycleview"
         android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
         android:layout_height="match_parent"
         android:layout_marginBottom="60dp"
         android:background="@color/white" />

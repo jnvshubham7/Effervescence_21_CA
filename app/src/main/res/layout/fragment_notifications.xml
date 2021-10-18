@@ -109,7 +109,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="121dp"
+            android:layout_marginTop="140dp"
             android:gravity="top"
             android:lineSpacingExtra="3sp"
             android:text="Glad to have as our campus ambassador :)"

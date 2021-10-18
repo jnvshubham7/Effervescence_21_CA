@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,8 +19,12 @@ import android.widget.Toast;
 
 import com.example.effe_21ca.models.TASKS;
 import com.example.effe_21ca.models.Users;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
@@ -59,8 +65,10 @@ private NavigationView navigationView;
 FirebaseAuth auth;
     FirebaseStorage storage;
     FirebaseDatabase database;
+    GoogleSignInClient mGoogleSignInClient;
     Boolean uploaded=false;
     ProgressDialog dialog;
+
 
     ArrayList<String> arrayList;
 
@@ -73,6 +81,17 @@ FirebaseAuth auth;
      setContentView(binding.getRoot());
         dialog = new ProgressDialog(this);
         dialog.setMessage("Uploading Image...");
+
+
+
+
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken("358743908709-bm0lkn9hjv1ueogqk2ggpjlj5ribgua9.apps.googleusercontent.com")
+                .requestEmail()
+                .build();
+
+
+        mGoogleSignInClient = GoogleSignIn.getClient(Bottom_Navigation_Activity.this, gso);
 
       //  dialog.setCancelable(false);
         ImageView imgnoti;
@@ -105,6 +124,65 @@ FirebaseAuth auth;
     }
 
 
+//
+//    @Override
+//    public void onBackPressed() {
+//// super.onBackPressed();
+//// Not calling **super**, disables back button in current screen.
+//    }
+//@Override
+//public void onBackPressed()
+//{
+//    startActivity(new Intent(this, Bottom_Navigation_Activity.class));
+//    finish();
+//}
+
+
+
+
+//
+//boolean doubleBackToExitPressedOnce = false;
+//
+//    @Override
+//    public void onBackPressed() {
+//        if (doubleBackToExitPressedOnce) {
+//            super.onBackPressed();
+//            return;
+//        }
+//
+//        this.doubleBackToExitPressedOnce = true;
+//        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+//
+//        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
+//
+//            @Override
+//            public void run() {
+//                doubleBackToExitPressedOnce=false;
+//            }
+//        }, 2000);
+//    }
+//
+//
+
+
+
+
+
+//private static final int TIME_INTERVAL = 2000; // # milliseconds, desired time passed between two back presses.
+//    private long mBackPressed;
+//
+//    @Override
+//    public void onBackPressed()
+//    {
+//        if (mBackPressed + TIME_INTERVAL > System.currentTimeMillis())
+//        {
+//            super.onBackPressed();
+//            return;
+//        }
+//        else { Toast.makeText(getBaseContext(), "Tap back button in order to exit", Toast.LENGTH_SHORT).show(); }
+//
+//        mBackPressed = System.currentTimeMillis();
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -117,10 +195,63 @@ FirebaseAuth auth;
         int id= item.getItemId();
         if(id==R.id.signout){
             auth.signOut();
-            Intent intent=new Intent(Bottom_Navigation_Activity.this,SignInUpActivity.class);
-            startActivity(intent);
+            mGoogleSignInClient.signOut()
+                    .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                           Intent intent=new Intent(Bottom_Navigation_Activity.this,SignInUpActivity.class);
+                           startActivity(intent);
 
-            Toast.makeText(this, "SignOut Successfully ", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+
+
+//                        signOut();
+//                        break;
+//
+
+//            id.setOnClickListener(view -> {
+//                FirebaseAuth.getInstance().signOut();
+//                startActivity(new Intent(Bottom_Navigation_Activity.this, SignInUpActivity.class)
+//                        .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
+//      //      });
+
+
+//            auth.signOut();
+//            auth.getInstance().signOut();
+//         //   return true;
+//            Intent intent=new Intent(Bottom_Navigation_Activity.this,SignInUpActivity.class);
+//            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//            startActivity(intent);
+//            finish();
+//
+//            Toast.makeText(this, "SignOut Successfully ", Toast.LENGTH_SHORT).show();
+
+//
+//            FirebaseAuth firebaseAuth;
+//            FirebaseAuth.AuthStateListener authStateListener = new FirebaseAuth.AuthStateListener() {
+//                @Override
+//                public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+//                    if (firebaseAuth.getCurrentUser() == null){
+//                        //Do anything here which needs to be done after signout is complete
+//                     //   signOutComplete();
+//                        Intent intent=new Intent(Bottom_Navigation_Activity.this,SignInUpActivity.class);
+////            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+//                           startActivity(intent);
+//                    }
+//                    else {
+//                    }
+//                }
+//            };
+//
+////Init and attach
+//            firebaseAuth = FirebaseAuth.getInstance();
+//            firebaseAuth.addAuthStateListener(authStateListener);
+//
+////Call signOut()
+//            firebaseAuth.signOut();
+
         }
         else if(id==R.id.Contacts){
             Intent intent =new Intent(Bottom_Navigation_Activity.this,Contacts_Activity.class);
@@ -238,6 +369,16 @@ FirebaseAuth auth;
                     Toast.makeText(Bottom_Navigation_Activity.this, "Image is Uploaded", Toast.LENGTH_SHORT).show();
                 }
             });
+
+//            private void signOut() {
+//                mGoogleSignInClient.signOut()
+//                        .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+//                            @Override
+//                            public void onComplete(@NonNull Task<Void> task) {
+//                                // ...
+//                            }
+//                        });
+//            }
 
 
 

@@ -46,7 +46,7 @@ public class TaskNotiAdaptor extends RecyclerView.Adapter<TaskNotiAdaptor.YasksN
 
         holder.title.setText(model.getTitle());
         holder.link.setText(model.getLink());
-        holder.points.setText(String.valueOf(model.getPoints()));
+  //      holder.points.setText(String.valueOf(model.getPoints()));
         holder.date.setText(Cdate);
     }
 
@@ -76,7 +76,7 @@ public class TaskNotiAdaptor extends RecyclerView.Adapter<TaskNotiAdaptor.YasksN
             title=itemView.findViewById(R.id.event_title1);
             link=itemView.findViewById(R.id.event_description1);
 
-            points=itemView.findViewById(R.id.events_points1);
+          //  points=itemView.findViewById(R.id.events_points1);
             date=itemView.findViewById(R.id.date);
         }
     }
