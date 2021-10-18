@@ -43,7 +43,7 @@ public class Splash_Screen_Activity extends AppCompatActivity {
 //                            },
 //                            "topic" : "general"
 //                        }
-                        String msg = "Successful";
+                        String msg = "";
                         if (!task.isSuccessful()) {
                             msg = "Failed";
                         }

@@ -10,7 +10,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.effe_21ca.Adaptors.TaskAdaptor;
 import com.example.effe_21ca.Adaptors.TaskNotiAdaptor;
 import com.example.effe_21ca.databinding.ActivityNotificationBinding;
 import com.example.effe_21ca.models.TASKS;
@@ -20,9 +19,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class NotificationActivity extends AppCompatActivity {
     ActivityNotificationBinding binding;
@@ -60,7 +60,21 @@ public class NotificationActivity extends AppCompatActivity {
                     if(!arrayList.contains(tasks1.getTaskId())) {
                         list.add(tasks1);
                     }
+
+
+             //       Collections.sort(list);
+
+//                    Collections.sort(list, new Comparator<TASKS>(){
+//                        public Long compare(TASKS obj1, TASKS obj2) {
+//
+//
+//                            return Long.valueOf(Long.valueOf(obj2.getTimestamp()).compareTo(Long.valueOf(obj1.getTimestamp()))); // To compare integer values
+//
+//                        }
+//
+//                    });
                 }
+
 
                 adapter=new TaskNotiAdaptor(NotificationActivity.this, list);
                 binding.orderRecyclerView.setAdapter(adapter);
@@ -113,6 +127,16 @@ public class NotificationActivity extends AppCompatActivity {
 //        FirebaseMessaging.getInstance().unsubscribeFromTopic("TopicName");
  
     }
+
+//    public class TASKS implements Comparable<TASKS>
+//    {
+//        public long timestamp;
+//
+//        @Override
+//        public int compareTo(TASKS obj) {
+//            return Long.compare(this.timestamp, obj.timestamp);
+//        }
+//    }
 
 
     @Override
