@@ -157,7 +157,7 @@ binding.AdminBackButton.setOnClickListener(new View.OnClickListener() {
 //                });
 
         FirebaseAuth.getInstance().signOut();
-        Intent intent = new Intent(Admin_Page.this, SignInUpActivity.class);
+        Intent intent = new Intent(Admin_Page.this, Bottom_Navigation_Activity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();
