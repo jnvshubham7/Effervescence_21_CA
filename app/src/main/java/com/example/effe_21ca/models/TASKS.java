@@ -1,14 +1,14 @@
 package com.example.effe_21ca.models;
 
 
-import java.util.Map;
-
 public class TASKS {
 
 
     String title,link,taskId;
     int points;
     Long timestamp;
+
+
 
     public TASKS(String title, String link, String taskId, int points) {
         this.title = title;
@@ -27,7 +27,7 @@ public class TASKS {
         this.timestamp = timestamp;
     }
 
-    public Long getTimestamp() {
+    public  Long getTimestamp() {
         return timestamp;
     }
 

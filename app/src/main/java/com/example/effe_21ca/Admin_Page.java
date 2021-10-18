@@ -21,6 +21,9 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.effe_21ca.databinding.ActivityAdminPageBinding;
 import com.example.effe_21ca.models.TASKS;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -41,6 +44,8 @@ public class Admin_Page extends AppCompatActivity {
     private static final String TAG = "s";
     ActivityAdminPageBinding binding;
     FirebaseDatabase database;
+    FirebaseAuth auth;
+    GoogleSignInClient mGoogleSignInClient;
 
 
     @Override
@@ -50,6 +55,14 @@ public class Admin_Page extends AppCompatActivity {
         binding =ActivityAdminPageBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         database = FirebaseDatabase.getInstance();
+
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken("358743908709-bm0lkn9hjv1ueogqk2ggpjlj5ribgua9.apps.googleusercontent.com")
+                .requestEmail()
+                .build();
+
+
+        mGoogleSignInClient = GoogleSignIn.getClient(Admin_Page.this, gso);
 //        String TaskTitle=binding.Title.getText().toString();
 //        String TaskLink=binding.TaskLink.getText().toString();
 //        int Taskpoint=Integer.parseInt(binding.Points.getText().toString());
@@ -131,6 +144,18 @@ binding.AdminButton.setOnClickListener(new View.OnClickListener() {
 binding.AdminBackButton.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
+
+//      //  auth.signOut();
+//        mGoogleSignInClient.signOut()
+//                .addOnCompleteListener( new OnCompleteListener<Void>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<Void> task) {
+//                        Intent intent=new Intent(Admin_Page.this,SignInUpActivity.class);
+//                        startActivity(intent);
+//
+//                    }
+//                });
+
         FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(Admin_Page.this, SignInUpActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
