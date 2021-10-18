@@ -14,6 +14,7 @@ import com.example.effe_21ca.Adaptors.TaskAdaptor;
 import com.example.effe_21ca.Adaptors.TaskNotiAdaptor;
 import com.example.effe_21ca.databinding.ActivityNotificationBinding;
 import com.example.effe_21ca.models.TASKS;
+import com.example.effe_21ca.models.Users;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -23,6 +24,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class NotificationActivity extends AppCompatActivity {
     ActivityNotificationBinding binding;
@@ -44,6 +47,10 @@ public class NotificationActivity extends AppCompatActivity {
         database=FirebaseDatabase.getInstance();
 
         LinearLayoutManager layoutManager=new LinearLayoutManager(this);
+
+        adapter=new TaskNotiAdaptor(NotificationActivity.this, list);
+        binding.orderRecyclerView.setAdapter(adapter);
+
         binding.orderRecyclerView.setLayoutManager(layoutManager);
         binding.orderRecyclerView.setItemAnimator(null);
 
@@ -55,6 +62,7 @@ public class NotificationActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 Log.d("d",snapshot.getKey());
 
+                list.clear();
                 for(DataSnapshot data : snapshot.getChildren()){
                     TASKS tasks1 = new TASKS(data.child("title").getValue(String.class),data.child("link").getValue(String.class),data.child("taskId").getValue(String.class),data.child("points").getValue(Integer.class),data.child("timestamp").getValue(Long.class));
                     if(!arrayList.contains(tasks1.getTaskId())) {
@@ -62,8 +70,17 @@ public class NotificationActivity extends AppCompatActivity {
                     }
                 }
 
-                adapter=new TaskNotiAdaptor(NotificationActivity.this, list);
-                binding.orderRecyclerView.setAdapter(adapter);
+                adapter.notifyDataSetChanged();
+                Collections.sort(list, new Comparator<TASKS>(){
+                    public int compare(TASKS obj1, TASKS obj2) {
+
+
+                        return Long.valueOf(obj2.getTimestamp()).compareTo(Long.valueOf(obj1.getTimestamp())); // To compare integer values
+
+                    }
+
+                });
+
 
             }
 
