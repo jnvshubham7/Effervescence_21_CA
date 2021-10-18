@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -37,6 +39,8 @@ public class SignUpFragment extends Fragment {
     FirebaseAuth Auth;
     FirebaseDatabase database;
     ProgressDialog progressDialog;
+    public EditText EmailAddress, TxPassword,  PersonName;
+    Button btnSignUp;
 
     GoogleSignInClient mGoogleSignInClient;
 
@@ -53,7 +57,9 @@ public class SignUpFragment extends Fragment {
 
         binding = FragmentSignUpBinding.inflate(inflater, container, false);
 
-
+        EmailAddress = getActivity().findViewById(R.id.EmailAddress);
+        TxPassword = getActivity().findViewById(R.id.TxPassword);
+        PersonName = getActivity().findViewById(R.id.PersonName);
         Auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
         progressDialog = new ProgressDialog(getContext());
@@ -70,26 +76,46 @@ public class SignUpFragment extends Fragment {
         binding.btnSignUP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                progressDialog.show();
+                String emailID = binding.EmailAddress.getText().toString();
+                String paswd = binding.TxPassword.getText().toString();
+                String personName = binding.PersonName.getText().toString();
 
-                Auth.createUserWithEmailAndPassword(binding.EmailAddress.getText().toString(), binding.TxPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        progressDialog.dismiss();
-                        if (task.isSuccessful()) {
+                if (emailID.isEmpty()) {
+                    binding.EmailAddress.setError("Provide your Email first!");
+                    binding.EmailAddress.requestFocus();
+                }
+              else  if (paswd.isEmpty()) {
+                    binding.TxPassword.setError("Set your password");
+                    binding.TxPassword.requestFocus();
+                }
+              else  if (personName.isEmpty()) {
+                    binding.PersonName.setError("Provide your UserName");
+                    binding.PersonName.requestFocus();
 
-                            Users user = new Users(binding.PersonName.getText().toString(), binding.EmailAddress.getText().toString(), binding.TxPassword.getText().toString());
+                }
 
-                            String id = task.getResult().getUser().getUid();
-                            database.getReference().child("Users").child(id).setValue(user);
-                            Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
-                            startActivity(intent);
-                            Toast.makeText(getContext(), "SignUp Succesfully", Toast.LENGTH_SHORT).show();
-                        } else {
-                            Toast.makeText(getContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+
+else if (!(emailID.isEmpty() && paswd.isEmpty() && personName.isEmpty())) {
+                    progressDialog.show();
+                    Auth.createUserWithEmailAndPassword(binding.EmailAddress.getText().toString(), binding.TxPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            progressDialog.dismiss();
+                            if (task.isSuccessful()) {
+
+                                Users user = new Users(binding.PersonName.getText().toString(), binding.EmailAddress.getText().toString(), binding.TxPassword.getText().toString());
+
+                                String id = task.getResult().getUser().getUid();
+                                database.getReference().child("Users").child(id).setValue(user);
+                                Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
+                                startActivity(intent);
+                                Toast.makeText(getContext(), "SignUp Succesfully", Toast.LENGTH_SHORT).show();
+                            } else {
+                                Toast.makeText(getContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                            }
                         }
-                    }
-                });
+                    });
+                }
             }
         });
 
