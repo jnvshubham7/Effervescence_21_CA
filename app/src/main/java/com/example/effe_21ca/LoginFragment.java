@@ -67,27 +67,43 @@ public class LoginFragment extends Fragment {
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                progressDialog.show();
-                auth.signInWithEmailAndPassword(binding.EmailAddress.getText().toString(), binding.TxPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
 
-                        progressDialog.dismiss();
-                        if (task.isSuccessful()) {
-                            if (binding.EmailAddress.getText().toString().equals("effervescence@iiita.ac.in")) {
-                                Intent intent = new Intent(getContext(), Admin_Page.class);
-                                startActivity(intent);
+                String emailID = binding.EmailAddress.getText().toString();
+                String paswd = binding.TxPassword.getText().toString();
+
+
+                if (emailID.isEmpty()) {
+                    binding.EmailAddress.setError("Provide your Email first!");
+                    binding.EmailAddress.requestFocus();
+                } else if (paswd.isEmpty()) {
+                    binding.TxPassword.setError("Provide your password");
+                    binding.TxPassword.requestFocus();
+                }
+
+
+                else if (!(emailID.isEmpty() && paswd.isEmpty())) {
+                    progressDialog.show();
+                    auth.signInWithEmailAndPassword(binding.EmailAddress.getText().toString(), binding.TxPassword.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+
+                            progressDialog.dismiss();
+                            if (task.isSuccessful()) {
+                                if (binding.EmailAddress.getText().toString().equals("effervescence@iiita.ac.in")) {
+                                    Intent intent = new Intent(getContext(), Admin_Page.class);
+                                    startActivity(intent);
+                                } else {
+
+                                    Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
+                                    startActivity(intent);
+                                }
+
                             } else {
-
-                                Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
-                                startActivity(intent);
+                                Toast.makeText(getContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                             }
-
-                        } else {
-                            Toast.makeText(getContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
-                    }
-                });
+                    });
+                }
             }
         });
 
