@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -29,6 +30,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -124,65 +126,26 @@ FirebaseAuth auth;
     }
 
 
-//
-//    @Override
-//    public void onBackPressed() {
-//// super.onBackPressed();
-//// Not calling **super**, disables back button in current screen.
-//    }
-//@Override
-//public void onBackPressed()
-//{
-//    startActivity(new Intent(this, Bottom_Navigation_Activity.class));
-//    finish();
-//}
+    int doubleBackToExitPressed = 1;
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressed == 2) {
+            finishAffinity();
+            System.exit(0);
+        }
+        else {
+            doubleBackToExitPressed++;
+            Toast.makeText(this, "Please press Back again to exit", Toast.LENGTH_SHORT).show();
+        }
 
-
-
-
-//
-//boolean doubleBackToExitPressedOnce = false;
-//
-//    @Override
-//    public void onBackPressed() {
-//        if (doubleBackToExitPressedOnce) {
-//            super.onBackPressed();
-//            return;
-//        }
-//
-//        this.doubleBackToExitPressedOnce = true;
-//        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
-//
-//        new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {
-//
-//            @Override
-//            public void run() {
-//                doubleBackToExitPressedOnce=false;
-//            }
-//        }, 2000);
-//    }
-//
-//
-
-
-
-
-
-//private static final int TIME_INTERVAL = 2000; // # milliseconds, desired time passed between two back presses.
-//    private long mBackPressed;
-//
-//    @Override
-//    public void onBackPressed()
-//    {
-//        if (mBackPressed + TIME_INTERVAL > System.currentTimeMillis())
-//        {
-//            super.onBackPressed();
-//            return;
-//        }
-//        else { Toast.makeText(getBaseContext(), "Tap back button in order to exit", Toast.LENGTH_SHORT).show(); }
-//
-//        mBackPressed = System.currentTimeMillis();
-//    }
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                doubleBackToExitPressed=1;
+            }
+        }, 2000);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
