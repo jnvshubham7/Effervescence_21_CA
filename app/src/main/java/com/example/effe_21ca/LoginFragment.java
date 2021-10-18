@@ -2,7 +2,9 @@ package com.example.effe_21ca;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -162,6 +164,14 @@ public class LoginFragment extends Fragment {
                             Log.d("TAG", "signInWithCredential:success");
                             FirebaseUser user = auth.getCurrentUser();
                             if (user.getEmail().equals("effervescence@iiita.ac.in")) {
+
+//                                Context context = getActivity();
+//                                SharedPreferences sharedPref = context.getSharedPreferences(
+//                                        "s", Context.MODE_PRIVATE);
+//                                SharedPreferences sharedPref = getActivity().getPreferences(Context.MODE_PRIVATE);
+//                                SharedPreferences.Editor editor = sharedPref.edit();
+//                                editor.putInt(getString(R.string.saved_high_score_key), newHighScore);
+//                                editor.apply();
                                 Intent intent = new Intent(getContext(), Admin_Page.class);
                                 startActivity(intent);
                             } else {

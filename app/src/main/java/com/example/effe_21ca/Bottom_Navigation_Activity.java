@@ -3,6 +3,7 @@ package com.example.effe_21ca;
 import static java.security.AccessController.getContext;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.Uri;
@@ -14,6 +15,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -70,6 +72,7 @@ FirebaseAuth auth;
     GoogleSignInClient mGoogleSignInClient;
     Boolean uploaded=false;
     ProgressDialog dialog;
+    Button TaskAdd;
 
 
     ArrayList<String> arrayList;
@@ -83,6 +86,7 @@ FirebaseAuth auth;
      setContentView(binding.getRoot());
         dialog = new ProgressDialog(this);
         dialog.setMessage("Uploading Image...");
+
 
 
 
@@ -162,6 +166,7 @@ FirebaseAuth auth;
                     .addOnCompleteListener(this, new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
+
                            Intent intent=new Intent(Bottom_Navigation_Activity.this,SignInUpActivity.class);
                            startActivity(intent);
 
@@ -169,6 +174,9 @@ FirebaseAuth auth;
                     });
 
 
+//            SharedPreferences sharedPref = getSharedPreferences("s", MODE_PRIVATE);
+//            Log.d("s", String.valueOf(sharedPref));
+         //   SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
 
 //                        signOut();
 //                        break;
@@ -217,6 +225,7 @@ FirebaseAuth auth;
 
         }
         else if(id==R.id.Contacts){
+
             Intent intent =new Intent(Bottom_Navigation_Activity.this,Contacts_Activity.class);
             startActivity(intent);
         }
