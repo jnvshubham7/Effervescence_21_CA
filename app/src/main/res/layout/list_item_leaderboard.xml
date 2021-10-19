@@ -65,20 +65,7 @@
         android:layout_marginRight="16dp"
         android:layout_marginLeft="8dp" />
 
-<!--    <TextView-->
-<!--        android:id="@+id/emailTextView"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginBottom="12dp"-->
-<!--        android:layout_marginEnd="8dp"-->
-<!--        android:layout_marginTop="4dp"-->
-<!--        android:fontFamily="sans-serif-condensed"-->
-<!--        android:text="College of Fake Students"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toStartOf="@+id/guideline4"-->
-<!--        app:layout_constraintStart_toStartOf="@+id/name1"-->
-<!--        app:layout_constraintTop_toTopOf="@+id/sr.no"-->
-<!--        android:layout_marginRight="8dp" />-->
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/sr.no"

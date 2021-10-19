@@ -22,13 +22,7 @@
         app:cardElevation="10dp"
         tools:ignore="MissingConstraints">
 
-<!--        <ImageView-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="@color/colorPrimary"-->
-<!--            android:src="@drawable/ic_bell"-->
 
-<!--            />-->
 
         <LinearLayout
             android:id="@+id/dasaboardRecycleview"
@@ -65,44 +59,7 @@
                     android:textAppearance="?android:attr/textAppearanceLarge"
                     android:textColor="#3F96BD" />
 
-<!--                <LinearLayout-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:orientation="horizontal">-->
 
-<!--                    <ImageView-->
-<!--                        android:layout_width="15dp"-->
-<!--                        android:layout_height="match_parent"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:layout_marginEnd="1dp"-->
-<!--                        android:layout_marginRight="1dp"-->
-<!--                        android:src="@drawable/add_ic" />-->
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/events_points1"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center_vertical"-->
-<!--                        android:layout_marginEnd="2dp"-->
-<!--                        android:layout_marginRight="2dp"-->
-<!--                        android:text="50"-->
-<!--                        android:textColor="@color/black"-->
-<!--                        android:textSize="20sp"-->
-<!--                        android:textStyle="bold" />-->
-
-<!--                    <TextView-->
-<!--                        android:id="@+id/point_text_TV1"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="bottom"-->
-<!--                        android:layout_marginEnd="5dp"-->
-<!--                        android:layout_marginRight="5dp"-->
-<!--                        android:textColor="@color/black"-->
-<!--                        android:gravity="top"-->
-<!--                        android:text="pts"-->
-<!--                        android:textAppearance="?android:textAppearanceSmall" />-->
-
-<!--                </LinearLayout>-->
 
             </LinearLayout>
 
@@ -127,25 +84,7 @@
     android:orientation="horizontal"
     >
 
-<!--            <TextView-->
-<!--                android:id="@+id/task"-->
-<!--                android:layout_width="150dp"-->
-<!--                android:layout_height="25dp"-->
-<!--                android:layout_gravity="start"-->
-<!--                android:ems="10"-->
-<!--                android:gravity="start"-->
 
-<!--                android:includeFontPadding="false"-->
-<!--                android:inputType="date"-->
-<!--                android:minWidth="0dp"-->
-<!--                android:minHeight="0dp"-->
-
-<!--                android:text="Task Added"-->
-
-
-<!--                android:textAllCaps="false"-->
-<!--                android:textColor="#98566C"-->
-<!--                android:textSize="20sp" />-->
 
             <TextView
                 android:id="@+id/date"
