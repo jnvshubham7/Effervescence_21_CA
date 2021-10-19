@@ -6,13 +6,7 @@ public class Users {
     int score;
     boolean isCurrentUser;
 
-//    public Users(String userName, int score, boolean isCurrentUser) {
-//
-//
-//        this.userName = userName;
-//        this.score = score;
-//        this.isCurrentUser = isCurrentUser;
-//    }
+
 
 
     public Users(String userName, String mail) {
@@ -26,9 +20,7 @@ public class Users {
         this.passwoord = passwoord;
     }
 
-//    public String getUsername() {
-//        return userName;
-//    }
+
 
     public Users(String userName, String mail, String passwoord, String userId) {
         this.userName = userName;
@@ -44,7 +36,7 @@ public class Users {
         this.passwoord = passwoord;
         this.score = score;
  
-       // this.points = points;
+
  
     }
 

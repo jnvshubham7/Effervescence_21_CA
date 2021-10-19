@@ -27,22 +27,7 @@ public class Splash_Screen_Activity extends AppCompatActivity {
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-//                        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//                        DatabaseReference notificationDatabase = database.getReference("user_notifications");
-//                        String key = notificationDatabase.push().getKey();
-//                        String userSessionId = "peter123";
-//                        if(userSessionId.equals("NULL")){
-//                            return;
-//                        }
 
-//                        {
-//                            "message" :{
-//                            "notification" : {
-//                                "title" : "Effe",
-//                                        "body" : "Checking push notification"
-//                            },
-//                            "topic" : "general"
-//                        }
                         String msg = "";
                         if (!task.isSuccessful()) {
                             msg = "Failed";
@@ -52,7 +37,6 @@ public class Splash_Screen_Activity extends AppCompatActivity {
                     }
                 });
 
-        // getSupportActionBar().hide();
 
         setContentView(R.layout.activity_splash_screen);
 

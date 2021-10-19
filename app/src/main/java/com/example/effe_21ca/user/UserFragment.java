@@ -45,15 +45,12 @@ public class UserFragment extends Fragment {
         notificationsViewModel =
                 new ViewModelProvider(this).get(UserViewModel.class);
 
-//        database = FirebaseDatabase.getInstance();\
-//        String name = getIntent().getStringExtra("name");
+
 
 
         binding = FragmentNotificationsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-//        firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
-//        SharedPreferences prefs = Objects.requireNonNull(getContext()).getSharedPreferences("PREFS", MODE_PRIVATE);
-//        profileid = prefs.getString("profileid", "none");
+
 
 
 
@@ -61,57 +58,7 @@ public class UserFragment extends Fragment {
         String currentDate = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.getTime());
         binding.date.setText(currentDate);
 
-//    binding.nameUser.setText((CharSequence) FirebaseDatabase.getInstance().getReference().child("Users")
-//            .child(FirebaseAuth.getInstance().getUid()).
-//                    child("userName"));
 
-        //  binding.nameUser.setText(FirebaseAuth.getInstance().getUid());
-
-//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-//        if (user != null) {
-//            String name = user.getDisplayName();
-//            binding.nameUser.setText(name);
-//        }
-//        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-//        if (user != null) {
-//            // User is signed in
-//            String displayName = user.getDisplayName();
-//            //  Uri profileUri = user.getPhotoUrl();
-//
-//            // If the above were null, iterate the provider data
-//            // and set with the first non null data
-//            for (UserInfo userInfo : user.getProviderData()) {
-//                if (displayName == null && userInfo.getDisplayName() != null) {
-//                    displayName = userInfo.getDisplayName();
-//                }
-//
-//            }
-//
-//
-//            binding.nameUser.setText(displayName);
-//
-//
-//        }
-
-//        database.getReference().child("Users").addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//
-//              //  list.clear();
-//                for(DataSnapshot dataSnapshot:snapshot.getChildren()){
-//                    Users users=dataSnapshot.getValue(Users.class);
-//                    users.getUserId(dataSnapshot.getKey());
-//                   // list.add(users);
-//
-//                }
-//
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
 
             DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getUid());
             reference.addValueEventListener(new ValueEventListener() {
@@ -122,10 +69,9 @@ public class UserFragment extends Fragment {
                     }
                     Users user = dataSnapshot.getValue(Users.class);
 
-             //      assert user != null;
+                  assert user != null;
 
-                   // userName.setText(user.getUsername());
-                    assert user != null;
+
                     binding.nameUser.setText(user.getUserName());
                  binding.score.setText(String.valueOf(user.getScore()));
 
@@ -139,16 +85,10 @@ public class UserFragment extends Fragment {
 
 
 
-//        final TextView textView = binding.textNotifications;
-//        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//                textView.setText(s);
-//            }
-//        });
+
         return root;
     }
- //   SharedPreferences preferences = this.getActivity().getSharedPreferences("pref", Context.MODE_PRIVATE);
+
 
     @Override
     public void onDestroyView() {
