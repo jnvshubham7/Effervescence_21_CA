@@ -166,7 +166,7 @@ public class LoginFragment extends Fragment {
 
                             Log.d("TAG", "signInWithCredential:success");
                             FirebaseUser user = auth.getCurrentUser();
-//
+
 
 
                                 SharedPreferences sharedPreferences = getContext().getSharedPreferences("MySharedPref",MODE_PRIVATE);

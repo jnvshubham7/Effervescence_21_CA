@@ -1,8 +1,11 @@
 package com.example.effe_21ca;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -167,6 +170,14 @@ else if (!(emailID.isEmpty() && paswd.isEmpty() && personName.isEmpty())) {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+
+                          //  FirebaseUser user = Auth.getCurrentUser();
+
+
+
+
+
+
                             GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getActivity());
                             if (acct != null) {
 
@@ -178,6 +189,17 @@ else if (!(emailID.isEmpty() && paswd.isEmpty() && personName.isEmpty())) {
                                 Users user = new Users(GoogleName, personEmail);
                                 String id = task.getResult().getUser().getUid();
                                 database.getReference().child("Users").child(id).setValue(user);
+
+                                SharedPreferences sharedPreferences = getContext().getSharedPreferences("MySharedPref1",MODE_PRIVATE);
+
+
+                                SharedPreferences.Editor myEdit = sharedPreferences.edit();
+
+
+                                myEdit.putString("name", acct.getEmail());
+
+
+                                myEdit.commit();
                             }
 
 

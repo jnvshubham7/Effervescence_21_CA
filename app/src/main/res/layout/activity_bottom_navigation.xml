@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -42,18 +43,20 @@
 
     <ImageButton
         android:id="@+id/TaskAdd"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="13dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="100dp"
         android:layout_marginRight="90dp"
-
-
         android:layout_marginBottom="20dp"
-        android:visibility="invisible"
 
-        app:srcCompat="@android:drawable/ic_input_add" />
+
+        android:background="@color/botomnev"
+
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_add_black_24dp"
+         />
 
     <ImageView
         android:id="@+id/imgNotification"
