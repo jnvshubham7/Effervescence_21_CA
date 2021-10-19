@@ -108,8 +108,6 @@ FirebaseAuth auth;
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setItemIconTintList(null);
 
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.award, R.id.navigation_dashboard, R.id.navigation_notifications)
                 .build();
@@ -137,7 +135,7 @@ FirebaseAuth auth;
         String s1 = sh.getString("name", "");
 
         View b = findViewById(R.id.TaskAdd);
-        b.setVisibility(View.GONE);
+        b.setVisibility(View.INVISIBLE);
 
         SharedPreferences sh1 = getSharedPreferences("MySharedPref1", MODE_PRIVATE);
 
@@ -151,47 +149,26 @@ FirebaseAuth auth;
          binding.TaskAdd.setVisibility(View.VISIBLE);
         }
 
-       else if (s2.equals("effervescence@iiita.ac.in")) {
-            binding.TaskAdd.setVisibility(View.VISIBLE);
+        if (!s2.equals("effervescence@iiita.ac.in")) {
+            binding.TaskAdd.setVisibility(View.GONE);
         }
+        Log.d("s2", s2);
 
-        else {
-            binding.TaskAdd.setVisibility(View.INVISIBLE);
-        }
+//        else {
+//            binding.TaskAdd.setVisibility(View.INVISIBLE);
+//        }
 
         binding.TaskAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                // Retrieving the value using its keys the file name
-// must be same in both saving and retrieving the data
-          //      SharedPreferences sh = getSharedPreferences("MySharedPref", MODE_PRIVATE);
-
-// The value will be default as empty string because for
-// the very first time when the app is opened, there is nothing to show
-      //          String s1 = sh.getString("name", "");
-                //  int a = sh.getInt("age", 0);
-
-// We can then use the data
-                //  binding.textView5.setText(s1);
-                //   age.setText(String.valueOf(a));
-//
-//                SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-//                text = sharedPreferences.getString(TEXT, "");
-//                Log.d("text", text);
-//                 FirebaseUser user = auth.getCurrentUser();
-                //  if(text.equals("effervescence@iiita.ac.in")){
-                //   Log.d("text", String.valueOf(binding.textView5));
-
-             //   if (s1.equals("effervescence@iiita.ac.in")) {
                     Intent intent = new Intent(Bottom_Navigation_Activity.this, Admin_Page.class);
                     startActivity(intent);
 
-                    //   }
-           //     }
+
             }
         });
-    //    binding.TaskAdd.;
+
 
     }
 
@@ -245,54 +222,7 @@ FirebaseAuth auth;
 
 
 
-//            SharedPreferences sharedPref = getSharedPreferences("s", MODE_PRIVATE);
-//            Log.d("s", String.valueOf(sharedPref));
-         //   SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
-
-//                        signOut();
-//                        break;
 //
-
-//            id.setOnClickListener(view -> {
-//                FirebaseAuth.getInstance().signOut();
-//                startActivity(new Intent(Bottom_Navigation_Activity.this, SignInUpActivity.class)
-//                        .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP));
-//      //      });
-
-
-//            auth.signOut();
-//            auth.getInstance().signOut();
-//         //   return true;
-//            Intent intent=new Intent(Bottom_Navigation_Activity.this,SignInUpActivity.class);
-//            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//            startActivity(intent);
-//            finish();
-//
-//            Toast.makeText(this, "SignOut Successfully ", Toast.LENGTH_SHORT).show();
-
-//
-//            FirebaseAuth firebaseAuth;
-//            FirebaseAuth.AuthStateListener authStateListener = new FirebaseAuth.AuthStateListener() {
-//                @Override
-//                public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-//                    if (firebaseAuth.getCurrentUser() == null){
-//                        //Do anything here which needs to be done after signout is complete
-//                     //   signOutComplete();
-//                        Intent intent=new Intent(Bottom_Navigation_Activity.this,SignInUpActivity.class);
-////            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//                           startActivity(intent);
-//                    }
-//                    else {
-//                    }
-//                }
-//            };
-//
-////Init and attach
-//            firebaseAuth = FirebaseAuth.getInstance();
-//            firebaseAuth.addAuthStateListener(authStateListener);
-//
-////Call signOut()
-//            firebaseAuth.signOut();
 
         }
         else if(id==R.id.Contacts){
@@ -348,13 +278,6 @@ FirebaseAuth auth;
     }
 
 
-//public void loadData1(){
-//        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
-//        text = sharedPreferences.getString(TEXT, "");
-//        Log.d("text", text);
-//
-//
-//}
 
 
     @Override
@@ -420,15 +343,7 @@ FirebaseAuth auth;
                 }
             });
 
-//            private void signOut() {
-//                mGoogleSignInClient.signOut()
-//                        .addOnCompleteListener(this, new OnCompleteListener<Void>() {
-//                            @Override
-//                            public void onComplete(@NonNull Task<Void> task) {
-//                                // ...
-//                            }
-//                        });
-//            }
+
 
 
 

@@ -34,6 +34,8 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Objects;
+
 
 public class SignUpFragment extends Fragment {
 
@@ -178,8 +180,13 @@ else if (!(emailID.isEmpty() && paswd.isEmpty() && personName.isEmpty())) {
 
 
 
+
+
                             GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getActivity());
                             if (acct != null) {
+
+
+
 
 
                                 String GoogleName = acct.getDisplayName();
@@ -188,9 +195,17 @@ else if (!(emailID.isEmpty() && paswd.isEmpty() && personName.isEmpty())) {
 
                                 Users user = new Users(GoogleName, personEmail);
                                 String id = task.getResult().getUser().getUid();
-                                int score=user.getScore();
+                             //   int score =user.getScore();
+                              //  Log.d("score", String.valueOf(score));
+
                                 database.getReference().child("Users").child(id).setValue(user);
-                                database.getReference().child("Users").child(id).child("score").setValue(user);
+                           //     database.getReference().child("Users").child(id).child("score").setValue(score);
+
+
+                                SharedPreferences sharedPreferences = requireContext().getSharedPreferences("MySharedPref1",MODE_PRIVATE);
+                                SharedPreferences.Editor myEdit = sharedPreferences.edit();
+                                myEdit.putString("name", acct.getEmail());
+                                myEdit.apply();
 
                             }
 
