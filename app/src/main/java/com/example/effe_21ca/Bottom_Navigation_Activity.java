@@ -133,13 +133,30 @@ FirebaseAuth auth;
 
         SharedPreferences sh = getSharedPreferences("MySharedPref", MODE_PRIVATE);
 
-// The value will be default as empty string because for
-// the very first time when the app is opened, there is nothing to show
+
         String s1 = sh.getString("name", "");
+
+        View b = findViewById(R.id.TaskAdd);
+        b.setVisibility(View.GONE);
+
+        SharedPreferences sh1 = getSharedPreferences("MySharedPref1", MODE_PRIVATE);
+
+
+        String s2 = sh1.getString("name", "");
+
+
 
 
         if (s1.equals("effervescence@iiita.ac.in")) {
          binding.TaskAdd.setVisibility(View.VISIBLE);
+        }
+
+       else if (s2.equals("effervescence@iiita.ac.in")) {
+            binding.TaskAdd.setVisibility(View.VISIBLE);
+        }
+
+        else {
+            binding.TaskAdd.setVisibility(View.INVISIBLE);
         }
 
         binding.TaskAdd.setOnClickListener(new View.OnClickListener() {
@@ -148,11 +165,11 @@ FirebaseAuth auth;
 
                 // Retrieving the value using its keys the file name
 // must be same in both saving and retrieving the data
-                SharedPreferences sh = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+          //      SharedPreferences sh = getSharedPreferences("MySharedPref", MODE_PRIVATE);
 
 // The value will be default as empty string because for
 // the very first time when the app is opened, there is nothing to show
-                String s1 = sh.getString("name", "");
+      //          String s1 = sh.getString("name", "");
                 //  int a = sh.getInt("age", 0);
 
 // We can then use the data

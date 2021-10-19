@@ -17,6 +17,9 @@
         <activity
             android:name=".Admin_Page"
             android:exported="true" />
+
+        <meta-data android:name="com.google.firebase.messaging.default_notification_icon" android:resource="@drawable/fcm_push_icon" />
+        <meta-data android:name="com.google.firebase.messaging.default_notification_color" android:resource="@color/colorAccent" />
         <!-- <meta-data -->
         <!-- android:name="com.google.firebase.messaging.default_notification_icon" -->
         <!-- android:resource="@drawable/ic_stat_ic_notification" /> -->

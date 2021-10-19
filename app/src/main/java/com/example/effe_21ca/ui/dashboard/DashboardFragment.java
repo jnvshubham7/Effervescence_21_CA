@@ -44,7 +44,7 @@ public class DashboardFragment extends Fragment {
 
     ArrayList<String> arrayList=new ArrayList<>();
     ArrayList<TASKS> list=new ArrayList<>();
-   // ProgressDialog dialog;
+
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -54,10 +54,7 @@ public class DashboardFragment extends Fragment {
 
         binding = FragmentDashboardBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-//        dialog = new ProgressDialog(getActivity());
-//        dialog.setMessage("Uploading Task");
-//
-//        dialog.setCancelable(false);
+
 
 
         storage=FirebaseStorage.getInstance();
@@ -84,9 +81,7 @@ public class DashboardFragment extends Fragment {
                     }
                 }
 
-//                for(TASKS tasks : list){
-//                    Log.d("key",tasks.getTaskId());
-//                }
+
 
                 adapter=new TaskAdaptor(list, getActivity());
                 binding.dasaboardRecycleview.setAdapter(adapter);
@@ -116,19 +111,15 @@ public class DashboardFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
-        //adapter.startListening();
+
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        //adapter.stopListening();
+
     }
 
-//    @Override
-//    public void onDestroyView() {
-//        super.onDestroyView();
-//        binding = null;
-//    }
+
 
 }

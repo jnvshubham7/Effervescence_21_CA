@@ -68,17 +68,7 @@ public class NotificationActivity extends AppCompatActivity {
                     }
 
 
-             //       Collections.sort(list);
 
-//                    Collections.sort(list, new Comparator<TASKS>(){
-//                        public Long compare(TASKS obj1, TASKS obj2) {
-//
-//
-//                            return Long.valueOf(Long.valueOf(obj2.getTimestamp()).compareTo(Long.valueOf(obj1.getTimestamp()))); // To compare integer values
-//
-//                        }
-//
-//                    });
                 }
 
                 adapter.notifyDataSetChanged();
@@ -109,59 +99,21 @@ public class NotificationActivity extends AppCompatActivity {
             }
         });
 
-//        databaseReference = database.getReference().child("TASKS");
-//
-//        databaseReference.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                Log.d("d",snapshot.getKey());
-//
-//                for(DataSnapshot data : snapshot.getChildren()){
-//                    TASKS tasks1 = new TASKS(data.child("title").getValue(String.class),data.child("link").getValue(String.class),data.child("taskId").getValue(String.class),data.child("points").getValue(Integer.class));
-//                    if(!arrayList.contains(tasks1.getTaskId())) {
-//                        list.add(tasks1);
-//                    }
-//                }
-//
-////                for(TASKS tasks : list){
-////                    Log.d("key",tasks.getTaskId());
-////                }
-//
-//                adapter=new TaskAdaptor(list , NotificationActivity.this);
-//                binding.orderRecyclerView.setAdapter(adapter);
-//
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//                Toast.makeText(NotificationActivity.this, "Fail to get data.", Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//        FirebaseMessaging.getInstance().subscribeToTopic("TopicName");
-//        FirebaseMessaging.getInstance().unsubscribeFromTopic("TopicName");
- 
+
     }
 
-//    public class TASKS implements Comparable<TASKS>
-//    {
-//        public long timestamp;
-//
-//        @Override
-//        public int compareTo(TASKS obj) {
-//            return Long.compare(this.timestamp, obj.timestamp);
-//        }
-//    }
+
 
 
     @Override
     public void onStart() {
         super.onStart();
-        //adapter.startListening();
+
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        //adapter.stopListening();
+
     }
 }

@@ -35,9 +35,7 @@ public class TASKS {
         this.timestamp = timestamp;
     }
 
-//    public void settaskId(String taskId) {
-//        taskId = taskId;
-//    }
+
 
     public TASKS() {
     }

@@ -78,12 +78,7 @@ public class Contacts_Activity extends AppCompatActivity {
                 CallButton6();
             }
         });
-//        Callimg7.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                CallButton();
-//            }
-//        });
+
 
 
     }

@@ -28,58 +28,47 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notification);
-//        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
-//        setContentView(binding.getRoot());
 
+//
 //        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 //            // Create channel to show notifications.
-//            String channelId  = getString(R.string.default_notification_channel_id);
-//            String channelName = getString(R.string.default_notification_channel_name);
-//            NotificationManager notificationManager =
+//            NotificationChannel channel =
+//                    new NotificationChannel("MyNotifications", "MyNotifications",NotificationManager.IMPORTANCE_DEFAULT );
+//
+//            NotificationManager manager =
 //                    getSystemService(NotificationManager.class);
-//            notificationManager.createNotificationChannel(new NotificationChannel(channelId,
-//                    channelName, NotificationManager.IMPORTANCE_LOW));
+//            manager.createNotificationChannel(channel);
 //        }
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            // Create channel to show notifications.
-            NotificationChannel channel =
-                    new NotificationChannel("MyNotifications", "MyNotifications",NotificationManager.IMPORTANCE_DEFAULT );
-
-            NotificationManager manager =
-                    getSystemService(NotificationManager.class);
-            manager.createNotificationChannel(channel);
-        }
-
-
-        FirebaseMessaging.getInstance().subscribeToTopic("general")
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-//                        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//                        DatabaseReference notificationDatabase = database.getReference("user_notifications");
-//                        String key = notificationDatabase.push().getKey();
-//                        String userSessionId = "peter123";
-//                        if(userSessionId.equals("NULL")){
-//                            return;
+//
+//        FirebaseMessaging.getInstance().subscribeToTopic("general")
+//                .addOnCompleteListener(new OnCompleteListener<Void>() {
+//                    @Override
+//                    public void onComplete(@NonNull Task<Void> task) {
+////                        FirebaseDatabase database = FirebaseDatabase.getInstance();
+////                        DatabaseReference notificationDatabase = database.getReference("user_notifications");
+////                        String key = notificationDatabase.push().getKey();
+////                        String userSessionId = "peter123";
+////                        if(userSessionId.equals("NULL")){
+////                            return;
+////                        }
+//
+////                        {
+////                            "message" :{
+////                            "notification" : {
+////                                "title" : "Effe",
+////                                        "body" : "Checking push notification"
+////                            },
+////                            "topic" : "general"
+////                        }
+//                        String msg = "Successful";
+//                        if (!task.isSuccessful()) {
+//                            msg = "Failed";
 //                        }
-
-//                        {
-//                            "message" :{
-//                            "notification" : {
-//                                "title" : "Effe",
-//                                        "body" : "Checking push notification"
-//                            },
-//                            "topic" : "general"
-//                        }
-                        String msg = "Successful";
-                        if (!task.isSuccessful()) {
-                            msg = "Failed";
-                        }
-                       Log.d(TAG, msg);
-                       Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
-                    }
-                });
+//                       Log.d(TAG, msg);
+//                       Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
+//                    }
+//                });
         // If a notification message is tapped, any data accompanying the notification
         // message is available in the intent extras. In this sample the launcher
         // intent is fired when the notification is tapped, so any accompanying data would

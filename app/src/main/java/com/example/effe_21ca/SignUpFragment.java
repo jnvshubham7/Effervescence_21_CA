@@ -1,8 +1,11 @@
 package com.example.effe_21ca;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -167,16 +170,22 @@ else if (!(emailID.isEmpty() && paswd.isEmpty() && personName.isEmpty())) {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
+
+                          //  FirebaseUser user = Auth.getCurrentUser();
+
+
+
+
+
+
                             GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getActivity());
                             if (acct != null) {
 
 
                                 String GoogleName = acct.getDisplayName();
-//                                String personGivenName = acct.getGivenName();
-//                                String personFamilyName = acct.getFamilyName();
+
                                 String personEmail = acct.getEmail();
-//                                String personId = acct.getId();
-                                // Uri personPhoto = acct.getPhotoUrl();
+
                                 Users user = new Users(GoogleName, personEmail);
                                 String id = task.getResult().getUser().getUid();
                                 int score=user.getScore();
@@ -186,16 +195,16 @@ else if (!(emailID.isEmpty() && paswd.isEmpty() && personName.isEmpty())) {
                             }
 
 
-                            // Sign in success, update UI with the signed-in user's information
+
                             Log.d("TAG", "signInWithCredential:success");
-                            //  FirebaseUser user = Auth.getCurrentUser();
+
                             Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
                             startActivity(intent);
-                            // updateUI(user);
+
                         } else {
-                            // If sign in fails, display a message to the user.
+
                             Log.w("TAG", "signInWithCredential:failure", task.getException());
-                            //updateUI(null);
+
                         }
                     }
                 });

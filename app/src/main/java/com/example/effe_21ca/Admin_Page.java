@@ -63,9 +63,7 @@ public class Admin_Page extends AppCompatActivity {
 
 
         mGoogleSignInClient = GoogleSignIn.getClient(Admin_Page.this, gso);
-//        String TaskTitle=binding.Title.getText().toString();
-//        String TaskLink=binding.TaskLink.getText().toString();
-//        int Taskpoint=Integer.parseInt(binding.Points.getText().toString());
+
 
 
 binding.AdminButton.setOnClickListener(new View.OnClickListener() {
@@ -115,22 +113,7 @@ binding.AdminButton.setOnClickListener(new View.OnClickListener() {
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
-//                        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//                        DatabaseReference notificationDatabase = database.getReference("user_notifications");
-//                        String key = notificationDatabase.push().getKey();
-//                        String userSessionId = "peter123";
-//                        if(userSessionId.equals("NULL")){
-//                            return;
-//                        }
 
-//                        {
-//                            "message" :{
-//                            "notification" : {
-//                                "title" : "Effe",
-//                                        "body" : "Checking push notification"
-//                            },
-//                            "topic" : "general"
-//                        }
                         String msg = "Successful";
                         if (!task.isSuccessful()) {
                             msg = "Failed";
@@ -145,16 +128,7 @@ binding.AdminBackButton.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
 
-      //  auth.signOut();
-//        mGoogleSignInClient.signOut()
-//                .addOnCompleteListener( new OnCompleteListener<Void>() {
-//                    @Override
-//                    public void onComplete(@NonNull Task<Void> task) {
-//                        Intent intent=new Intent(Admin_Page.this,SignInUpActivity.class);
-//                        startActivity(intent);
-//
-//                    }
-//                });
+
 
         FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(Admin_Page.this, Bottom_Navigation_Activity.class);
@@ -166,58 +140,7 @@ binding.AdminBackButton.setOnClickListener(new View.OnClickListener() {
 
 
     }
-//    // Post Request For JSONObject
-//    public void postData() {
-//
-//
-//        JSONObject object = new JSONObject();
-//        try {
-//            //input your API parameters
-//            object.put("Title",binding.Title.getText().toString());
-//            object.put("TitleLink",binding.TaskLink.getText().toString());
-//            object.put("Points",binding.Points.getText().toString());
-//        } catch (JSONException e) {
-//            e.printStackTrace();
-//        }
-//        // Enter the correct url for your api service site
-//        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, "https://limitless-shore-56363.herokuapp.com/push", object,
-//                new Response.Listener<JSONObject>() {
-//                    @Override
-//                    public void onResponse(JSONObject response) {
-////                        Toast.makeText(Login_screen.this,"String Response : "+ response.toString(),Toast.LENGTH_LONG).show();
-//                        try {
-//                            Log.d("JSON", String.valueOf(response));
-//
-//                            String Error = response.getString("httpStatus");
-//                            if (Error.equals("")||Error.equals(null)){
-//
-//                            }else if(Error.equals("OK")){
-//                                JSONObject body = response.getJSONObject("body");
-//
-//                            }else {
-//
-//                            }
-//
-//                        } catch (JSONException e) {
-//                            e.printStackTrace();
-//
-//                        }
-////                        resultTextView.setText("String Response : "+ response.toString());
-//                    }
-//                }, new Response.ErrorListener() {
-//            @Override
-//            public void onErrorResponse(VolleyError error) {
-//
-//                VolleyLog.d("Error", "Error: " + error.getMessage());
-//                Toast.makeText(Admin_Page.this, "" + error.getMessage(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-//        requestQueue.add(jsonObjectRequest);
-//    }
 
-
-    // Post Request For JSONObject
     public void postData() throws JSONException {
 
 
@@ -233,23 +156,7 @@ binding.AdminBackButton.setOnClickListener(new View.OnClickListener() {
         Log.d("body", binding.Title.getText().toString());
         Log.d("notification", String.valueOf(notification1));
         binding.Title.setText("");
-//        message.put("notification", notification1);
-//        message.put("topic", "general");
-//        object.put("message", message);
 
-
-
-
-//        try {
-//            //input your API parameters
-//            object.put("Title", "String");
-//            object.put("TitleLink","ssss");
-//           // object.put("Points",binding.Points.getText().toString());
-//          String string = "{\"message\" :{  \"notification\" : { \"title\" : \"Effe\", \"body\" : \"Checking push notification\" }, \"topic\" : \"general\" } }";
-//        } catch (JSONException e) {
-//            e.printStackTrace();
-//        }
-        // Enter the correct url for your api service site
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, "https://limitless-shore-56363.herokuapp.com/push", notification1,
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -272,7 +179,7 @@ binding.AdminBackButton.setOnClickListener(new View.OnClickListener() {
                             e.printStackTrace();
 
                         }
-//                        resultTextView.setText("String Response : "+ response.toString());
+
                     }
                 }, new Response.ErrorListener() {
             @Override
