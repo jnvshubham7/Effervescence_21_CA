@@ -1,5 +1,7 @@
 package com.example.effe_21ca;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -41,6 +43,8 @@ public class LoginFragment extends Fragment {
     FirebaseAuth auth;
     GoogleSignInClient mGoogleSignInClient;
     FirebaseDatabase database;
+    public static final String SHARED_PREFS = "sharedPrefs";
+    public static final String TEXT = "text";
 
     public LoginFragment() {
         // Required empty public constructor
@@ -163,7 +167,33 @@ public class LoginFragment extends Fragment {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("TAG", "signInWithCredential:success");
                             FirebaseUser user = auth.getCurrentUser();
-                            if (user.getEmail().equals("effervescence@iiita.ac.in")) {
+//                            if (user.getEmail().equals("effervescence@iiita.ac.in")) {
+
+                                // Storing data into SharedPreferences
+                                SharedPreferences sharedPreferences = getContext().getSharedPreferences("MySharedPref",MODE_PRIVATE);
+
+// Creating an Editor object to edit(write to the file)
+                                SharedPreferences.Editor myEdit = sharedPreferences.edit();
+
+// Storing the key and its value as the data fetched from edittext
+                                myEdit.putString("name", user.getEmail());
+                             //   myEdit.putInt("age", Integer.parseInt(age.getText().toString()));
+
+// Once the changes have been made,
+// we need to commit to apply those changes made,
+// otherwise, it will throw an error
+                                myEdit.commit();
+
+
+
+
+
+                              //  savData();
+
+//                                SharedPreferences sharedPreferences = getContext().getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE);
+//                                SharedPreferences.Editor editor = sharedPreferences.edit();
+//                                editor.putString(TEXT, "shubham");
+//                                Log.d("text", TEXT);
 
 //                                Context context = getActivity();
 //                                SharedPreferences sharedPref = context.getSharedPreferences(
@@ -172,12 +202,12 @@ public class LoginFragment extends Fragment {
 //                                SharedPreferences.Editor editor = sharedPref.edit();
 //                                editor.putInt(getString(R.string.saved_high_score_key), newHighScore);
 //                                editor.apply();
-                                Intent intent = new Intent(getContext(), Admin_Page.class);
-                                startActivity(intent);
-                            } else {
                                 Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
                                 startActivity(intent);
-                            }
+//                            } else {
+//                                Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
+//                                startActivity(intent);
+//                            }
                             // updateUI(user);
                         } else {
                             // If sign in fails, display a message to the user.
@@ -187,6 +217,14 @@ public class LoginFragment extends Fragment {
                     }
                 });
     }
+
+
+//    public void savData(){
+//        SharedPreferences sharedPreferences = getContext().getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
+//        SharedPreferences.Editor editor = sharedPreferences.edit();
+//        editor.putString(TEXT, )
+//
+//    }
 
 
 }

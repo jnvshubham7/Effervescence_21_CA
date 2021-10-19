@@ -44,6 +44,7 @@ import androidx.navigation.ui.NavigationUI;
 import com.example.effe_21ca.databinding.ActivityBottomNavigationBinding;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -72,7 +73,10 @@ FirebaseAuth auth;
     GoogleSignInClient mGoogleSignInClient;
     Boolean uploaded=false;
     ProgressDialog dialog;
+    public static final String SHARED_PREFS = "sharedPrefs";
+    public static final String TEXT = "text";
     Button TaskAdd;
+    String text;
 
 
     ArrayList<String> arrayList;
@@ -127,7 +131,55 @@ FirebaseAuth auth;
              }
          });
 
+        SharedPreferences sh = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+
+// The value will be default as empty string because for
+// the very first time when the app is opened, there is nothing to show
+        String s1 = sh.getString("name", "");
+
+
+        if (s1.equals("effervescence@iiita.ac.in")) {
+binding.TaskAdd.setVisibility(View.VISIBLE);
+        }
+
+        binding.TaskAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                // Retrieving the value using its keys the file name
+// must be same in both saving and retrieving the data
+                SharedPreferences sh = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+
+// The value will be default as empty string because for
+// the very first time when the app is opened, there is nothing to show
+                String s1 = sh.getString("name", "");
+                //  int a = sh.getInt("age", 0);
+
+// We can then use the data
+                //  binding.textView5.setText(s1);
+                //   age.setText(String.valueOf(a));
+//
+//                SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+//                text = sharedPreferences.getString(TEXT, "");
+//                Log.d("text", text);
+//                 FirebaseUser user = auth.getCurrentUser();
+                //  if(text.equals("effervescence@iiita.ac.in")){
+                //   Log.d("text", String.valueOf(binding.textView5));
+
+             //   if (s1.equals("effervescence@iiita.ac.in")) {
+                    Intent intent = new Intent(Bottom_Navigation_Activity.this, Admin_Page.class);
+                    startActivity(intent);
+
+                    //   }
+           //     }
+            }
+        });
+    //    binding.TaskAdd.;
+
     }
+
+
+
 
 
     int doubleBackToExitPressed = 1;
@@ -172,6 +224,8 @@ FirebaseAuth auth;
 
                         }
                     });
+
+
 
 
 //            SharedPreferences sharedPref = getSharedPreferences("s", MODE_PRIVATE);
@@ -277,6 +331,13 @@ FirebaseAuth auth;
     }
 
 
+//public void loadData1(){
+//        SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+//        text = sharedPreferences.getString(TEXT, "");
+//        Log.d("text", text);
+//
+//
+//}
 
 
     @Override

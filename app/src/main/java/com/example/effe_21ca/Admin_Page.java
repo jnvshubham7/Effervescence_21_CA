@@ -78,7 +78,7 @@ binding.AdminButton.setOnClickListener(new View.OnClickListener() {
         String TaskLink=binding.TaskLink.getText().toString();
         int Taskpoint=Integer.parseInt(binding.Points.getText().toString());
         binding.TaskLink.setText("");
-        binding.Title.setText("");
+
         binding.Points.setText("");
 
 
@@ -227,9 +227,12 @@ binding.AdminBackButton.setOnClickListener(new View.OnClickListener() {
 
         JSONObject notification1 = new JSONObject();
      //   JSONObject message = new JSONObject();
-        notification1.put("title", "message");
-        notification1.put("body", "bodym");
+        notification1.put("title", "Task Added");
+        notification1.put("body", binding.Title.getText().toString());
+
+        Log.d("body", binding.Title.getText().toString());
         Log.d("notification", String.valueOf(notification1));
+        binding.Title.setText("");
 //        message.put("notification", notification1);
 //        message.put("topic", "general");
 //        object.put("message", message);

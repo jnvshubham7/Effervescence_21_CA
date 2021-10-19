@@ -122,9 +122,10 @@ public class UserFragment extends Fragment {
                     }
                     Users user = dataSnapshot.getValue(Users.class);
 
-                   assert user != null;
+             //      assert user != null;
 
                    // userName.setText(user.getUsername());
+                    assert user != null;
                     binding.nameUser.setText(user.getUserName());
                  binding.score.setText(String.valueOf(user.getScore()));
 
