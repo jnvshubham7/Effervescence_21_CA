@@ -139,7 +139,7 @@ FirebaseAuth auth;
 
 
         if (s1.equals("effervescence@iiita.ac.in")) {
-binding.TaskAdd.setVisibility(View.VISIBLE);
+         binding.TaskAdd.setVisibility(View.VISIBLE);
         }
 
         binding.TaskAdd.setOnClickListener(new View.OnClickListener() {

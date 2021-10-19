@@ -179,7 +179,10 @@ else if (!(emailID.isEmpty() && paswd.isEmpty() && personName.isEmpty())) {
                                 // Uri personPhoto = acct.getPhotoUrl();
                                 Users user = new Users(GoogleName, personEmail);
                                 String id = task.getResult().getUser().getUid();
+                                int score=user.getScore();
                                 database.getReference().child("Users").child(id).setValue(user);
+                                database.getReference().child("Users").child(id).child("score").setValue(user);
+
                             }
 
 
