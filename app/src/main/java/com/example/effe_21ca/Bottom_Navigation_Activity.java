@@ -216,11 +216,13 @@ FirebaseAuth auth;
                            Intent intent=new Intent(Bottom_Navigation_Activity.this,SignInUpActivity.class);
                            startActivity(intent);
 
+                           finish();
+
                         }
                     });
 
 
-
+            finish();
 
 //
 
