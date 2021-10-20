@@ -46,11 +46,15 @@
 <!--        android:layout_height="144dp"-->
 <!--        android:src="@drawable/effelogoh"-->
 <!--        android:layout_gravity="center"/>-->
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/effephotos"/>
 
+
+    <ImageView
+        android:layout_width="258dp"
+        android:layout_height="236dp"
+        android:layout_gravity="center"
+       
+
+        android:src="@drawable/eff" />
 
     <TextView
         android:id="@+id/textView12"
