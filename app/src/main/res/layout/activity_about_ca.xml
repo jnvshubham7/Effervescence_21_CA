@@ -415,7 +415,7 @@ You are to communicate with team effervescence regularly for the exchange of res
                     android:layout_marginEnd="8dp"
                     android:layout_marginBottom="8dp"
                     android:gravity="center_horizontal"
-                    android:text="Internship Opportunity"
+                    android:text="Workshop Opportunity"
 
                     android:textAlignment="center"
                     android:textColor="@color/baseTextPara"
@@ -432,7 +432,7 @@ You are to communicate with team effervescence regularly for the exchange of res
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:gravity="center_horizontal"
-                    android:text="Zebronics Goodies"
+                    android:text="Goodies"
                     android:textAlignment="center"
                     android:textColor="@color/baseTextPara"
                     app:layout_constraintEnd_toEndOf="@+id/imageView8"
