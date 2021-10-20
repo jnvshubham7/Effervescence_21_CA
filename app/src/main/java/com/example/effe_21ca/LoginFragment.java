@@ -70,6 +70,10 @@ public class LoginFragment extends Fragment {
 
         mGoogleSignInClient = GoogleSignIn.getClient(getContext(), gso);
 
+
+     //   updateUI(account);
+
+
         binding.btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -116,10 +120,28 @@ public class LoginFragment extends Fragment {
         binding.GoogleLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 signIn();
+
+
+
+
             }
         });
         if (auth.getCurrentUser() != null) {
+
+//            GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(getContext());
+//            Log.d("acccount", String.valueOf(account));
+//
+//            if(account!=null) {
+//                Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
+//                startActivity(intent);
+//
+//            }
+//            else {
+//                Toast.makeText(getContext(), "please Sign Up First", Toast.LENGTH_SHORT);
+//
+//            }
 
 
             Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
@@ -127,6 +149,32 @@ public class LoginFragment extends Fragment {
 
         }
         return binding.getRoot();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+//        FirebaseUser firebaseUser = auth.getCurrentUser();
+//        if(firebaseUser!=null){
+//
+//        }
+//        else {
+//            startActivity(new Intent(getContext(), Bottom_Navigation_Activity.class));
+//        }
+
+//        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(getContext());
+//        Log.d("acccount", String.valueOf(account));
+//
+//        if(account!=null) {
+//            Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
+//            startActivity(intent);
+//
+//        }
+//        else {
+//            Toast.makeText(getContext(), "please Sign Up First", Toast.LENGTH_SHORT);
+//
+//        }
     }
 
     int RC_SIGN_IN = 65;
@@ -163,6 +211,40 @@ public class LoginFragment extends Fragment {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
+//
+//                            GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getActivity());
+//                            if (acct != null) {
+//
+//
+//
+//
+//                                String GoogleName = acct.getDisplayName();
+//
+//                                String personEmail = acct.getEmail();
+//
+//                                Users user = new Users(GoogleName, personEmail);
+//                                String id = task.getResult().getUser().getUid();
+//                                //   int score =user.getScore();
+//                                //  Log.d("score", String.valueOf(score));
+//
+//                          //      database.getReference().child("Users").child(id).setValue(user);
+//                                //     database.getReference().child("Users").child(id).child("score").setValue(score);
+//
+//
+//                                SharedPreferences sharedPreferences = requireContext().getSharedPreferences("MySharedPref",MODE_PRIVATE);
+//                                SharedPreferences.Editor myEdit = sharedPreferences.edit();
+//                                myEdit.putString("name", acct.getEmail());
+//                                myEdit.apply();
+//
+//                            }
+
+
+//
+//                            Log.d("TAG", "signInWithCredential:success");
+//
+//                            Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
+//                            startActivity(intent);
+
 
                             Log.d("TAG", "signInWithCredential:success");
                             FirebaseUser user = auth.getCurrentUser();
@@ -180,13 +262,24 @@ public class LoginFragment extends Fragment {
 
                                 myEdit.commit();
 
+//                            GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(getActivity());
+//                            Log.d("acccount", String.valueOf(account));
+//
+//                            if(account!=null) {
+//                                Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
+//                                startActivity(intent);
+//
+//                            }
+//                            else {
+//                                Toast.makeText(getContext(), "please Sign Up First", Toast.LENGTH_SHORT);
+//
+//                            }
 
 
+                            Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
+                            startActivity(intent);
 
 
-
-                                Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
-                                startActivity(intent);
 //
                         } else {
                             // If sign in fails, display a message to the user.
