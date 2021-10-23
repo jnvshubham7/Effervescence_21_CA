@@ -152,6 +152,7 @@ FirebaseAuth auth;
         if (!s2.equals("effervescence@iiita.ac.in")) {
             binding.TaskAdd.setVisibility(View.GONE);
         }
+        Log.d("s1", s1);
         Log.d("s2", s2);
 
 //        else {
@@ -222,7 +223,7 @@ FirebaseAuth auth;
                     });
 
 
-            finish();
+         //   finish();
 
 //
 
