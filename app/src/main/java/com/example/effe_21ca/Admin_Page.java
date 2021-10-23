@@ -74,38 +74,55 @@ binding.AdminButton.setOnClickListener(new View.OnClickListener() {
         String TaskId=tasksRef.getKey();
         String TaskTitle=binding.Title.getText().toString();
         String TaskLink=binding.TaskLink.getText().toString();
-        int Taskpoint=Integer.parseInt(binding.Points.getText().toString());
-        binding.TaskLink.setText("");
+        String Taskpoint1 =binding.Points.getText().toString();
 
-        binding.Points.setText("");
-
+       // int Taskpoint=Integer.parseInt(binding.Points.getText().toString());
 
 
-        TASKS Task = new TASKS(TaskTitle,TaskLink,TaskId,Taskpoint);
+        if (TaskLink.isEmpty()){
+            binding.TaskLink.setError("Provide Task Link");
+            binding.TaskLink.requestFocus();
+        }
+        else if (Taskpoint1.isEmpty()){
+            binding.Points.setError("Provide Task Points");
+            binding.Points.requestFocus();
+        }
+
+        else  if(TaskTitle.isEmpty()){
+            binding.Title.setError("Provide Task Title");
+            binding.Title.requestFocus();
+        }
+
+        else if (!(TaskTitle.isEmpty()  && Taskpoint1.isEmpty() && TaskLink.isEmpty())) {
+            int Taskpoint=Integer.parseInt(binding.Points.getText().toString());
+            binding.TaskLink.setText("");
+            binding.Points.setText("");
 
 
-        database.getReference().child("TASKS").child(TaskId).setValue(Task).addOnSuccessListener(new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void unused) {
+            TASKS Task = new TASKS(TaskTitle, TaskLink, TaskId, Taskpoint);
 
-                DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
-                Map map = new HashMap();
-                map.put("timestamp", ServerValue.TIMESTAMP);
-                ref.child("TASKS").child(TaskId).updateChildren(map);
-                Toast.makeText(Admin_Page.this, "Task Added", Toast.LENGTH_SHORT).show();
-                try {
-                    postData();
-                } catch (JSONException e) {
-                    e.printStackTrace();
+
+            database.getReference().child("TASKS").child(TaskId).setValue(Task).addOnSuccessListener(new OnSuccessListener<Void>() {
+                @Override
+                public void onSuccess(Void unused) {
+
+                    DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+                    Map map = new HashMap();
+                    map.put("timestamp", ServerValue.TIMESTAMP);
+                    ref.child("TASKS").child(TaskId).updateChildren(map);
+                    Toast.makeText(Admin_Page.this, "Task Added", Toast.LENGTH_SHORT).show();
+                    try {
+                        postData();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+
                 }
+            });
 
 
-            }
-        });
-
-
-
-
+        }
 
     }
 });
@@ -128,13 +145,10 @@ binding.AdminBackButton.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
 
-
-
-        FirebaseAuth.getInstance().signOut();
         Intent intent = new Intent(Admin_Page.this, Bottom_Navigation_Activity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+
         startActivity(intent);
-        finish();
+
     }
 });
 

@@ -33,7 +33,7 @@ import java.util.Objects;
 public class UserFragment extends Fragment {
     FirebaseDatabase database;
 
-    private UserViewModel notificationsViewModel;
+  //  private UserViewModel notificationsViewModel;
     private FragmentNotificationsBinding binding;
     //void userInfo();
     String userId;
@@ -42,8 +42,8 @@ public class UserFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                new ViewModelProvider(this).get(UserViewModel.class);
+//        notificationsViewModel =
+//                new ViewModelProvider(this).get(UserViewModel.class);
 
 
 
