@@ -70,22 +70,27 @@
                 <View
                     android:id="@+id/view2"
                     android:layout_width="50dp"
-                    android:layout_height="2dp"
+                    android:layout_height="4dp"
                     android:layout_gravity="center"
                     android:background="#B5C8C6" />
 
                 <TextView
                     android:id="@+id/textView4"
                     android:layout_width="wrap_content"
+                     android:textColor="@color/black"
+                    android:layout_marginStart="2dp"
                     android:layout_height="wrap_content"
-                    android:text=" or with" />
+                    android:text=" or with"
+                    android:layout_marginLeft="5dp" />
 
                 <View
                     android:id="@+id/view3"
                     android:layout_width="50dp"
-                    android:layout_height="2dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_height="4dp"
                     android:layout_gravity="center"
-                    android:background="#D6DDDD" />
+                    android:background="#D6DDDD"
+                    android:layout_marginLeft="5dp" />
             </LinearLayout>
 
             <LinearLayout
@@ -96,7 +101,7 @@
 
 
                 <TextView
-                    android:id="@+id/GoogleLogin"
+                    android:id="@+id/GoogleLogin1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="80dp"
