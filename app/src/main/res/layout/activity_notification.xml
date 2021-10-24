@@ -7,18 +7,27 @@
     android:background="@color/white"
     android:orientation="vertical"
     tools:context=".NotificationActivity">
-    <ImageView
-        android:id="@+id/back_notification"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
+<!--    <ImageView-->
+<!--        android:id="@+id/back_notification"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:layout_marginLeft="10dp"-->
 
-        android:layout_marginTop="10dp"
+<!--        android:layout_marginTop="10dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@drawable/ic_vector"-->
+<!--        tools:ignore="MissingConstraints" />-->
+    <ImageButton
+        android:id="@+id/back_notification"
+        android:layout_width="44dp"
+
+        android:layout_height="37dp"
+        android:background="@color/teal_200"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_vector"
-        tools:ignore="MissingConstraints" />
+        app:srcCompat="@drawable/ic_vector" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

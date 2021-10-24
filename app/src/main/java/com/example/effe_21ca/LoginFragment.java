@@ -181,6 +181,31 @@ public class LoginFragment extends Fragment {
                             GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getActivity());
                             if (acct != null) {
 
+//                                DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getUid());
+//                                reference.addValueEventListener(new ValueEventListener() {
+//                                    @Override
+//                                    public void onDataChange(DataSnapshot dataSnapshot) {
+//                                        if (getContext() == null){
+//                                            return;
+//                                        }
+//                                        Users user = dataSnapshot.getValue(Users.class);
+//
+//                                        assert user != null;
+//
+//
+//                                        Log.d("score", (String.valueOf(user.getScore())));
+//
+////                                        binding.nameUser.setText(user.getUserName());
+////                                        binding.score.setText(String.valueOf(user.getScore()));
+//
+//                                    }
+//
+//                                    @Override
+//                                    public void onCancelled(DatabaseError databaseError) {
+//
+//                                    }
+//                                });
+
 
                                 String GoogleName = acct.getDisplayName();
 
