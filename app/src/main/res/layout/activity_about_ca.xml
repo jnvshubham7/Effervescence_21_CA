@@ -28,6 +28,9 @@
         <ImageButton
             android:id="@+id/backArrowCA"
             android:layout_width="44dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="15dp"
 
             android:layout_height="37dp"
             android:background="@color/teal_200"

@@ -223,7 +223,7 @@ FirebaseAuth auth;
                     });
 
 
-         //   finish();
+            finish();
 
 //
 
