@@ -176,7 +176,22 @@ else if (!(emailID.isEmpty() && paswd.isEmpty() && personName.isEmpty())) {
                           //  FirebaseUser user = Auth.getCurrentUser();
 
 
-
+                      //      FirebaseUserMetadata metadata = Auth.getCurrentUser().getMetadata();
+//                            if (metadata.getCreationTimestamp() == metadata.getLastSignInTimestamp()) {
+//
+//                                Log.d("TAG", "signInWithCredential:success");
+//
+//                                Toast.makeText(getActivity(), "plz sign up", Toast.LENGTH_LONG);
+//                                // The user is new, show them a fancy intro screen!
+//                            } else {
+//                                Log.d("TAG", "fail");
+//
+//
+//                                Toast.makeText(getActivity(), "Sign IN", Toast.LENGTH_LONG);
+//                                Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
+//                              startActivity(intent);
+                            // This is an existing user, show them a welcome back screen.
+                            //  }
 
 
 

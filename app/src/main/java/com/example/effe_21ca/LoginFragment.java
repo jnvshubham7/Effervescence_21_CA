@@ -177,6 +177,22 @@ public class LoginFragment extends Fragment {
 
                             //  FirebaseUser user = Auth.getCurrentUser();
 
+//                            boolean isNew = task.getResult().getAdditionalUserInfo().isNewUser();
+//                            if(isNew==true) {
+//
+//                                Log.d("TAG", "signInWithCredential:success");
+//
+//                                Intent intent = new Intent(getContext(), Bottom_Navigation_Activity.class);
+//                                startActivity(intent);
+//
+//
+//                            }
+//                            else {
+//
+//                                Toast.makeText(getActivity(), "plz sign up", Toast.LENGTH_LONG);
+//
+//                            }
+
                             
                             GoogleSignInAccount acct = GoogleSignIn.getLastSignedInAccount(getActivity());
                             if (acct != null) {
