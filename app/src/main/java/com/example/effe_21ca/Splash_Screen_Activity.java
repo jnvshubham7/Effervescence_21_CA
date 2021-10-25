@@ -33,7 +33,7 @@ public class Splash_Screen_Activity extends AppCompatActivity {
                             msg = "Failed";
                         }
                         Log.d(TAG, msg);
-                       // Toast.makeText(Splash_Screen_Activity.this, msg, Toast.LENGTH_SHORT).show();
+
                     }
                 });
 

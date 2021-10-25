@@ -33,17 +33,16 @@ import java.util.Objects;
 public class UserFragment extends Fragment {
     FirebaseDatabase database;
 
-  //  private UserViewModel notificationsViewModel;
+
     private FragmentNotificationsBinding binding;
-    //void userInfo();
+
     String userId;
     FirebaseUser firebaseUser;
-   // String profileid;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-//        notificationsViewModel =
-//                new ViewModelProvider(this).get(UserViewModel.class);
+
 
 
 

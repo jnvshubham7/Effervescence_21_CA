@@ -103,7 +103,7 @@ FirebaseAuth auth;
 
         mGoogleSignInClient = GoogleSignIn.getClient(Bottom_Navigation_Activity.this, gso);
 
-      //  dialog.setCancelable(false);
+
         ImageView imgnoti;
         BottomNavigationView navView = findViewById(R.id.nav_view);
         navView.setItemIconTintList(null);
@@ -120,7 +120,7 @@ FirebaseAuth auth;
         storage=FirebaseStorage.getInstance();
         database=FirebaseDatabase.getInstance();
          imgnoti=findViewById(R.id.imgNotification);
-        // name=findViewById(R.id.nameUser);
+
          imgnoti.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
@@ -155,9 +155,7 @@ FirebaseAuth auth;
         Log.d("s1", s1);
         Log.d("s2", s2);
 
-//        else {
-//            binding.TaskAdd.setVisibility(View.INVISIBLE);
-//        }
+
 
         binding.TaskAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -223,7 +221,7 @@ FirebaseAuth auth;
                     });
 
 
-        //    finish();
+            finish();
 
 //
 

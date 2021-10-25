@@ -45,9 +45,9 @@ public class HomeFragment extends Fragment {
     ProgressDialog dialog;
 
 
-    //private LeaderboardViewModel homeViewModel;
+
  FragmentHomeBinding binding;
-    // Object Users_Adapter;
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
             ViewGroup container, Bundle savedInstanceState) {
@@ -58,7 +58,7 @@ public class HomeFragment extends Fragment {
         dialog = new ProgressDialog(getActivity());
         dialog.setMessage("Loading LeaderBoard");
 
-       // dialog.setCancelable(false);
+
 
 
 

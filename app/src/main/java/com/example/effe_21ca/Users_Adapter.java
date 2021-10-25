@@ -65,7 +65,7 @@ public class Users_Adapter extends RecyclerView.Adapter<Users_Adapter.UsersViewH
         Users user = users.get(position);
         holder.userName.setText(user.getUserName());
         holder.score.setText(String.valueOf(user.getScore()));
-        // TextView.setText(String.valueOf(int)).
+
         holder.srNoTextView.setText(String.valueOf(position+1));
 
 

@@ -76,7 +76,7 @@ binding.AdminButton.setOnClickListener(new View.OnClickListener() {
         String TaskLink=binding.TaskLink.getText().toString();
         String Taskpoint1 =binding.Points.getText().toString();
 
-       // int Taskpoint=Integer.parseInt(binding.Points.getText().toString());
+
 
 
         if (TaskLink.isEmpty()){
@@ -136,7 +136,7 @@ binding.AdminButton.setOnClickListener(new View.OnClickListener() {
                             msg = "Failed";
                         }
                         Log.d(TAG, msg);
-                   //     Toast.makeText(Admin_Page.this, msg, Toast.LENGTH_SHORT).show();
+
                     }
                 });
 
