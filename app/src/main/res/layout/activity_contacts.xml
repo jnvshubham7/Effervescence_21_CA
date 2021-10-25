@@ -29,15 +29,7 @@ android:background="@color/gray0"
             android:padding="8dp"
             android:layout_gravity="left"
             app:srcCompat="@drawable/ic_vector" />
-<!--        <ImageButton-->
-<!--            android:id="@+id/Admin_back_button"-->
-<!--            android:layout_width="44dp"-->
 
-<!--            android:layout_height="37dp"-->
-<!--            android:background="@color/teal_200"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            app:srcCompat="@drawable/ic_vector" />-->
 
         <TextView
             android:layout_width="wrap_content"
