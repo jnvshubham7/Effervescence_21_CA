@@ -78,6 +78,14 @@ public class SignUpFragment extends Fragment {
         mGoogleSignInClient = GoogleSignIn.getClient(getContext(), gso);
 
 
+        // FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        // if (user != null) {
+        //     // User is signed in
+        // } else {
+        //     // No user is signed in
+        // }
+
+
         binding.btnSignUP.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
